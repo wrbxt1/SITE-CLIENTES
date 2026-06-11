@@ -1,76 +1,99 @@
-from pathlib import Path
-
-html = r"""<!DOCTYPE html>
+html = """<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NOME_DO_ESCRITORIO</title>
+<title>AMUY MENEZES | Previdenciário</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <style>
-body{margin:0;font-family:Arial,sans-serif;background:#0b1220;color:#fff}
-header{padding:20px 8%;position:fixed;width:84%;background:rgba(11,18,32,.9);backdrop-filter:blur(10px)}
-.hero{height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;
-background:linear-gradient(rgba(11,18,32,.8),rgba(11,18,32,.8)),url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1600&q=80') center/cover}
-.hero h1{font-size:56px;max-width:900px}
-.btn{display:inline-block;padding:16px 28px;background:#d4af37;color:#000;text-decoration:none;border-radius:40px;font-weight:bold}
-section{padding:80px 8%}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
-.card{background:#131d33;padding:25px;border-radius:16px}
-.faq details{background:#131d33;margin:10px 0;padding:15px;border-radius:12px}
-.cta{text-align:center;background:#131d33}
-.whats{position:fixed;right:20px;bottom:20px;background:#25D366;color:#fff;padding:18px;border-radius:50%;text-decoration:none}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif}
+body{background:#070b14;color:#fff;overflow-x:hidden}
+:root{--gold:#d4af37;--card:rgba(255,255,255,.06)}
+header{position:fixed;top:0;width:100%;padding:22px 8%;display:flex;justify-content:space-between;backdrop-filter:blur(16px);background:rgba(7,11,20,.7);z-index:99}
+nav a{color:#fff;text-decoration:none;margin-left:25px}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 20px;background:
+radial-gradient(circle at top,#203055 0,#070b14 60%)}
+.hero h1{font-size:clamp(3rem,8vw,6rem);max-width:1000px}
+.hero p{max-width:800px;margin:25px auto;font-size:1.2rem;color:#cfd4dd}
+.btn{display:inline-block;padding:18px 34px;border-radius:50px;background:linear-gradient(90deg,var(--gold),#f7d978);color:#000;text-decoration:none;font-weight:700}
+.section{padding:110px 8%}
+.title{text-align:center;font-size:3rem;margin-bottom:60px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
+.card{background:var(--card);border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(20px);padding:30px;border-radius:24px;transition:.3s}
+.card:hover{transform:translateY(-8px)}
+.process{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.step{background:var(--card);padding:25px;border-radius:20px}
+.num{font-size:2rem;color:var(--gold);font-weight:800}
+.cta{background:linear-gradient(135deg,#101a31,#0d1220);text-align:center;border-top:1px solid rgba(255,255,255,.1)}
+.faq details{background:var(--card);margin:12px 0;padding:18px;border-radius:16px}
+footer{text-align:center;padding:40px;color:#aab}
+.whatsapp{position:fixed;right:25px;bottom:25px;width:70px;height:70px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#25D366;text-decoration:none;color:#fff;font-size:32px}
+.glow{position:absolute;width:500px;height:500px;border-radius:50%;background:rgba(212,175,55,.08);filter:blur(100px)}
 </style>
 </head>
 <body>
-<header><strong>NOME_DO_ESCRITORIO</strong></header>
+<header>
+<h2 style="color:#d4af37">AMUY MENEZES</h2>
+<nav>
+<a href="#areas">Áreas</a>
+<a href="#processo">Processo</a>
+<a href="#faq">FAQ</a>
+</nav>
+</header>
 
 <section class="hero">
 <div>
-<h1>Atendimento Previdenciário Especializado</h1>
-<p>Equipe preparada para acompanhar seu caso do início ao fim.</p>
+<h1>Seu benefício previdenciário merece acompanhamento especializado.</h1>
+<p>Atendimento completo para aposentadorias, benefícios por incapacidade, BPC/LOAS, pensão por morte e demais demandas previdenciárias.</p>
 <a class="btn" href="https://wa.me/WHATSAPP_AQUI">Solicitar Atendimento</a>
 </div>
 </section>
 
-<section>
-<h2>Áreas de Atuação</h2>
-<div class="cards">
-<div class="card">Aposentadorias</div>
-<div class="card">Auxílio por Incapacidade</div>
-<div class="card">BPC / LOAS</div>
-<div class="card">Pensão por Morte</div>
-<div class="card">Salário-Maternidade</div>
-<div class="card">Planejamento Previdenciário</div>
+<section class="section" id="areas">
+<h2 class="title">Áreas de Atuação</h2>
+<div class="grid">
+<div class="card"><h3>Aposentadorias</h3><p>Análise e acompanhamento completo.</p></div>
+<div class="card"><h3>Auxílio por Incapacidade</h3><p>Orientação e suporte especializado.</p></div>
+<div class="card"><h3>BPC / LOAS</h3><p>Atendimento para quem busca seus direitos.</p></div>
+<div class="card"><h3>Pensão por Morte</h3><p>Suporte para dependentes e familiares.</p></div>
+<div class="card"><h3>Salário-Maternidade</h3><p>Auxílio em todas as etapas.</p></div>
+<div class="card"><h3>Planejamento Previdenciário</h3><p>Estratégia para o futuro.</p></div>
 </div>
 </section>
 
-<section>
-<h2>Como Funciona</h2>
-<div class="cards">
-<div class="card">1. Primeiro contato</div>
-<div class="card">2. Avaliação do caso</div>
-<div class="card">3. Organização documental</div>
-<div class="card">4. Acompanhamento especializado</div>
+<section class="section" id="processo">
+<h2 class="title">Como Funciona</h2>
+<div class="process">
+<div class="step"><div class="num">01</div><h3>Contato</h3><p>Fale com nossa equipe.</p></div>
+<div class="step"><div class="num">02</div><h3>Análise</h3><p>Avaliação do seu caso.</p></div>
+<div class="step"><div class="num">03</div><h3>Documentação</h3><p>Orientação completa.</p></div>
+<div class="step"><div class="num">04</div><h3>Acompanhamento</h3><p>Suporte durante o processo.</p></div>
 </div>
 </section>
 
-<section class="faq">
-<h2>Perguntas Frequentes</h2>
-<details><summary>Meu benefício foi negado. Posso recorrer?</summary><p>Cada caso deve ser analisado individualmente.</p></details>
-<details><summary>Posso ser atendido online?</summary><p>Sim, conforme a política do escritório.</p></details>
-<details><summary>Quais documentos preciso?</summary><p>A equipe informará após análise inicial.</p></details>
+<section class="section" id="faq">
+<h2 class="title">Perguntas Frequentes</h2>
+<div class="faq">
+<details><summary>Meu benefício foi negado. E agora?</summary><p>Seu caso pode ser analisado pela equipe.</p></details>
+<details><summary>Posso ser atendido online?</summary><p>Sim, conforme disponibilidade do escritório.</p></details>
+<details><summary>Quais documentos preciso?</summary><p>Os documentos variam conforme o benefício.</p></details>
+</div>
 </section>
 
-<section class="cta">
-<h2>Fale com nossa equipe</h2>
-<p>Receba orientação especializada.</p>
+<section class="section cta">
+<h2 class="title">Fale com Nossa Equipe</h2>
+<p style="max-width:700px;margin:0 auto 30px;color:#cfd4dd">Receba orientação especializada para analisar sua situação previdenciária.</p>
 <a class="btn" href="https://wa.me/WHATSAPP_AQUI">Conversar no WhatsApp</a>
 </section>
 
-<a class="whats" href="https://wa.me/WHATSAPP_AQUI">💬</a>
+<footer>
+© 2026 AMUY MENEZES ADVOCACIA
+</footer>
+
+<a class="whatsapp" href="https://wa.me/WHATSAPP_AQUI">💬</a>
 </body>
 </html>"""
 
-path = "/mnt/data/site_previdenciario_premium.html"
-Path(path).write_text(html, encoding="utf-8")
+path="/mnt/data/landing_page_dark_premium.html"
+Path(path).write_text(html,encoding="utf-8")
 print(path)
