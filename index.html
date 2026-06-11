@@ -3,303 +3,295 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Especialistas em Direito Previdenciário</title>
+
+<title>Especialista em Benefícios INSS | Atendimento Previdenciário</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Inter',sans-serif;
-}
-
-:root{
-    --primary:#0B1F3A;
-    --gold:#D4AF37;
-    --white:#ffffff;
-    --gray:#f4f6f9;
-    --text:#444;
-}
-
-body{
-    background:#fff;
-    color:#222;
-    overflow-x:hidden;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
 }
 
 html{
-    scroll-behavior:smooth;
+scroll-behavior:smooth;
+}
+
+body{
+background:#ffffff;
+color:#1d1d1d;
+overflow-x:hidden;
+}
+
+:root{
+--azul:#0B1F3A;
+--dourado:#D4AF37;
+--verde:#25D366;
+--cinza:#f5f7fa;
 }
 
 /* HEADER */
 
 header{
-    position:fixed;
-    width:100%;
-    top:0;
-    z-index:999;
-    background:rgba(11,31,58,.95);
-    backdrop-filter:blur(10px);
+position:fixed;
+top:0;
+width:100%;
+background:rgba(11,31,58,.97);
+z-index:999;
+backdrop-filter:blur(10px);
 }
 
 .nav{
-    max-width:1200px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px;
+max-width:1200px;
+margin:auto;
+padding:18px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 .logo{
-    color:var(--gold);
-    font-size:24px;
-    font-weight:800;
+color:var(--dourado);
+font-size:24px;
+font-weight:800;
 }
 
 .menu{
-    display:flex;
-    gap:25px;
+display:flex;
+gap:25px;
 }
 
 .menu a{
-    color:white;
-    text-decoration:none;
-    font-weight:500;
+color:white;
+text-decoration:none;
+font-weight:500;
+transition:.3s;
 }
 
 .menu a:hover{
-    color:var(--gold);
+color:var(--dourado);
 }
 
 /* HERO */
 
 .hero{
-    min-height:100vh;
-    background:
-    linear-gradient(rgba(11,31,58,.85),rgba(11,31,58,.85)),
-    url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1400');
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:30px;
+min-height:100vh;
+background:
+linear-gradient(rgba(11,31,58,.85),rgba(11,31,58,.85)),
+url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:20px;
+text-align:center;
 }
 
 .hero-content{
-    max-width:900px;
-    color:white;
+max-width:900px;
+color:white;
 }
 
 .hero h1{
-    font-size:58px;
-    margin-bottom:20px;
+font-size:60px;
+font-weight:800;
+margin-bottom:20px;
+line-height:1.1;
 }
 
 .hero p{
-    font-size:22px;
-    margin-bottom:35px;
-    line-height:1.6;
+font-size:22px;
+line-height:1.7;
+margin-bottom:35px;
 }
 
 .btn{
-    display:inline-block;
-    padding:18px 35px;
-    background:var(--gold);
-    color:#111;
-    text-decoration:none;
-    border-radius:50px;
-    font-weight:700;
-    transition:.3s;
+display:inline-block;
+padding:18px 35px;
+background:var(--verde);
+color:white;
+font-weight:700;
+text-decoration:none;
+border-radius:50px;
+transition:.3s;
 }
 
 .btn:hover{
-    transform:translateY(-3px);
+transform:translateY(-4px);
 }
 
 /* BENEFICIOS */
 
 .section{
-    padding:90px 20px;
+padding:90px 20px;
 }
 
 .container{
-    max-width:1200px;
-    margin:auto;
+max-width:1200px;
+margin:auto;
 }
 
 .title{
-    text-align:center;
-    font-size:40px;
-    color:var(--primary);
-    margin-bottom:50px;
+text-align:center;
+font-size:42px;
+margin-bottom:60px;
+color:var(--azul);
 }
 
 .cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:25px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
 }
 
 .card{
-    background:white;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-    transition:.3s;
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+border-top:4px solid var(--dourado);
 }
 
 .card:hover{
-    transform:translateY(-6px);
+transform:translateY(-8px);
 }
 
 .card h3{
-    color:var(--primary);
-    margin-bottom:15px;
+color:var(--azul);
+margin-bottom:15px;
 }
 
 .card p{
-    color:var(--text);
-    line-height:1.6;
+line-height:1.7;
+color:#555;
 }
 
-/* SOBRE */
+/* DIFERENCIAL */
 
-.about{
-    background:var(--gray);
+.diferencial{
+background:var(--cinza);
 }
 
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:50px;
-    align-items:center;
+.diferencial-box{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
 }
 
-.about img{
-    width:100%;
-    border-radius:20px;
+.diferencial img{
+width:100%;
+border-radius:20px;
 }
 
-.about-text h2{
-    color:var(--primary);
-    margin-bottom:20px;
-    font-size:40px;
+.lista{
+list-style:none;
 }
 
-.about-text p{
-    color:#555;
-    line-height:1.8;
-    margin-bottom:15px;
+.lista li{
+padding:12px 0;
+font-size:18px;
 }
 
 /* PASSOS */
 
-.steps{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
+.passos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
 }
 
-.step{
-    text-align:center;
+.passo{
+text-align:center;
 }
 
-.number{
-    width:70px;
-    height:70px;
-    border-radius:50%;
-    background:var(--gold);
-    color:black;
-    font-size:28px;
-    font-weight:bold;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin:auto;
-    margin-bottom:20px;
+.numero{
+width:70px;
+height:70px;
+background:var(--dourado);
+margin:auto;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+font-weight:bold;
+margin-bottom:20px;
 }
 
-/* DEPOIMENTOS */
+/* FORMULARIO */
 
-.testimonials{
-    background:var(--gray);
+.formulario{
+background:var(--azul);
+color:white;
 }
 
-.testimonial{
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
+.form-box{
+max-width:700px;
+margin:auto;
 }
 
-.testimonial p{
-    line-height:1.7;
-    color:#555;
+.form-box form{
+display:flex;
+flex-direction:column;
+gap:15px;
 }
 
-.testimonial strong{
-    display:block;
-    margin-top:15px;
-    color:var(--primary);
+input,select{
+padding:16px;
+border:none;
+border-radius:10px;
+font-size:16px;
 }
 
-/* CTA */
-
-.cta{
-    background:var(--primary);
-    color:white;
-    text-align:center;
+button{
+padding:18px;
+background:var(--verde);
+border:none;
+color:white;
+font-size:18px;
+font-weight:bold;
+border-radius:10px;
+cursor:pointer;
 }
 
-.cta h2{
-    font-size:42px;
-    margin-bottom:20px;
-}
-
-.cta p{
-    margin-bottom:30px;
-    font-size:20px;
-}
-
-/* FOOTER */
+/* RODAPE */
 
 footer{
-    background:#081426;
-    color:#ccc;
-    text-align:center;
-    padding:30px;
+background:#071322;
+color:#ccc;
+text-align:center;
+padding:40px 20px;
 }
 
-/* WHATSAPP */
-
 .whatsapp{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    background:#25D366;
-    color:white;
-    width:70px;
-    height:70px;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-decoration:none;
-    font-size:34px;
-    box-shadow:0 5px 20px rgba(0,0,0,.3);
-    animation:pulse 1.5s infinite;
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+width:70px;
+height:70px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:35px;
+text-decoration:none;
+color:white;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+animation:pulse 1.5s infinite;
 }
 
 @keyframes pulse{
-    0%{transform:scale(1);}
-    50%{transform:scale(1.1);}
-    100%{transform:scale(1);}
+50%{
+transform:scale(1.1);
+}
 }
 
 @media(max-width:768px){
@@ -312,50 +304,54 @@ font-size:38px;
 font-size:18px;
 }
 
-.about-grid{
-grid-template-columns:1fr;
-}
-
 .menu{
 display:none;
+}
+
+.diferencial-box{
+grid-template-columns:1fr;
 }
 
 }
 
 </style>
 </head>
+
 <body>
 
 <header>
+
 <div class="nav">
 
 <div class="logo">
-PREVIDÊNCIA EXPERT
+INSS EXPERT
 </div>
 
 <div class="menu">
 <a href="#beneficios">Benefícios</a>
-<a href="#sobre">Sobre</a>
 <a href="#como-funciona">Como Funciona</a>
 <a href="#contato">Contato</a>
 </div>
 
 </div>
+
 </header>
 
 <section class="hero">
 
 <div class="hero-content">
 
-<h1>Seu benefício do INSS pode estar mais perto do que você imagina</h1>
+<h1>
+Descubra se você tem direito a um benefício do INSS
+</h1>
 
 <p>
-Análise especializada para aposentadorias, auxílio-doença,
-pensão por morte, BPC/LOAS e outros benefícios previdenciários.
+Nossa equipe acompanha todo o processo para você.
+Desde a análise do caso até a conclusão do benefício.
 </p>
 
-<a href="https://wa.me/5562999999999" class="btn">
-Solicitar Atendimento
+<a href="https://wa.me/5562000000000" class="btn">
+FALAR COM UM ESPECIALISTA
 </a>
 
 </div>
@@ -366,38 +362,40 @@ Solicitar Atendimento
 
 <div class="container">
 
-<h2 class="title">Benefícios Atendidos</h2>
+<h2 class="title">
+Benefícios Atendidos
+</h2>
 
 <div class="cards">
 
 <div class="card">
 <h3>Aposentadoria por Idade</h3>
-<p>Verificação completa dos requisitos e acompanhamento do processo.</p>
+<p>Análise completa dos requisitos e acompanhamento do processo.</p>
 </div>
 
 <div class="card">
 <h3>Aposentadoria Rural</h3>
-<p>Auxílio para trabalhadores rurais comprovarem sua atividade.</p>
+<p>Atendimento especializado para trabalhadores rurais.</p>
 </div>
 
 <div class="card">
-<h3>Auxílio-Doença</h3>
-<p>Orientação e defesa dos seus direitos junto ao INSS.</p>
-</div>
-
-<div class="card">
-<h3>Pensão por Morte</h3>
-<p>Suporte completo para dependentes e familiares.</p>
+<h3>Auxílio por Incapacidade</h3>
+<p>Orientação e suporte em todas as etapas do benefício.</p>
 </div>
 
 <div class="card">
 <h3>BPC / LOAS</h3>
-<p>Análise de elegibilidade e documentação necessária.</p>
+<p>Atendimento para idosos e pessoas com deficiência.</p>
 </div>
 
 <div class="card">
-<h3>Planejamento Previdenciário</h3>
-<p>Descubra a melhor estratégia para sua aposentadoria.</p>
+<h3>Pensão por Morte</h3>
+<p>Suporte para dependentes e familiares.</p>
+</div>
+
+<div class="card">
+<h3>Salário-Maternidade</h3>
+<p>Orientação sobre documentação e requisitos.</p>
 </div>
 
 </div>
@@ -406,28 +404,28 @@ Solicitar Atendimento
 
 </section>
 
-<section class="section about" id="sobre">
+<section class="section diferencial">
 
 <div class="container">
 
-<div class="about-grid">
+<div class="diferencial-box">
 
-<img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200">
+<img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85">
 
-<div class="about-text">
+<div>
 
-<h2>Atendimento Humanizado</h2>
+<h2 style="color:#0B1F3A;font-size:42px;margin-bottom:20px;">
+Você não precisa enfrentar a burocracia sozinho
+</h2>
 
-<p>
-Nossa equipe atua na análise de benefícios previdenciários
-com foco em segurança, transparência e orientação completa.
-</p>
-
-<p>
-Cada caso é avaliado individualmente para identificar
-as melhores oportunidades e garantir que seus direitos
-sejam respeitados.
-</p>
+<ul class="lista">
+<li>✔ Análise do seu caso</li>
+<li>✔ Organização dos documentos</li>
+<li>✔ Entrada no benefício</li>
+<li>✔ Acompanhamento completo</li>
+<li>✔ Orientação para perícias</li>
+<li>✔ Atendimento durante todo o processo</li>
+</ul>
 
 </div>
 
@@ -441,32 +439,34 @@ sejam respeitados.
 
 <div class="container">
 
-<h2 class="title">Como Funciona</h2>
+<h2 class="title">
+Como Funciona
+</h2>
 
-<div class="steps">
+<div class="passos">
 
-<div class="step">
-<div class="number">1</div>
+<div class="passo">
+<div class="numero">1</div>
 <h3>Contato</h3>
-<p>Envie sua dúvida pelo WhatsApp.</p>
+<p>Você entra em contato pelo WhatsApp.</p>
 </div>
 
-<div class="step">
-<div class="number">2</div>
+<div class="passo">
+<div class="numero">2</div>
 <h3>Análise</h3>
-<p>Seu caso será avaliado pela equipe.</p>
+<p>A equipe avalia sua situação.</p>
 </div>
 
-<div class="step">
-<div class="number">3</div>
-<h3>Orientação</h3>
-<p>Receba informações claras sobre seus direitos.</p>
-</div>
-
-<div class="step">
-<div class="number">4</div>
+<div class="passo">
+<div class="numero">3</div>
 <h3>Atendimento</h3>
-<p>Inicie seu processo com segurança.</p>
+<p>Receba orientação e acompanhamento especializado.</p>
+</div>
+
+<div class="passo">
+<div class="numero">4</div>
+<h3>Conclusão</h3>
+<p>Acompanhamento até a finalização do atendimento.</p>
 </div>
 
 </div>
@@ -475,54 +475,40 @@ sejam respeitados.
 
 </section>
 
-<section class="section testimonials">
+<section class="section formulario" id="contato">
 
 <div class="container">
 
-<h2 class="title">Depoimentos</h2>
+<div class="form-box">
 
-<div class="cards">
+<h2 style="text-align:center;margin-bottom:30px;font-size:42px;">
+Solicite Atendimento
+</h2>
 
-<div class="testimonial">
-<p>
-"Recebi toda orientação necessária para solicitar minha aposentadoria."
-</p>
-<strong>Cliente</strong>
+<form id="leadForm">
+
+<input type="text" id="nome" placeholder="Seu nome" required>
+
+<input type="tel" id="telefone" placeholder="Seu telefone" required>
+
+<select id="beneficio">
+
+<option>Aposentadoria</option>
+<option>Auxílio por Incapacidade</option>
+<option>Pensão por Morte</option>
+<option>BPC / LOAS</option>
+<option>Salário-Maternidade</option>
+<option>Outro</option>
+
+</select>
+
+<button type="submit">
+QUERO SER ATENDIDO
+</button>
+
+</form>
+
 </div>
-
-<div class="testimonial">
-<p>
-"Atendimento rápido e esclarecedor. Recomendo."
-</p>
-<strong>Cliente</strong>
-</div>
-
-<div class="testimonial">
-<p>
-"Consegui entender meus direitos e iniciar meu processo."
-</p>
-<strong>Cliente</strong>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="section cta" id="contato">
-
-<div class="container">
-
-<h2>Fale com um Especialista</h2>
-
-<p>
-Tire suas dúvidas e descubra quais benefícios você pode ter direito.
-</p>
-
-<a href="https://wa.me/5562999999999" class="btn">
-Conversar no WhatsApp
-</a>
 
 </div>
 
@@ -530,19 +516,47 @@ Conversar no WhatsApp
 
 <footer>
 
-<p>
-© 2026 - Especialistas em Direito Previdenciário
-</p>
+<h3>Atendimento Previdenciário Especializado</h3>
 
-<p>
-WhatsApp: (62) 99999-9999
-</p>
+<br>
+
+<p>Parceria com equipe especializada em Direito Previdenciário</p>
+
+<br>
+
+<p>WhatsApp: (62) XXXXX-XXXX</p>
+
+<p>Instagram: @seuinstagram</p>
 
 </footer>
 
-<a class="whatsapp" href="https://wa.me/5562999999999">
+<a class="whatsapp" href="https://wa.me/5562000000000">
 💬
 </a>
+
+<script>
+
+document.getElementById("leadForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+const nome=document.getElementById("nome").value;
+const telefone=document.getElementById("telefone").value;
+const beneficio=document.getElementById("beneficio").value;
+
+const mensagem=
+`Olá! Meu nome é ${nome}.
+Telefone: ${telefone}.
+Tenho interesse em informações sobre: ${beneficio}.`;
+
+window.open(
+`https://wa.me/5562000000000?text=${encodeURIComponent(mensagem)}`,
+'_blank'
+);
+
+});
+
+</script>
 
 </body>
 </html>
