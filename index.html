@@ -1,648 +1,548 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Especialistas em Direito Previdenciário</title>
 
-<title>Para Lara Alice ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+:root{
+    --primary:#0B1F3A;
+    --gold:#D4AF37;
+    --white:#ffffff;
+    --gray:#f4f6f9;
+    --text:#444;
 }
 
 body{
-
-height:100vh;
-overflow:hidden;
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-position:relative;
-
-color:white;
-text-align:center;
-
-background:black;
-
+    background:#fff;
+    color:#222;
+    overflow-x:hidden;
 }
 
-/* FOTO FUNDO */
-
-body::before{
-
-content:"";
-
-position:absolute;
-
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-background-image:url("./Lara Alice.jpeg");
-
-background-size:contain;
-background-repeat:no-repeat;
-background-position:center;
-
-filter:brightness(0.55);
-
-z-index:-2;
-
+html{
+    scroll-behavior:smooth;
 }
 
-/* ESCURECER */
+/* HEADER */
 
-body::after{
-
-content:"";
-
-position:absolute;
-
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-background:rgba(0,0,0,0.25);
-
-z-index:-1;
-
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:999;
+    background:rgba(11,31,58,.95);
+    backdrop-filter:blur(10px);
 }
 
-/* CONTAINER */
-
-.carta-container{
-
-position:relative;
-
-width:430px;
-height:540px;
-
-perspective:1200px;
-
+.nav{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px;
 }
 
-/* CARTA */
-
-.carta{
-
-position:absolute;
-
-width:100%;
-height:100%;
-
-background:rgba(255,255,255,0.10);
-
-backdrop-filter:blur(8px);
-
-border-radius:25px;
-
-overflow:hidden;
-
-box-shadow:0 0 35px rgba(0,0,0,0.45);
-
-transform-style:preserve-3d;
-
-transition:1s;
-
+.logo{
+    color:var(--gold);
+    font-size:24px;
+    font-weight:800;
 }
 
-/* TAMPA */
-
-.tampa{
-
-position:absolute;
-
-top:0;
-left:0;
-
-width:100%;
-height:180px;
-
-background:#ffd6e0;
-
-clip-path:polygon(0 0,100% 0,50% 100%);
-
-transform-origin:top;
-
-transition:1s;
-
-z-index:5;
-
+.menu{
+    display:flex;
+    gap:25px;
 }
 
-.aberta .tampa{
-
-transform:rotateX(180deg);
-
+.menu a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
 }
 
-/* BOTÃO ABRIR */
-
-#abrirBtn{
-
-position:absolute;
-
-top:50%;
-left:50%;
-
-transform:translate(-50%,-50%);
-
-z-index:10;
-
+.menu a:hover{
+    color:var(--gold);
 }
 
-/* CONTEÚDO */
+/* HERO */
 
-.conteudo{
-
-position:absolute;
-
-width:100%;
-height:100%;
-
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-
-padding:35px;
-
-opacity:0;
-
-transition:1s;
-
+.hero{
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(11,31,58,.85),rgba(11,31,58,.85)),
+    url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1400');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:30px;
 }
 
-.aberta .conteudo{
-
-opacity:1;
-
+.hero-content{
+    max-width:900px;
+    color:white;
 }
 
-/* FLORES */
-
-.flor{
-
-position:absolute;
-
-width:95px;
-height:95px;
-
-object-fit:contain;
-
-pointer-events:none;
-
-filter:drop-shadow(0 0 10px rgba(0,0,0,0.35));
-
-animation:pulse 4s infinite ease-in-out;
-
-z-index:1;
-
+.hero h1{
+    font-size:58px;
+    margin-bottom:20px;
 }
 
-.flor1{
-top:15px;
-left:15px;
+.hero p{
+    font-size:22px;
+    margin-bottom:35px;
+    line-height:1.6;
 }
 
-.flor2{
-top:15px;
-right:35px;
+.btn{
+    display:inline-block;
+    padding:18px 35px;
+    background:var(--gold);
+    color:#111;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:700;
+    transition:.3s;
 }
 
-.flor3{
-bottom:15px;
-left:15px;
+.btn:hover{
+    transform:translateY(-3px);
 }
 
-.flor4{
-bottom:15px;
-right:35px;
+/* BENEFICIOS */
+
+.section{
+    padding:90px 20px;
 }
 
-/* TÍTULO */
-
-h1{
-
-font-size:2.3rem;
-
-margin-bottom:25px;
-
-z-index:2;
-
+.container{
+    max-width:1200px;
+    margin:auto;
 }
 
-/* FRASES */
-
-.frase{
-
-font-size:1.45rem;
-
-line-height:1.6;
-
-min-height:160px;
-
-display:flex;
-
-justify-content:center;
-align-items:center;
-
-padding:10px;
-
-transition:0.5s;
-
-z-index:2;
-
+.title{
+    text-align:center;
+    font-size:40px;
+    color:var(--primary);
+    margin-bottom:50px;
 }
 
-/* BOTÕES */
-
-button{
-
-padding:15px 35px;
-
-border:none;
-
-border-radius:40px;
-
-background:#ffe5ec;
-
-color:#ff3366;
-
-font-size:1rem;
-
-font-weight:bold;
-
-cursor:pointer;
-
-transition:0.3s;
-
-z-index:2;
-
-margin-top:10px;
-
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
 }
 
-button:hover{
-
-transform:scale(1.05);
-
-background:white;
-
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
 }
 
-/* ANIMAÇÕES */
-
-.fade-out{
-
-opacity:0;
-transform:translateY(-20px);
-
+.card:hover{
+    transform:translateY(-6px);
 }
 
-.fade-in{
-
-animation:fadeIn 0.8s ease;
-
+.card h3{
+    color:var(--primary);
+    margin-bottom:15px;
 }
 
-@keyframes fadeIn{
-
-from{
-opacity:0;
-transform:translateY(20px);
+.card p{
+    color:var(--text);
+    line-height:1.6;
 }
 
-to{
-opacity:1;
-transform:translateY(0);
+/* SOBRE */
+
+.about{
+    background:var(--gray);
 }
 
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    border-radius:20px;
+}
+
+.about-text h2{
+    color:var(--primary);
+    margin-bottom:20px;
+    font-size:40px;
+}
+
+.about-text p{
+    color:#555;
+    line-height:1.8;
+    margin-bottom:15px;
+}
+
+/* PASSOS */
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.step{
+    text-align:center;
+}
+
+.number{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:var(--gold);
+    color:black;
+    font-size:28px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:auto;
+    margin-bottom:20px;
+}
+
+/* DEPOIMENTOS */
+
+.testimonials{
+    background:var(--gray);
+}
+
+.testimonial{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.testimonial p{
+    line-height:1.7;
+    color:#555;
+}
+
+.testimonial strong{
+    display:block;
+    margin-top:15px;
+    color:var(--primary);
+}
+
+/* CTA */
+
+.cta{
+    background:var(--primary);
+    color:white;
+    text-align:center;
+}
+
+.cta h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.cta p{
+    margin-bottom:30px;
+    font-size:20px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#081426;
+    color:#ccc;
+    text-align:center;
+    padding:30px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#25D366;
+    color:white;
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    font-size:34px;
+    box-shadow:0 5px 20px rgba(0,0,0,.3);
+    animation:pulse 1.5s infinite;
 }
 
 @keyframes pulse{
-
-0%{
-transform:scale(1);
+    0%{transform:scale(1);}
+    50%{transform:scale(1.1);}
+    100%{transform:scale(1);}
 }
-
-50%{
-transform:scale(1.04);
-}
-
-100%{
-transform:scale(1);
-}
-
-}
-
-/* FINAL */
-
-.final{
-
-font-size:1.3rem;
-
-line-height:1.8;
-
-padding:15px;
-
-animation:brilho 2s infinite alternate;
-
-}
-
-@keyframes brilho{
-
-from{
-text-shadow:0 0 10px #ff7aa2;
-}
-
-to{
-text-shadow:0 0 25px #ffb3c7;
-}
-
-}
-
-/* RESPONSIVO */
 
 @media(max-width:768px){
 
-.carta-container{
-
-width:92%;
-height:78vh;
-
+.hero h1{
+font-size:38px;
 }
 
-h1{
-
-font-size:2rem;
-
+.hero p{
+font-size:18px;
 }
 
-.frase{
-
-font-size:1.15rem;
-
-min-height:140px;
-
+.about-grid{
+grid-template-columns:1fr;
 }
 
-button{
-
-width:100%;
-
-padding:14px 20px;
-
-}
-
-.flor{
-
-width:72px;
-height:72px;
-
-}
-
-.flor1{
-top:5px;
-left:5px;
-}
-
-.flor2{
-top:5px;
-right:20px;
-}
-
-.flor3{
-bottom:5px;
-left:5px;
-}
-
-.flor4{
-bottom:5px;
-right:20px;
-}
-
-.final{
-
-font-size:1.05rem;
-
+.menu{
+display:none;
 }
 
 }
 
 </style>
 </head>
-
 <body>
 
-<div class="carta-container">
+<header>
+<div class="nav">
 
-<div class="carta" id="carta">
-
-<div class="tampa"></div>
-
-<button id="abrirBtn" onclick="abrirCarta()">
-Abrir ❤️
-</button>
-
-<div class="conteudo">
-
-<!-- FLORES -->
-
-<img src="https://i.postimg.cc/5YPwKJX1/Design-sem-nome-4.png"
-class="flor flor1">
-
-<img src="https://i.postimg.cc/0KqtxP8m/d29214c878893e2f5b87a5355799461f.png"
-class="flor flor2">
-
-<img src="https://i.postimg.cc/D4KCFn2P/png-clipart-rose-single-red-rose-red-rose-flower-arranging-plant-stem-thumbnail.png"
-class="flor flor3">
-
-<img src="https://i.postimg.cc/fShHZDwK/png-transparent-purple-cosmos-flower-illustration-flower-blossom-flower-purple-violet-color-thumbnai.png"
-class="flor flor4">
-
-<h1>💌 Para Lara Alice</h1>
-
-<div class="frase fade-in" id="frase">
-
-🎧 Coloque os fones de ouvido...
-
+<div class="logo">
+PREVIDÊNCIA EXPERT
 </div>
 
-<button id="btnMusica" onclick="iniciarMusica()">
-Já coloquei ❤️
-</button>
-
-<button id="btnProxima"
-onclick="proximaMensagem()"
-style="display:none;">
-
-Próxima mensagem ❤️
-
-</button>
-
+<div class="menu">
+<a href="#beneficios">Benefícios</a>
+<a href="#sobre">Sobre</a>
+<a href="#como-funciona">Como Funciona</a>
+<a href="#contato">Contato</a>
 </div>
 
 </div>
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Seu benefício do INSS pode estar mais perto do que você imagina</h1>
+
+<p>
+Análise especializada para aposentadorias, auxílio-doença,
+pensão por morte, BPC/LOAS e outros benefícios previdenciários.
+</p>
+
+<a href="https://wa.me/5562999999999" class="btn">
+Solicitar Atendimento
+</a>
 
 </div>
 
-<!-- MÚSICA -->
+</section>
 
-<audio id="musica">
+<section class="section" id="beneficios">
 
-<source src="./Lara Alice (2).mp3" type="audio/mpeg">
+<div class="container">
 
-</audio>
+<h2 class="title">Benefícios Atendidos</h2>
 
-<script>
+<div class="cards">
 
-const mensagens = [
+<div class="card">
+<h3>Aposentadoria por Idade</h3>
+<p>Verificação completa dos requisitos e acompanhamento do processo.</p>
+</div>
 
-"Essa música foi feita pensando em você ❤️",
+<div class="card">
+<h3>Aposentadoria Rural</h3>
+<p>Auxílio para trabalhadores rurais comprovarem sua atividade.</p>
+</div>
 
-"Seu olhar junto com seu sorriso me desmonta completamente ❤️",
+<div class="card">
+<h3>Auxílio-Doença</h3>
+<p>Orientação e defesa dos seus direitos junto ao INSS.</p>
+</div>
 
-"Você merece viver coisas leves e bonitas 🌸",
+<div class="card">
+<h3>Pensão por Morte</h3>
+<p>Suporte completo para dependentes e familiares.</p>
+</div>
 
-"Seu jeito me traz paz até nos dias difíceis 🌷",
+<div class="card">
+<h3>BPC / LOAS</h3>
+<p>Análise de elegibilidade e documentação necessária.</p>
+</div>
 
-"Tem algo em você que faz qualquer momento ficar especial 🌹",
-
-"Você é daquelas pessoas difíceis de esquecer 💐",
-
-"Seu sorriso consegue melhorar meu dia sem esforço 🌺",
-
-"Você é muito mais incrível do que imagina 🌻",
-
-"Eu adoro nossa conexão e o jeito leve que tudo acontece ❤️",
-
-"Seu olhar parece abraço 🌷",
-
-"Você merece alguém que te motive e cuide do seu coração 🌹",
-
-"Seu sorriso parece que desarma qualquer coisa ruim em mim ❤️",
-
-"Você é intensa do jeito mais bonito possível 🌸",
-
-"Eu gosto da sua companhia mais do que imaginava 🌷",
-
-"Até agora estou me segurando bastante pra não te abraçar toda hora ❤️",
-
-"Você apareceu de mansinho e bagunçou tudo aqui dentro 🌹"
-
-];
-
-let index = 0;
-
-function abrirCarta(){
-
-document
-.getElementById("carta")
-.classList.add("aberta");
-
-document
-.getElementById("abrirBtn")
-.style.display = "none";
-
-}
-
-function iniciarMusica(){
-
-document
-.getElementById("musica")
-.play();
-
-document
-.getElementById("btnMusica")
-.style.display = "none";
-
-document
-.getElementById("btnProxima")
-.style.display = "block";
-
-document
-.getElementById("frase")
-.innerHTML = mensagens[0];
-
-index = 1;
-
-}
-
-function proximaMensagem(){
-
-const frase =
-document.getElementById("frase");
-
-frase.classList.remove("fade-in");
-
-frase.classList.add("fade-out");
-
-setTimeout(()=>{
-
-if(index < mensagens.length){
-
-frase.innerHTML = mensagens[index];
-
-index++;
-
-}else{
-
-frase.innerHTML = `
-
-<div class="final">
-
-❤️ ❤️ ❤️<br><br>
-
-Eu sei que ainda é muito cedo...<br><br>
-
-Mas se um dia você me der a oportunidade,<br>
-eu prometo fazer o possível pra te fazer feliz,<br>
-te apoiar, te motivar e cuidar do seu coração da forma mais sincera que eu conseguir ❤️<br><br>
-
-Porque desde que você apareceu,<br>
-algo aqui dentro mudou de um jeito bom 🌹<br><br>
-
-Com carinho,<br>
-Felipe ❤️
-
-<br><br>
-
-❤️ ❤️ ❤️
+<div class="card">
+<h3>Planejamento Previdenciário</h3>
+<p>Descubra a melhor estratégia para sua aposentadoria.</p>
+</div>
 
 </div>
 
-`;
+</div>
 
-document
-.getElementById("btnProxima")
-.style.display = "none";
+</section>
 
-}
+<section class="section about" id="sobre">
 
-frase.classList.remove("fade-out");
+<div class="container">
 
-void frase.offsetWidth;
+<div class="about-grid">
 
-frase.classList.add("fade-in");
+<img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200">
 
-},500);
+<div class="about-text">
 
-}
+<h2>Atendimento Humanizado</h2>
 
-</script>
+<p>
+Nossa equipe atua na análise de benefícios previdenciários
+com foco em segurança, transparência e orientação completa.
+</p>
+
+<p>
+Cada caso é avaliado individualmente para identificar
+as melhores oportunidades e garantir que seus direitos
+sejam respeitados.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="como-funciona">
+
+<div class="container">
+
+<h2 class="title">Como Funciona</h2>
+
+<div class="steps">
+
+<div class="step">
+<div class="number">1</div>
+<h3>Contato</h3>
+<p>Envie sua dúvida pelo WhatsApp.</p>
+</div>
+
+<div class="step">
+<div class="number">2</div>
+<h3>Análise</h3>
+<p>Seu caso será avaliado pela equipe.</p>
+</div>
+
+<div class="step">
+<div class="number">3</div>
+<h3>Orientação</h3>
+<p>Receba informações claras sobre seus direitos.</p>
+</div>
+
+<div class="step">
+<div class="number">4</div>
+<h3>Atendimento</h3>
+<p>Inicie seu processo com segurança.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section testimonials">
+
+<div class="container">
+
+<h2 class="title">Depoimentos</h2>
+
+<div class="cards">
+
+<div class="testimonial">
+<p>
+"Recebi toda orientação necessária para solicitar minha aposentadoria."
+</p>
+<strong>Cliente</strong>
+</div>
+
+<div class="testimonial">
+<p>
+"Atendimento rápido e esclarecedor. Recomendo."
+</p>
+<strong>Cliente</strong>
+</div>
+
+<div class="testimonial">
+<p>
+"Consegui entender meus direitos e iniciar meu processo."
+</p>
+<strong>Cliente</strong>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section cta" id="contato">
+
+<div class="container">
+
+<h2>Fale com um Especialista</h2>
+
+<p>
+Tire suas dúvidas e descubra quais benefícios você pode ter direito.
+</p>
+
+<a href="https://wa.me/5562999999999" class="btn">
+Conversar no WhatsApp
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 - Especialistas em Direito Previdenciário
+</p>
+
+<p>
+WhatsApp: (62) 99999-9999
+</p>
+
+</footer>
+
+<a class="whatsapp" href="https://wa.me/5562999999999">
+💬
+</a>
 
 </body>
 </html>
