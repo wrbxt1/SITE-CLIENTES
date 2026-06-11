@@ -8,13 +8,204 @@
 
 <title>Amuy Menezes Advocacia Previdenciária</title>
 
+<meta name="description"
+content="Advocacia especializada em aposentadorias, BPC/LOAS, pensão por morte, auxílio por incapacidade e planejamento previdenciário.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+.section-header{
+text-align:center;
+max-width:800px;
+margin:auto auto 70px;
+}
 
+.section-tag{
+display:inline-block;
+padding:10px 18px;
+border-radius:999px;
+background:rgba(200,168,93,.08);
+border:1px solid rgba(200,168,93,.3);
+color:var(--gold);
+margin-bottom:20px;
+}
+
+.section-header h2{
+font-size:56px;
+font-family:'Playfair Display',serif;
+margin-bottom:20px;
+}
+
+.section-header p{
+color:#999;
+line-height:1.8;
+}
+
+.areas{
+padding:120px 0;
+}
+
+.areas-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.area-card{
+background:rgba(255,255,255,.03);
+border:1px solid rgba(255,255,255,.05);
+padding:35px;
+border-radius:24px;
+transition:.3s;
+}
+
+.area-card:hover{
+transform:translateY(-8px);
+border-color:rgba(200,168,93,.4);
+}
+
+.area-number{
+font-size:50px;
+color:var(--gold);
+font-family:'Playfair Display',serif;
+margin-bottom:20px;
+}
+
+.process-section{
+padding:120px 0;
+background:#090909;
+}
+
+.timeline{
+max-width:900px;
+margin:auto;
+}
+
+.timeline-item{
+display:flex;
+gap:25px;
+margin-bottom:50px;
+}
+
+.timeline-dot{
+width:20px;
+height:20px;
+background:var(--gold);
+border-radius:50%;
+margin-top:10px;
+}
+
+.timeline-content h3{
+margin-bottom:10px;
+}
+
+.timeline-content p{
+color:#bbb;
+line-height:1.8;
+}
+
+.faq-section{
+padding:120px 0;
+}
+
+.faq-container{
+max-width:900px;
+margin:auto;
+}
+
+.faq-container details{
+background:rgba(255,255,255,.03);
+padding:25px;
+margin-bottom:20px;
+border-radius:20px;
+}
+
+.faq-container summary{
+cursor:pointer;
+font-weight:600;
+font-size:18px;
+}
+
+.faq-container p{
+margin-top:15px;
+color:#bbb;
+line-height:1.8;
+}
+
+.final-cta{
+padding:160px 0;
+text-align:center;
+background:linear-gradient(
+180deg,
+transparent,
+rgba(200,168,93,.08)
+);
+}
+
+.final-cta h2{
+font-size:60px;
+font-family:'Playfair Display',serif;
+max-width:900px;
+margin:auto auto 25px;
+}
+
+.final-cta p{
+font-size:20px;
+margin-bottom:35px;
+color:#bbb;
+}
+
+footer{
+padding:80px 0 40px;
+border-top:1px solid rgba(255,255,255,.05);
+}
+
+.footer-grid{
+display:flex;
+justify-content:space-between;
+gap:40px;
+margin-bottom:40px;
+}
+
+.footer-grid h3{
+font-size:30px;
+color:var(--gold);
+font-family:'Playfair Display',serif;
+}
+
+.footer-grid p{
+color:#999;
+line-height:1.8;
+}
+
+.copyright{
+text-align:center;
+color:#666;
+padding-top:30px;
+border-top:1px solid rgba(255,255,255,.05);
+}
+
+.whatsapp{
+position:fixed;
+right:25px;
+bottom:25px;
+width:70px;
+height:70px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+font-size:30px;
+text-decoration:none;
+background:linear-gradient(135deg,var(--gold),var(--gold-light));
+color:#000;
+font-weight:bold;
+box-shadow:0 0 30px rgba(200,168,93,.4);
+z-index:9999;
+}
 <style>
 
 *{
@@ -27,458 +218,268 @@ html{
 scroll-behavior:smooth;
 }
 
-body{
-
-background:#050505;
-font-family:'Inter',sans-serif;
-color:#fff;
-overflow-x:hidden;
-
-}
-
 :root{
-
 --gold:#C8A85D;
 --gold-light:#E3C57A;
 --black:#050505;
---card:#0E0E0E;
+--card:#111;
 --text:#E8E8E8;
+}
 
+body{
+background:#050505;
+font-family:'Inter',sans-serif;
+color:white;
+overflow-x:hidden;
 }
 
 body::before{
-
 content:"";
 position:fixed;
 top:-300px;
 right:-300px;
-
 width:700px;
 height:700px;
-
-background:
-radial-gradient(
-circle,
-rgba(200,168,93,.18),
-transparent 70%
-);
-
+background:radial-gradient(circle,rgba(200,168,93,.18),transparent 70%);
 filter:blur(100px);
-
-pointer-events:none;
 z-index:-1;
-
 }
 
 body::after{
-
 content:"";
 position:fixed;
 bottom:-300px;
 left:-300px;
-
 width:700px;
 height:700px;
-
-background:
-radial-gradient(
-circle,
-rgba(200,168,93,.10),
-transparent 70%
-);
-
+background:radial-gradient(circle,rgba(200,168,93,.10),transparent 70%);
 filter:blur(120px);
-
-pointer-events:none;
 z-index:-1;
-
-}
-
-/* NAVBAR */
-
-header{
-
-position:fixed;
-top:0;
-left:0;
-
-width:100%;
-
-padding:25px 0;
-
-z-index:999;
-
-background:rgba(5,5,5,.65);
-
-backdrop-filter:blur(15px);
-
-border-bottom:1px solid rgba(255,255,255,.04);
-
 }
 
 .container{
-
 width:90%;
 max-width:1400px;
 margin:auto;
+}
 
+/* HEADER */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 0;
+background:rgba(5,5,5,.8);
+backdrop-filter:blur(15px);
+z-index:999;
+border-bottom:1px solid rgba(255,255,255,.05);
 }
 
 .nav{
-
 display:flex;
 align-items:center;
 justify-content:space-between;
-
 }
 
 .logo{
-
-font-size:28px;
 font-family:'Playfair Display',serif;
-
+font-size:28px;
 font-weight:700;
-
 color:var(--gold);
-
 letter-spacing:2px;
-
 }
 
 .menu{
-
 display:flex;
-gap:35px;
-
+gap:30px;
 }
 
 .menu a{
-
 text-decoration:none;
 color:#ddd;
-
-font-size:15px;
-
 transition:.3s;
-
 }
 
 .menu a:hover{
-
 color:var(--gold);
-
 }
 
 .btn-nav{
-
 padding:14px 28px;
-
 border-radius:50px;
-
-background:
-linear-gradient(
-135deg,
-var(--gold),
-var(--gold-light)
-);
-
-color:#000;
+background:linear-gradient(135deg,var(--gold),var(--gold-light));
+color:black;
 font-weight:700;
-
 text-decoration:none;
-
 }
 
 /* HERO */
 
 .hero{
-
-min-height:100vh;
-
+min-height:85vh;
 display:flex;
 align-items:center;
-
+padding-top:120px;
 position:relative;
-
-overflow:hidden;
-
 }
 
-.hero-content{
-
-max-width:850px;
-
+.hero-wrapper{
+display:grid;
+grid-template-columns:1.1fr .9fr;
+gap:80px;
+align-items:center;
 }
 
 .hero-tag{
-
 display:inline-block;
-
 padding:10px 18px;
-
-border:1px solid rgba(200,168,93,.4);
-
-background:rgba(200,168,93,.08);
-
 border-radius:999px;
-
+background:rgba(200,168,93,.08);
+border:1px solid rgba(200,168,93,.3);
 color:var(--gold);
-
-font-size:14px;
-
-margin-bottom:30px;
-
+margin-bottom:25px;
 }
 
 .hero h1{
-
 font-family:'Playfair Display',serif;
-
-font-size:clamp(4rem,7vw,7rem);
-
-line-height:1.05;
-
-font-weight:700;
-
-margin-bottom:30px;
-
+font-size:clamp(3rem,5vw,5rem);
+line-height:1.1;
+margin-bottom:25px;
 }
 
 .hero h1 span{
-
 color:var(--gold);
-
 }
 
 .hero p{
-
 font-size:20px;
-
-line-height:1.9;
-
+line-height:1.8;
 color:#bdbdbd;
-
-max-width:720px;
-
-margin-bottom:40px;
-
+margin-bottom:35px;
+max-width:650px;
 }
 
 .hero-buttons{
-
 display:flex;
 gap:20px;
 flex-wrap:wrap;
-
 }
 
 .btn-primary{
-
 padding:18px 36px;
-
 border-radius:50px;
-
 text-decoration:none;
-
-background:
-linear-gradient(
-135deg,
-var(--gold),
-var(--gold-light)
-);
-
-color:#000;
-
+background:linear-gradient(135deg,var(--gold),var(--gold-light));
+color:black;
 font-weight:700;
-
-font-size:16px;
-
-transition:.4s;
-
+transition:.3s;
 }
 
 .btn-primary:hover{
-
 transform:translateY(-4px);
-
 }
 
 .btn-secondary{
-
 padding:18px 36px;
-
 border-radius:50px;
-
-border:1px solid rgba(255,255,255,.12);
-
-background:rgba(255,255,255,.03);
-
-backdrop-filter:blur(10px);
-
 text-decoration:none;
-
+border:1px solid rgba(255,255,255,.1);
 color:white;
-
-font-weight:600;
-
-transition:.4s;
-
 }
 
-.btn-secondary:hover{
-
-border-color:var(--gold);
-
+.hero-image{
+position:relative;
 }
 
-/* HERO CARD */
+.hero-image img{
+width:100%;
+height:650px;
+object-fit:cover;
+border-radius:30px;
+box-shadow:0 25px 80px rgba(0,0,0,.5);
+}
 
 .hero-card{
-
 position:absolute;
-
-right:8%;
-top:50%;
-
-transform:translateY(-50%);
-
-width:420px;
-
-padding:35px;
-
-background:rgba(255,255,255,.04);
-
-backdrop-filter:blur(25px);
-
-border:1px solid rgba(255,255,255,.06);
-
-border-radius:30px;
-
-box-shadow:
-0 20px 80px rgba(0,0,0,.5);
-
+bottom:25px;
+left:-40px;
+width:350px;
+padding:30px;
+border-radius:24px;
+background:rgba(10,10,10,.95);
+border:1px solid rgba(255,255,255,.05);
+backdrop-filter:blur(20px);
 }
 
 .hero-card h3{
-
-font-size:26px;
-
 margin-bottom:15px;
-
-font-family:'Playfair Display',serif;
-
-}
-
-.hero-card p{
-
-color:#bcbcbc;
-
-line-height:1.8;
-
-margin-bottom:25px;
-
+font-size:24px;
 }
 
 .hero-card ul{
-
 list-style:none;
-
 display:flex;
 flex-direction:column;
-gap:16px;
-
+gap:15px;
 }
 
 .hero-card li{
-
 display:flex;
 align-items:center;
-gap:12px;
-
-color:#ddd;
-
+gap:10px;
 }
 
 .check{
-
 width:12px;
 height:12px;
-
 border-radius:50%;
-
 background:var(--gold);
-
-box-shadow:
-0 0 15px var(--gold);
-
+box-shadow:0 0 10px var(--gold);
 }
 
-/* STATS PREMIUM */
+/* ESTATÍSTICAS */
 
 .stats{
-
-padding:120px 0;
-
+padding:100px 0;
 border-top:1px solid rgba(255,255,255,.05);
 border-bottom:1px solid rgba(255,255,255,.05);
-
 }
 
 .stats-grid{
-
 display:grid;
-
-grid-template-columns:
-repeat(4,1fr);
-
+grid-template-columns:repeat(4,1fr);
 gap:40px;
-
 }
 
 .stat{
-
 text-align:center;
-
 }
 
 .stat h2{
-
-font-size:58px;
-
+font-size:60px;
 font-family:'Playfair Display',serif;
-
 color:var(--gold);
-
 margin-bottom:10px;
-
 }
 
 .stat p{
-
-color:#aaa;
-
-font-size:15px;
-
-letter-spacing:1px;
-
+color:#999;
 text-transform:uppercase;
-
+letter-spacing:1px;
 }
 
 /* RESPONSIVO */
 
 @media(max-width:1100px){
 
-.hero-card{
-
-display:none;
-
+.hero-wrapper{
+grid-template-columns:1fr;
 }
 
-.hero h1{
-
-font-size:60px;
-
+.hero-image{
+display:none;
 }
 
 }
@@ -490,21 +491,15 @@ display:none;
 }
 
 .hero h1{
-
-font-size:46px;
-
+font-size:42px;
 }
 
 .hero p{
-
 font-size:18px;
-
 }
 
 .stats-grid{
-
 grid-template-columns:1fr 1fr;
-
 }
 
 }
@@ -525,15 +520,17 @@ AMUY MENEZES
 
 <nav class="menu">
 
-<a href="#">Início</a>
-<a href="#">Benefícios</a>
-<a href="#">Processo</a>
-<a href="#">FAQ</a>
-<a href="#">Contato</a>
+<a href="#inicio">Início</a>
+<a href="#areas">Benefícios</a>
+<a href="#processo">Processo</a>
+<a href="#faq">FAQ</a>
+<a href="#contato">Contato</a>
 
 </nav>
 
-<a href="#" class="btn-nav">
+<a href="https://wa.me/5562000000000"
+target="_blank"
+class="btn-nav">
 Solicitar Atendimento
 </a>
 
@@ -541,9 +538,11 @@ Solicitar Atendimento
 
 </header>
 
-<section class="hero">
+<section class="hero" id="inicio">
 
 <div class="container">
+
+<div class="hero-wrapper">
 
 <div class="hero-content">
 
@@ -552,29 +551,28 @@ Especialistas em Direito Previdenciário
 </div>
 
 <h1>
-
 Seu benefício merece
 <span>acompanhamento especializado.</span>
-
 </h1>
 
 <p>
-
 Atendimento completo para aposentadorias,
 benefícios por incapacidade,
 BPC/LOAS,
-pensão por morte
-e demais demandas previdenciárias.
-
+pensão por morte e planejamento previdenciário.
 </p>
 
 <div class="hero-buttons">
 
-<a href="#" class="btn-primary">
+<a href="https://wa.me/5562000000000"
+target="_blank"
+class="btn-primary">
 Solicitar Atendimento
 </a>
 
-<a href="#" class="btn-secondary">
+<a href="https://wa.me/5562000000000"
+target="_blank"
+class="btn-secondary">
 Falar com Especialista
 </a>
 
@@ -582,20 +580,15 @@ Falar com Especialista
 
 </div>
 
-</div>
+<div class="hero-image">
+
+<img
+src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=900&q=80"
+alt="Advocacia Previdenciária">
 
 <div class="hero-card">
 
-<h3>
-Atendimento Completo
-</h3>
-
-<p>
-
-Nossa equipe acompanha você desde a análise documental
-até a conclusão do benefício.
-
-</p>
+<h3>Atendimento Completo</h3>
 
 <ul>
 
@@ -603,13 +596,19 @@ até a conclusão do benefício.
 
 <li><span class="check"></span>Documentação</li>
 
-<li><span class="check"></span>Orientação para Perícias</li>
+<li><span class="check"></span>Perícias Médicas</li>
 
 <li><span class="check"></span>Acompanhamento Integral</li>
 
 <li><span class="check"></span>Suporte Especializado</li>
 
 </ul>
+
+</div>
+
+</div>
+
+</div>
 
 </div>
 
@@ -622,23 +621,23 @@ até a conclusão do benefício.
 <div class="stats-grid">
 
 <div class="stat">
-<h2>15+</h2>
-<p>Anos de Experiência</p>
+<h2>500+</h2>
+<p>Clientes Atendidos</p>
 </div>
 
 <div class="stat">
-<h2>100%</h2>
-<p>Atendimento Humanizado</p>
+<h2>98%</h2>
+<p>Satisfação</p>
 </div>
 
 <div class="stat">
-<h2>24h</h2>
-<p>Suporte Inicial</p>
+<h2>10+</h2>
+<p>Anos de Atuação</p>
 </div>
 
 <div class="stat">
-<h2>Online</h2>
-<p>Atendimento Digital</p>
+<h2>Brasil</h2>
+<p>Atendimento Nacional</p>
 </div>
 
 </div>
@@ -646,9 +645,10 @@ até a conclusão do benefício.
 </div>
 
 </section>
-<!-- ÁREAS DE ATUAÇÃO -->
 
-<section class="areas">
+  <!-- ÁREAS DE ATUAÇÃO -->
+
+<section class="areas" id="areas">
 
 <div class="container">
 
@@ -659,17 +659,11 @@ até a conclusão do benefício.
 </span>
 
 <h2>
-
-Atuação especializada em
-benefícios previdenciários.
-
+Atuação especializada em benefícios previdenciários.
 </h2>
 
 <p>
-
-Nossa equipe atua de forma estratégica
-em todas as etapas do atendimento previdenciário.
-
+Nossa equipe atua estrategicamente em todas as etapas do atendimento previdenciário.
 </p>
 
 </div>
@@ -677,101 +671,39 @@ em todas as etapas do atendimento previdenciário.
 <div class="areas-grid">
 
 <div class="area-card">
-
-<div class="area-number">
-01
-</div>
-
-<h3>
-Aposentadorias
-</h3>
-
-<p>
-Orientação completa para aposentadoria por idade,
-tempo de contribuição e demais modalidades.
-</p>
-
+<div class="area-number">01</div>
+<h3>Aposentadorias</h3>
+<p>Orientação completa para aposentadoria por idade, tempo de contribuição e demais modalidades.</p>
 </div>
 
 <div class="area-card">
-
-<div class="area-number">
-02
-</div>
-
-<h3>
-Auxílio por Incapacidade
-</h3>
-
-<p>
-Atendimento especializado para benefícios
-decorrentes de incapacidade laboral.
-</p>
-
+<div class="area-number">02</div>
+<h3>Auxílio por Incapacidade</h3>
+<p>Atendimento especializado para benefícios decorrentes de incapacidade laboral.</p>
 </div>
 
 <div class="area-card">
-
-<div class="area-number">
-03
-</div>
-
-<h3>
-BPC / LOAS
-</h3>
-
-<p>
-Análise detalhada dos requisitos e documentação.
-</p>
-
+<div class="area-number">03</div>
+<h3>BPC / LOAS</h3>
+<p>Análise detalhada dos requisitos e documentação necessária.</p>
 </div>
 
 <div class="area-card">
-
-<div class="area-number">
-04
-</div>
-
-<h3>
-Pensão por Morte
-</h3>
-
-<p>
-Suporte completo para dependentes e familiares.
-</p>
-
+<div class="area-number">04</div>
+<h3>Pensão por Morte</h3>
+<p>Suporte completo para dependentes e familiares.</p>
 </div>
 
 <div class="area-card">
-
-<div class="area-number">
-05
-</div>
-
-<h3>
-Salário-Maternidade
-</h3>
-
-<p>
-Acompanhamento durante todas as etapas do pedido.
-</p>
-
+<div class="area-number">05</div>
+<h3>Salário-Maternidade</h3>
+<p>Acompanhamento durante todas as etapas do pedido.</p>
 </div>
 
 <div class="area-card">
-
-<div class="area-number">
-06
-</div>
-
-<h3>
-Planejamento Previdenciário
-</h3>
-
-<p>
-Estratégias para garantir mais segurança no futuro.
-</p>
-
+<div class="area-number">06</div>
+<h3>Planejamento Previdenciário</h3>
+<p>Estratégias para garantir mais segurança e melhores benefícios no futuro.</p>
 </div>
 
 </div>
@@ -782,7 +714,7 @@ Estratégias para garantir mais segurança no futuro.
 
 <!-- PROCESSO -->
 
-<section class="process-section">
+<section class="process-section" id="processo">
 
 <div class="container">
 
@@ -793,8 +725,7 @@ Como Funciona
 </span>
 
 <h2>
-Atendimento simples,
-rápido e transparente.
+Atendimento simples, rápido e transparente.
 </h2>
 
 </div>
@@ -802,67 +733,91 @@ rápido e transparente.
 <div class="timeline">
 
 <div class="timeline-item">
-
 <div class="timeline-dot"></div>
-
 <div class="timeline-content">
-
 <h3>Primeiro Contato</h3>
-
-<p>
-Você entra em contato com nossa equipe.
-</p>
-
+<p>Você entra em contato pelo WhatsApp e explica sua situação.</p>
 </div>
-
 </div>
 
 <div class="timeline-item">
-
 <div class="timeline-dot"></div>
-
 <div class="timeline-content">
-
 <h3>Análise do Caso</h3>
-
-<p>
-Avaliação das informações e documentos.
-</p>
-
+<p>Nossa equipe analisa documentos e identifica as melhores possibilidades.</p>
 </div>
-
 </div>
 
 <div class="timeline-item">
-
 <div class="timeline-dot"></div>
-
 <div class="timeline-content">
-
 <h3>Estratégia Previdenciária</h3>
-
-<p>
-Definição da melhor condução para o caso.
-</p>
-
+<p>Definimos o melhor caminho para buscar seu benefício.</p>
 </div>
-
 </div>
 
 <div class="timeline-item">
-
 <div class="timeline-dot"></div>
-
 <div class="timeline-content">
-
 <h3>Acompanhamento</h3>
-
-<p>
-Monitoramento contínuo do processo.
-</p>
+<p>Monitoramos cada etapa até a conclusão do processo.</p>
+</div>
+</div>
 
 </div>
 
+</div>
+
+</section>
+
+<!-- DEPOIMENTOS -->
+
+<section class="areas">
+
+<div class="container">
+
+<div class="section-header">
+
+<span class="section-tag">
+Depoimentos
+</span>
+
+<h2>
+O que nossos clientes dizem
+</h2>
+
+</div>
+
+<div class="areas-grid">
+
+<div class="area-card">
+<p>
+★★★★★
+<br><br>
+Excelente atendimento. Recebi toda a orientação necessária durante o processo.
+</p>
+<br>
+<h3>Maria Silva</h3>
+</div>
+
+<div class="area-card">
+<p>
+★★★★★
+<br><br>
+Profissionais extremamente atenciosos e comprometidos.
+</p>
+<br>
+<h3>João Pereira</h3>
+</div>
+
+<div class="area-card">
+<p>
+★★★★★
+<br><br>
+Meu benefício foi aprovado com total suporte da equipe.
+</p>
+<br>
+<h3>Ana Costa</h3>
 </div>
 
 </div>
@@ -873,7 +828,7 @@ Monitoramento contínuo do processo.
 
 <!-- FAQ -->
 
-<section class="faq-section">
+<section class="faq-section" id="faq">
 
 <div class="container">
 
@@ -884,7 +839,7 @@ Perguntas Frequentes
 </span>
 
 <h2>
-Dúvidas comuns.
+Dúvidas comuns
 </h2>
 
 </div>
@@ -892,47 +847,23 @@ Dúvidas comuns.
 <div class="faq-container">
 
 <details>
-<summary>
-Meu benefício foi negado. O que fazer?
-</summary>
-
-<p>
-Cada situação deve ser analisada individualmente.
-</p>
-
+<summary>Meu benefício foi negado. O que fazer?</summary>
+<p>Uma negativa não significa que você perdeu seu direito. É importante realizar uma análise especializada do caso.</p>
 </details>
 
 <details>
-<summary>
-Posso ser atendido online?
-</summary>
-
-<p>
-Sim. O atendimento pode ocorrer de forma digital.
-</p>
-
+<summary>Posso ser atendido online?</summary>
+<p>Sim. Todo o atendimento pode ser realizado de forma digital.</p>
 </details>
 
 <details>
-<summary>
-Quais documentos preciso apresentar?
-</summary>
-
-<p>
-A documentação varia conforme cada benefício.
-</p>
-
+<summary>Quais documentos preciso apresentar?</summary>
+<p>A documentação varia conforme o benefício solicitado. Nossa equipe orientará você.</p>
 </details>
 
 <details>
-<summary>
-O acompanhamento continua após o protocolo?
-</summary>
-
-<p>
-Sim. O atendimento ocorre durante todo o processo.
-</p>
-
+<summary>O acompanhamento continua após o protocolo?</summary>
+<p>Sim. O acompanhamento ocorre durante todo o andamento do processo.</p>
 </details>
 
 </div>
@@ -948,18 +879,16 @@ Sim. O atendimento ocorre durante todo o processo.
 <div class="container">
 
 <h2>
-
 Descubra quais são os seus direitos previdenciários.
-
 </h2>
 
 <p>
-
-Entre em contato e receba orientação especializada.
-
+Entre em contato agora mesmo e receba orientação especializada.
 </p>
 
-<a href="#"
+<a
+href="https://wa.me/5562000000000"
+target="_blank"
 class="btn-primary">
 
 Solicitar Atendimento
@@ -970,9 +899,9 @@ Solicitar Atendimento
 
 </section>
 
-<!-- RODAPÉ -->
+<!-- FOOTER -->
 
-<footer>
+<footer id="contato">
 
 <div class="container">
 
@@ -980,32 +909,23 @@ Solicitar Atendimento
 
 <div>
 
-<h3>
-AMUY MENEZES
-</h3>
+<h3>AMUY MENEZES</h3>
 
 <p>
-
-Atendimento especializado em
-Direito Previdenciário.
-
+Atendimento especializado em Direito Previdenciário.
 </p>
 
 </div>
 
 <div>
 
-<h4>
-Contato
-</h4>
+<h4>Contato</h4>
 
-<p>
-WhatsApp: (62) XXXXX-XXXX
-</p>
+<p>WhatsApp: (62) 00000-0000</p>
 
-<p>
-Instagram: @amuymenezes
-</p>
+<p>Instagram: @amuymenezes</p>
+
+<p>E-mail: contato@amuymenezes.com.br</p>
 
 </div>
 
@@ -1013,8 +933,7 @@ Instagram: @amuymenezes
 
 <div class="copyright">
 
-© 2026 Amuy Menezes Advocacia.
-Todos os direitos reservados.
+© 2026 Amuy Menezes Advocacia. Todos os direitos reservados.
 
 </div>
 
@@ -1022,369 +941,19 @@ Todos os direitos reservados.
 
 </footer>
 
-<!-- WHATSAPP -->
+<!-- BOTÃO WHATSAPP -->
 
-<a href="#"
+<a
+href="https://wa.me/5562000000000"
+target="_blank"
 class="whatsapp">
 
 💬
 
 </a>
 
-<style>
+</body>
 
-/* SEÇÕES */
+</html>
 
-.section-header{
 
-text-align:center;
-max-width:800px;
-margin:auto auto 70px;
-
-}
-
-.section-tag{
-
-display:inline-block;
-
-padding:10px 18px;
-
-border-radius:999px;
-
-background:
-rgba(200,168,93,.08);
-
-border:
-1px solid rgba(200,168,93,.3);
-
-color:var(--gold);
-
-margin-bottom:20px;
-
-}
-
-.section-header h2{
-
-font-size:58px;
-
-font-family:
-'Playfair Display',
-serif;
-
-margin-bottom:20px;
-
-}
-
-.section-header p{
-
-color:#9e9e9e;
-
-line-height:1.8;
-
-}
-
-.areas{
-
-padding:140px 0;
-
-}
-
-.areas-grid{
-
-display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(300px,1fr));
-
-gap:30px;
-
-}
-
-.area-card{
-
-background:
-rgba(255,255,255,.03);
-
-border:
-1px solid rgba(255,255,255,.05);
-
-padding:35px;
-
-border-radius:24px;
-
-transition:.4s;
-
-}
-
-.area-card:hover{
-
-transform:translateY(-10px);
-
-border-color:
-rgba(200,168,93,.4);
-
-}
-
-.area-number{
-
-font-size:55px;
-
-font-family:
-'Playfair Display';
-
-color:var(--gold);
-
-margin-bottom:20px;
-
-}
-
-.area-card h3{
-
-margin-bottom:15px;
-
-font-size:24px;
-
-}
-
-.area-card p{
-
-line-height:1.8;
-color:#b4b4b4;
-
-}
-
-/* TIMELINE */
-
-.process-section{
-
-padding:140px 0;
-
-background:#090909;
-
-}
-
-.timeline{
-
-max-width:900px;
-margin:auto;
-
-}
-
-.timeline-item{
-
-display:flex;
-gap:30px;
-
-margin-bottom:50px;
-
-}
-
-.timeline-dot{
-
-width:20px;
-height:20px;
-
-border-radius:50%;
-
-background:var(--gold);
-
-margin-top:10px;
-
-box-shadow:
-0 0 20px var(--gold);
-
-}
-
-.timeline-content{
-
-flex:1;
-
-}
-
-.timeline-content h3{
-
-margin-bottom:10px;
-
-}
-
-/* FAQ */
-
-.faq-section{
-
-padding:140px 0;
-
-}
-
-.faq-container{
-
-max-width:900px;
-margin:auto;
-
-}
-
-.faq-container details{
-
-background:
-rgba(255,255,255,.03);
-
-margin-bottom:20px;
-
-padding:25px;
-
-border-radius:20px;
-
-border:
-1px solid rgba(255,255,255,.05);
-
-}
-
-.faq-container summary{
-
-cursor:pointer;
-
-font-size:20px;
-
-font-weight:600;
-
-}
-
-.faq-container p{
-
-margin-top:20px;
-
-color:#b4b4b4;
-
-line-height:1.8;
-
-}
-
-/* CTA */
-
-.final-cta{
-
-padding:180px 0;
-
-text-align:center;
-
-background:
-linear-gradient(
-180deg,
-transparent,
-rgba(200,168,93,.08)
-);
-
-}
-
-.final-cta h2{
-
-font-size:68px;
-
-font-family:
-'Playfair Display';
-
-max-width:900px;
-
-margin:auto auto 30px;
-
-}
-
-.final-cta p{
-
-font-size:20px;
-
-margin-bottom:40px;
-
-color:#bdbdbd;
-
-}
-
-/* FOOTER */
-
-footer{
-
-padding:80px 0 40px;
-
-border-top:
-1px solid rgba(255,255,255,.05);
-
-}
-
-.footer-grid{
-
-display:flex;
-justify-content:space-between;
-
-gap:50px;
-
-margin-bottom:50px;
-
-}
-
-.footer-grid h3{
-
-color:var(--gold);
-
-font-family:
-'Playfair Display';
-
-font-size:30px;
-
-}
-
-.footer-grid p{
-
-color:#9d9d9d;
-line-height:1.8;
-
-}
-
-.copyright{
-
-text-align:center;
-
-color:#666;
-
-padding-top:30px;
-
-border-top:
-1px solid rgba(255,255,255,.05);
-
-}
-
-/* WHATS */
-
-.whatsapp{
-
-position:fixed;
-
-right:25px;
-bottom:25px;
-
-width:70px;
-height:70px;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-border-radius:50%;
-
-font-size:28px;
-
-text-decoration:none;
-
-background:
-linear-gradient(
-135deg,
-#25D366,
-#1fb954
-);
-
-box-shadow:
-0 0 30px rgba(37,211,102,.4);
-
-z-index:9999;
-
-}
-
-</style>
