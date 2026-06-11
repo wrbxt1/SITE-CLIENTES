@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para Lara Alice ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+
+height:100vh;
+overflow:hidden;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+position:relative;
+
+color:white;
+text-align:center;
+
+background:black;
+
+}
+
+/* FOTO FUNDO */
+
+body::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background-image:url("./Lara Alice.jpeg");
+
+background-size:contain;
+background-repeat:no-repeat;
+background-position:center;
+
+filter:brightness(0.55);
+
+z-index:-2;
+
+}
+
+/* ESCURECER */
+
+body::after{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.25);
+
+z-index:-1;
+
+}
+
+/* CONTAINER */
+
+.carta-container{
+
+position:relative;
+
+width:430px;
+height:540px;
+
+perspective:1200px;
+
+}
+
+/* CARTA */
+
+.carta{
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+background:rgba(255,255,255,0.10);
+
+backdrop-filter:blur(8px);
+
+border-radius:25px;
+
+overflow:hidden;
+
+box-shadow:0 0 35px rgba(0,0,0,0.45);
+
+transform-style:preserve-3d;
+
+transition:1s;
+
+}
+
+/* TAMPA */
+
+.tampa{
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:180px;
+
+background:#ffd6e0;
+
+clip-path:polygon(0 0,100% 0,50% 100%);
+
+transform-origin:top;
+
+transition:1s;
+
+z-index:5;
+
+}
+
+.aberta .tampa{
+
+transform:rotateX(180deg);
+
+}
+
+/* BOTÃO ABRIR */
+
+#abrirBtn{
+
+position:absolute;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+z-index:10;
+
+}
+
+/* CONTEÚDO */
+
+.conteudo{
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+padding:35px;
+
+opacity:0;
+
+transition:1s;
+
+}
+
+.aberta .conteudo{
+
+opacity:1;
+
+}
+
+/* FLORES */
+
+.flor{
+
+position:absolute;
+
+width:95px;
+height:95px;
+
+object-fit:contain;
+
+pointer-events:none;
+
+filter:drop-shadow(0 0 10px rgba(0,0,0,0.35));
+
+animation:pulse 4s infinite ease-in-out;
+
+z-index:1;
+
+}
+
+.flor1{
+top:15px;
+left:15px;
+}
+
+.flor2{
+top:15px;
+right:35px;
+}
+
+.flor3{
+bottom:15px;
+left:15px;
+}
+
+.flor4{
+bottom:15px;
+right:35px;
+}
+
+/* TÍTULO */
+
+h1{
+
+font-size:2.3rem;
+
+margin-bottom:25px;
+
+z-index:2;
+
+}
+
+/* FRASES */
+
+.frase{
+
+font-size:1.45rem;
+
+line-height:1.6;
+
+min-height:160px;
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+padding:10px;
+
+transition:0.5s;
+
+z-index:2;
+
+}
+
+/* BOTÕES */
+
+button{
+
+padding:15px 35px;
+
+border:none;
+
+border-radius:40px;
+
+background:#ffe5ec;
+
+color:#ff3366;
+
+font-size:1rem;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:0.3s;
+
+z-index:2;
+
+margin-top:10px;
+
+}
+
+button:hover{
+
+transform:scale(1.05);
+
+background:white;
+
+}
+
+/* ANIMAÇÕES */
+
+.fade-out{
+
+opacity:0;
+transform:translateY(-20px);
+
+}
+
+.fade-in{
+
+animation:fadeIn 0.8s ease;
+
+}
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+@keyframes pulse{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.04);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+/* FINAL */
+
+.final{
+
+font-size:1.3rem;
+
+line-height:1.8;
+
+padding:15px;
+
+animation:brilho 2s infinite alternate;
+
+}
+
+@keyframes brilho{
+
+from{
+text-shadow:0 0 10px #ff7aa2;
+}
+
+to{
+text-shadow:0 0 25px #ffb3c7;
+}
+
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+.carta-container{
+
+width:92%;
+height:78vh;
+
+}
+
+h1{
+
+font-size:2rem;
+
+}
+
+.frase{
+
+font-size:1.15rem;
+
+min-height:140px;
+
+}
+
+button{
+
+width:100%;
+
+padding:14px 20px;
+
+}
+
+.flor{
+
+width:72px;
+height:72px;
+
+}
+
+.flor1{
+top:5px;
+left:5px;
+}
+
+.flor2{
+top:5px;
+right:20px;
+}
+
+.flor3{
+bottom:5px;
+left:5px;
+}
+
+.flor4{
+bottom:5px;
+right:20px;
+}
+
+.final{
+
+font-size:1.05rem;
+
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="carta-container">
+
+<div class="carta" id="carta">
+
+<div class="tampa"></div>
+
+<button id="abrirBtn" onclick="abrirCarta()">
+Abrir ❤️
+</button>
+
+<div class="conteudo">
+
+<!-- FLORES -->
+
+<img src="https://i.postimg.cc/5YPwKJX1/Design-sem-nome-4.png"
+class="flor flor1">
+
+<img src="https://i.postimg.cc/0KqtxP8m/d29214c878893e2f5b87a5355799461f.png"
+class="flor flor2">
+
+<img src="https://i.postimg.cc/D4KCFn2P/png-clipart-rose-single-red-rose-red-rose-flower-arranging-plant-stem-thumbnail.png"
+class="flor flor3">
+
+<img src="https://i.postimg.cc/fShHZDwK/png-transparent-purple-cosmos-flower-illustration-flower-blossom-flower-purple-violet-color-thumbnai.png"
+class="flor flor4">
+
+<h1>💌 Para Lara Alice</h1>
+
+<div class="frase fade-in" id="frase">
+
+🎧 Coloque os fones de ouvido...
+
+</div>
+
+<button id="btnMusica" onclick="iniciarMusica()">
+Já coloquei ❤️
+</button>
+
+<button id="btnProxima"
+onclick="proximaMensagem()"
+style="display:none;">
+
+Próxima mensagem ❤️
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- MÚSICA -->
+
+<audio id="musica">
+
+<source src="./Lara Alice (2).mp3" type="audio/mpeg">
+
+</audio>
+
+<script>
+
+const mensagens = [
+
+"Essa música foi feita pensando em você ❤️",
+
+"Seu olhar junto com seu sorriso me desmonta completamente ❤️",
+
+"Você merece viver coisas leves e bonitas 🌸",
+
+"Seu jeito me traz paz até nos dias difíceis 🌷",
+
+"Tem algo em você que faz qualquer momento ficar especial 🌹",
+
+"Você é daquelas pessoas difíceis de esquecer 💐",
+
+"Seu sorriso consegue melhorar meu dia sem esforço 🌺",
+
+"Você é muito mais incrível do que imagina 🌻",
+
+"Eu adoro nossa conexão e o jeito leve que tudo acontece ❤️",
+
+"Seu olhar parece abraço 🌷",
+
+"Você merece alguém que te motive e cuide do seu coração 🌹",
+
+"Seu sorriso parece que desarma qualquer coisa ruim em mim ❤️",
+
+"Você é intensa do jeito mais bonito possível 🌸",
+
+"Eu gosto da sua companhia mais do que imaginava 🌷",
+
+"Até agora estou me segurando bastante pra não te abraçar toda hora ❤️",
+
+"Você apareceu de mansinho e bagunçou tudo aqui dentro 🌹"
+
+];
+
+let index = 0;
+
+function abrirCarta(){
+
+document
+.getElementById("carta")
+.classList.add("aberta");
+
+document
+.getElementById("abrirBtn")
+.style.display = "none";
+
+}
+
+function iniciarMusica(){
+
+document
+.getElementById("musica")
+.play();
+
+document
+.getElementById("btnMusica")
+.style.display = "none";
+
+document
+.getElementById("btnProxima")
+.style.display = "block";
+
+document
+.getElementById("frase")
+.innerHTML = mensagens[0];
+
+index = 1;
+
+}
+
+function proximaMensagem(){
+
+const frase =
+document.getElementById("frase");
+
+frase.classList.remove("fade-in");
+
+frase.classList.add("fade-out");
+
+setTimeout(()=>{
+
+if(index < mensagens.length){
+
+frase.innerHTML = mensagens[index];
+
+index++;
+
+}else{
+
+frase.innerHTML = `
+
+<div class="final">
+
+❤️ ❤️ ❤️<br><br>
+
+Eu sei que ainda é muito cedo...<br><br>
+
+Mas se um dia você me der a oportunidade,<br>
+eu prometo fazer o possível pra te fazer feliz,<br>
+te apoiar, te motivar e cuidar do seu coração da forma mais sincera que eu conseguir ❤️<br><br>
+
+Porque desde que você apareceu,<br>
+algo aqui dentro mudou de um jeito bom 🌹<br><br>
+
+Com carinho,<br>
+Felipe ❤️
+
+<br><br>
+
+❤️ ❤️ ❤️
+
+</div>
+
+`;
+
+document
+.getElementById("btnProxima")
+.style.display = "none";
+
+}
+
+frase.classList.remove("fade-out");
+
+void frase.offsetWidth;
+
+frase.classList.add("fade-in");
+
+},500);
+
+}
+
+</script>
+
+</body>
+</html>
