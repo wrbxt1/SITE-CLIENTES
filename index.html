@@ -313,7 +313,7 @@ font-size:38px;
 <a href="#contato">Contato</a>
 </div>
 
-<a href="https://wa.me/5562992754704" class="btn">
+<a href="#" onclick="abrirWhatsApp()" class="btn">
 Atendimento
 </a>
 
@@ -343,8 +343,8 @@ pensão por morte, auxílio por incapacidade e planejamento previdenciário.
 
 <div class="hero-buttons">
 
-<a href="https://wa.me/5562992754704" class="btn">
-Falar no WhatsApp
+<a href="#" onclick="abrirWhatsApp()" class="btn">
+Falar com a Lara
 </a>
 
 <a href="#areas" class="btn">
@@ -468,7 +468,7 @@ Ver áreas
 <div class="dot"></div>
 <div>
 <h3>Primeiro Contato</h3>
-<p>Você fala pelo WhatsApp.</p>
+<p>Você fala diretamente com a Lara pelo WhatsApp.</p>
 </div>
 </div>
 
@@ -476,7 +476,7 @@ Ver áreas
 <div class="dot"></div>
 <div>
 <h3>Análise do Caso</h3>
-<p>Verificação dos documentos.</p>
+<p>Verificação dos documentos e direitos.</p>
 </div>
 </div>
 
@@ -509,11 +509,11 @@ Descubra seus direitos previdenciários
 </h2>
 
 <p style="font-size:20px;color:#c7c7c7;margin-bottom:40px;">
-Entre em contato agora e receba orientação.
+Entre em contato agora e receba atendimento com a Lara.
 </p>
 
-<a href="https://wa.me/5562992754704" class="btn">
-Falar no WhatsApp
+<a href="#" onclick="abrirWhatsApp()" class="btn">
+Falar com a Lara
 </a>
 
 </div>
@@ -539,10 +539,37 @@ Falar no WhatsApp
 
 </footer>
 
-<a href="https://wa.me/5562992754704"
+<a href="#" onclick="abrirWhatsApp()"
 style="position:fixed;right:25px;bottom:25px;width:70px;height:70px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#C8A85D;color:black;font-size:30px;text-decoration:none;font-weight:bold;box-shadow:0 0 30px rgba(200,168,93,.4);z-index:9999;">
 💬
 </a>
+
+<script>
+function abrirWhatsApp() {
+
+    const numero = "5562992754704";
+
+    const hora = new Date().getHours();
+
+    let saudacao = "";
+
+    if (hora >= 5 && hora < 12) {
+        saudacao = "Bom dia";
+    } 
+    else if (hora >= 12 && hora < 18) {
+        saudacao = "Boa tarde";
+    } 
+    else {
+        saudacao = "Boa noite";
+    }
+
+    const mensagem = `${saudacao}! Gostaria de atendimento com a Lara sobre meu benefício previdenciário.`;
+
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+
+    window.open(url, "_blank");
+}
+</script>
 
 </body>
 </html>
