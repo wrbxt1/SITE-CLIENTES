@@ -8,7 +8,7 @@
 
 <meta name="description" content="Advocacia previdenciária especializada em aposentadoria, BPC/LOAS, pensão por morte e revisão de benefícios. Atendimento em todo o Brasil.">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -268,7 +268,7 @@ h1{font-size:34px;}
 <h1>Seu benefício merece<br><span>atenção especializada</span></h1>
 
 <p>
-Atuação em aposentadoria, BPC/LOAS, pensão por morte e revisões previdenciárias em todo o Brasil.
+Atendimento previdenciário completo em aposentadoria, BPC/LOAS, pensão por morte e auxílio doença.
 </p>
 
 <button class="btn" onclick="abrirWhatsApp()">Falar com atendente</button>
@@ -311,42 +311,11 @@ Atuação em aposentadoria, BPC/LOAS, pensão por morte e revisões previdenciá
 <div class="title"><h2>Áreas de Atuação</h2></div>
 
 <div class="cards">
-
-<div class="card">
-<h3>Aposentadoria</h3>
-<p>Planejamento e concessão de benefícios.</p>
+<div class="card"><h3>Aposentadoria</h3><p>Análise e concessão de benefícios.</p></div>
+<div class="card"><h3>BPC / LOAS</h3><p>Benefício assistencial completo.</p></div>
+<div class="card"><h3>Pensão por Morte</h3><p>Direito de dependentes.</p></div>
+<div class="card"><h3>Auxílio Doença</h3><p>Casos de incapacidade no INSS.</p></div>
 </div>
-
-<div class="card">
-<h3>BPC / LOAS</h3>
-<p>Benefício assistencial ao idoso e PCD.</p>
-</div>
-
-<div class="card">
-<h3>Pensão por Morte</h3>
-<p>Concessão e revisão de dependentes.</p>
-</div>
-
-<div class="card">
-<h3>Auxílio Doença</h3>
-<p>Casos de incapacidade e perícia do INSS.</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<!-- PROCESSO -->
-<section class="section" id="processo">
-<div class="container">
-
-<div class="title"><h2>Como Funciona</h2></div>
-
-<div class="card"><h3>1. Contato</h3><p>Você fala com a atendente pelo WhatsApp.</p></div>
-<div class="card"><h3>2. Análise</h3><p>Avaliamos seu caso com cuidado jurídico.</p></div>
-<div class="card"><h3>3. Estratégia</h3><p>Definimos o melhor caminho para seu benefício.</p></div>
-<div class="card"><h3>4. Acompanhamento</h3><p>Seguimos até a conclusão do processo.</p></div>
 
 </div>
 </section>
@@ -357,7 +326,7 @@ Atuação em aposentadoria, BPC/LOAS, pensão por morte e revisões previdenciá
 
 <div class="title">
 <h2>Falar com a atendente</h2>
-<p>Preencha e envie direto para o WhatsApp</p>
+<p>Envie suas informações pelo WhatsApp</p>
 </div>
 
 <div class="form-box">
@@ -392,11 +361,13 @@ Atuação em aposentadoria, BPC/LOAS, pensão por morte e revisões previdenciá
 
 <script>
 
+/* WHATSAPP NORMAL */
 function abrirWhatsApp(){
 const numero = "5562992754704";
 window.open(`https://wa.me/${numero}`,'_blank');
 }
 
+/* WHATSAPP FORM COM SAUDAÇÃO + LARA */
 function enviarFormulario(){
 
 const nome = document.getElementById("nome").value;
@@ -409,13 +380,37 @@ alert("Preencha nome e telefone.");
 return;
 }
 
-const texto =
-`Nome: ${nome}
-Telefone: ${telefone}
-Tipo: ${tipo}
-Mensagem: ${msg}`;
+const hora = new Date().getHours();
 
-window.open(`https://wa.me/5562992754704?text=${encodeURIComponent(texto)}`,'_blank');
+let saudacao = "";
+if(hora < 12){
+saudacao = "Bom dia";
+} else if(hora < 18){
+saudacao = "Boa tarde";
+} else {
+saudacao = "Boa noite";
+}
+
+const texto =
+`${saudacao}! 😊
+
+Me chamo Lara, sou da equipe de atendimento.
+
+📌 Dados do atendimento:
+Nome: ${nome}
+Telefone: ${telefone}
+Área: ${tipo}
+
+📝 Descrição:
+${msg}
+
+Vou analisar seu caso e te retorno com as orientações.`;
+
+window.open(
+`https://wa.me/5562992754704?text=${encodeURIComponent(texto)}`,
+'_blank'
+);
+
 }
 
 </script>
