@@ -12,13 +12,19 @@
 
 <style>
 
-*{margin:0;padding:0;box-sizing:border-box;}
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
 body{
 font-family:'Inter',sans-serif;
 background:#070707;
 color:#fff;
 overflow-x:hidden;
+line-height:1.5;
 }
 
 .container{
@@ -52,34 +58,9 @@ color:#C8A85D;
 font-weight:700;
 }
 
-.menu{
-display:flex;
-gap:20px;
-}
-
-.menu a{
-color:#ccc;
-text-decoration:none;
-font-size:14px;
-}
-
-.menu a:hover{
-color:#C8A85D;
-}
-
-.btn{
-background:linear-gradient(135deg,#C8A85D,#E3C57A);
-color:#000;
-padding:12px 18px;
-border-radius:30px;
-font-weight:700;
-border:none;
-cursor:pointer;
-}
-
 /* HERO */
 .hero{
-padding:120px 0 50px;
+padding:130px 0 60px;
 }
 
 .hero-grid{
@@ -91,7 +72,7 @@ align-items:center;
 
 h1{
 font-family:'Playfair Display';
-font-size:48px;
+font-size:50px;
 line-height:1.1;
 margin-bottom:15px;
 }
@@ -101,7 +82,6 @@ h1 span{color:#C8A85D;}
 .hero p{
 color:#bbb;
 font-size:16px;
-line-height:1.6;
 margin-bottom:20px;
 }
 
@@ -112,54 +92,42 @@ object-fit:cover;
 border-radius:15px;
 }
 
-/* BAR */
-.bar{
+/* BADGES */
+.badges{
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:10px;
-margin-top:35px;
-background:#0f0f0f;
-padding:18px;
-border-radius:15px;
-border:1px solid rgba(255,255,255,.05);
-text-align:center;
+margin-top:25px;
 }
 
-.bar div{
+.badge{
+background:#0f0f0f;
+padding:12px;
+border-radius:12px;
+text-align:center;
 font-size:13px;
 color:#bbb;
+border:1px solid rgba(255,255,255,.05);
 }
 
-/* STATS */
-.stats{
-padding:40px 0;
-}
-
-.stats-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-text-align:center;
-gap:10px;
-}
-
-.stats h2{
-color:#C8A85D;
-font-size:34px;
-}
-
-/* SEÇÕES */
+/* SECTIONS */
 .section{
-padding:70px 0;
+padding:80px 0;
 }
 
 .title{
 text-align:center;
-margin-bottom:30px;
+margin-bottom:40px;
 }
 
 .title h2{
-font-size:36px;
+font-size:38px;
 font-family:'Playfair Display';
+}
+
+.title p{
+color:#aaa;
+margin-top:10px;
 }
 
 /* CARDS */
@@ -171,20 +139,33 @@ gap:15px;
 
 .card{
 background:#111;
-padding:20px;
+padding:22px;
 border-radius:15px;
 border:1px solid rgba(255,255,255,.05);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
 }
 
 .card h3{
 color:#C8A85D;
 margin-bottom:8px;
-font-size:18px;
 }
 
-.card p{
-color:#aaa;
-font-size:14px;
+/* STATS */
+.stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+text-align:center;
+margin-top:40px;
+}
+
+.stats h2{
+color:#C8A85D;
+font-size:34px;
 }
 
 /* FORM */
@@ -204,29 +185,79 @@ border:none;
 outline:none;
 background:#1a1a1a;
 color:#fff;
-font-family:inherit;
 }
 
-textarea{
-height:120px;
-resize:none;
+textarea{height:120px;resize:none;}
+
+/* FAQ */
+.faq-item{
+background:#111;
+padding:18px;
+border-radius:12px;
+margin-bottom:10px;
+cursor:pointer;
+border:1px solid rgba(255,255,255,.05);
+}
+
+.faq-answer{
+display:none;
+margin-top:10px;
+color:#aaa;
+}
+
+/* TESTIMONIALS */
+.testimonials{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+
+.testimonial{
+background:#111;
+padding:20px;
+border-radius:15px;
+border:1px solid rgba(255,255,255,.05);
+}
+
+.testimonial p{
+color:#bbb;
+font-size:14px;
+}
+
+.testimonial span{
+display:block;
+margin-top:10px;
+color:#C8A85D;
+font-size:13px;
 }
 
 /* CTA */
 .cta{
 text-align:center;
-padding:60px 0;
+padding:70px 0;
 background:#0f0f0f;
-margin-top:20px;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:#fff;
+padding:14px 16px;
+border-radius:50px;
+font-weight:700;
+text-decoration:none;
+z-index:9999;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
 }
 
 /* MOBILE */
 @media(max-width:900px){
 .hero-grid{grid-template-columns:1fr;}
-.bar{grid-template-columns:1fr 1fr;}
-.stats-grid{grid-template-columns:1fr 1fr;}
-.menu{display:none;}
-h1{font-size:34px;}
+.badges{grid-template-columns:1fr 1fr;}
+.stats{grid-template-columns:1fr 1fr;}
 }
 
 </style>
@@ -237,24 +268,13 @@ h1{font-size:34px;}
 <header>
 <div class="container">
 <nav>
-
 <div class="logo">AMUY MENEZES</div>
-
-<div class="menu">
-<a href="#areas">Áreas</a>
-<a href="#processo">Processo</a>
-<a href="#form">Contato</a>
-</div>
-
-<button class="btn" onclick="abrirWhatsApp()">WhatsApp</button>
-
 </nav>
 </div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-
 <div class="container">
 
 <div class="hero-grid">
@@ -263,17 +283,13 @@ h1{font-size:34px;}
 
 <h1>Seu benefício merece<br><span>atenção especializada</span></h1>
 
-<p>
-Atuação previdenciária em aposentadoria, BPC/LOAS, pensão por morte, auxílio-doença e auxílio-acidente.
-</p>
+<p>Atuação completa em aposentadoria, BPC/LOAS, pensão por morte, auxílio-doença e auxílio-acidente.</p>
 
-<button class="btn" onclick="abrirWhatsApp()">Falar com atendente</button>
-
-<div class="bar">
-<div>Atendimento online</div>
-<div>Todo Brasil</div>
-<div>Especialista INSS</div>
-<div>Resposta rápida</div>
+<div class="badges">
+<div class="badge">Atendimento online</div>
+<div class="badge">Todo Brasil</div>
+<div class="badge">Especialista INSS</div>
+<div class="badge">Resposta rápida</div>
 </div>
 
 </div>
@@ -285,40 +301,104 @@ Atuação previdenciária em aposentadoria, BPC/LOAS, pensão por morte, auxíli
 </div>
 
 </div>
+</section>
 
+<!-- ÁREAS -->
+<section class="section">
+<div class="container">
+
+<div class="title">
+<h2>Áreas de Atuação</h2>
+<p>Atendimento previdenciário completo</p>
+</div>
+
+<div class="cards">
+<div class="card"><h3>Aposentadoria</h3><p>Planejamento completo do benefício.</p></div>
+<div class="card"><h3>BPC / LOAS</h3><p>Benefício assistencial.</p></div>
+<div class="card"><h3>Pensão por Morte</h3><p>Direitos de dependentes.</p></div>
+<div class="card"><h3>Auxílio Doença</h3><p>Incapacidade temporária.</p></div>
+<div class="card"><h3>Auxílio-Acidente</h3><p>Indenização por sequela permanente.</p></div>
+</div>
+
+</div>
 </section>
 
 <!-- STATS -->
-<section class="stats">
+<section class="section">
 <div class="container">
-<div class="stats-grid">
+
+<div class="title">
+<h2>Resultados</h2>
+</div>
+
+<div class="stats">
 <div><h2>500+</h2><p>Casos</p></div>
 <div><h2>98%</h2><p>Sucesso</p></div>
 <div><h2>10+</h2><p>Anos</p></div>
 <div><h2>100%</h2><p>Online</p></div>
 </div>
+
 </div>
 </section>
 
-<!-- ÁREAS -->
-<section class="section" id="areas">
+<!-- TESTIMONIALS -->
+<section class="section">
 <div class="container">
 
-<div class="title"><h2>Áreas de Atuação</h2></div>
+<div class="title">
+<h2>Depoimentos</h2>
+</div>
 
-<div class="cards">
-<div class="card"><h3>Aposentadoria</h3><p>Planejamento e concessão de benefícios.</p></div>
-<div class="card"><h3>BPC / LOAS</h3><p>Benefício assistencial ao idoso e PCD.</p></div>
-<div class="card"><h3>Pensão por Morte</h3><p>Concessão e revisão de dependentes.</p></div>
-<div class="card"><h3>Auxílio Doença</h3><p>Casos de incapacidade no INSS.</p></div>
-<div class="card"><h3>Auxílio-Acidente</h3><p>Indenização por sequela permanente após acidente.</p></div>
+<div class="testimonials">
+
+<div class="testimonial">
+<p>"Excelente atendimento, resolveu meu benefício rapidamente."</p>
+<span>Maria S.</span>
+</div>
+
+<div class="testimonial">
+<p>"Muito atenciosos e explicam tudo com clareza."</p>
+<span>João P.</span>
+</div>
+
+<div class="testimonial">
+<p>"Consegui minha aposentadoria depois de muita negativa."</p>
+<span>Rosa L.</span>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+<div class="container">
+
+<div class="title">
+<h2>Dúvidas Frequentes</h2>
+</div>
+
+<div class="faq-item" onclick="toggle(this)">
+<h3>Preciso ir presencialmente?</h3>
+<div class="faq-answer">Não, atendimento 100% online.</div>
+</div>
+
+<div class="faq-item" onclick="toggle(this)">
+<h3>Meu benefício pode ser negado?</h3>
+<div class="faq-answer">Cada caso precisa de análise individual.</div>
+</div>
+
+<div class="faq-item" onclick="toggle(this)">
+<h3>Quanto tempo demora?</h3>
+<div class="faq-answer">Depende do tipo de benefício e análise do INSS.</div>
 </div>
 
 </div>
 </section>
 
 <!-- FORM -->
-<section class="section" id="form">
+<section class="section">
 <div class="container">
 
 <div class="title">
@@ -341,7 +421,18 @@ Atuação previdenciária em aposentadoria, BPC/LOAS, pensão por morte, auxíli
 
 <textarea id="msg" placeholder="Descreva sua situação"></textarea>
 
-<button class="btn" onclick="enviarFormulario()">Enviar WhatsApp</button>
+<button onclick="enviarFormulario()" style="
+background:linear-gradient(135deg,#C8A85D,#E3C57A);
+color:#000;
+padding:12px;
+width:100%;
+border:none;
+border-radius:10px;
+font-weight:700;
+cursor:pointer;
+">
+Enviar WhatsApp
+</button>
 
 </div>
 
@@ -352,63 +443,67 @@ Atuação previdenciária em aposentadoria, BPC/LOAS, pensão por morte, auxíli
 <section class="cta">
 <div class="container">
 <h2>Atendimento rápido via WhatsApp</h2>
-<p>Fale com nossa atendente agora mesmo</p>
-<button class="btn" onclick="abrirWhatsApp()">Iniciar conversa</button>
+<p>Preencha o formulário para falar com a atendente</p>
 </div>
 </section>
 
+<!-- WHATSAPP FLOAT -->
+<a class="whatsapp" href="#" onclick="abrirWhatsApp()">WhatsApp</a>
+
 <script>
 
-/* WHATSAPP SIMPLES */
-function abrirWhatsApp(){
-const numero = "5562992754704";
-window.open(`https://wa.me/${numero}`,'_blank');
+/* FAQ */
+function toggle(el){
+const ans = el.querySelector(".faq-answer");
+ans.style.display = ans.style.display === "block" ? "none" : "block";
 }
 
-/* WHATSAPP FORM */
+/* VALIDADO WHATSAPP */
 function enviarFormulario(){
 
-const nome = document.getElementById("nome").value;
-const telefone = document.getElementById("telefone").value;
+const nome = document.getElementById("nome").value.trim();
+const telefone = document.getElementById("telefone").value.replace(/\D/g,"");
 const tipo = document.getElementById("tipo").value;
-const msg = document.getElementById("msg").value;
+const msg = document.getElementById("msg").value.trim();
 
-if(!nome || !telefone){
-alert("Preencha nome e telefone.");
+if(nome.length < 3){
+alert("Nome inválido");
+return;
+}
+
+if(telefone.length < 10 || telefone.length > 11){
+alert("Telefone inválido");
+return;
+}
+
+if(msg.length < 5){
+alert("Descreva melhor seu caso");
 return;
 }
 
 const hora = new Date().getHours();
 
-let saudacao = "";
-if(hora < 12){
-saudacao = "Bom dia";
-} else if(hora < 18){
-saudacao = "Boa tarde";
-} else {
-saudacao = "Boa noite";
-}
+let saudacao = hora < 12 ? "Bom dia" : hora < 18 ? "Boa tarde" : "Boa noite";
 
 const texto =
 `${saudacao}
 
 Me chamo Lara, sou da equipe de atendimento.
 
-Dados do atendimento:
 Nome: ${nome}
 Telefone: ${telefone}
 Área: ${tipo}
 
 Descrição:
-${msg}
+${msg}`;
 
-Vou analisar seu caso e te retorno com as orientações.`;
+window.open(`https://wa.me/5562992754704?text=${encodeURIComponent(texto)}`,'_blank');
 
-window.open(
-`https://wa.me/5562992754704?text=${encodeURIComponent(texto)}`,
-'_blank'
-);
+}
 
+/* BOTÃO FLUTUANTE */
+function abrirWhatsApp(){
+window.open("https://wa.me/5562992754704","_blank");
 }
 
 </script>
