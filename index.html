@@ -16,6 +16,10 @@ padding:0;
 box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 font-family:'Inter',sans-serif;
 background:#070707;
@@ -23,26 +27,24 @@ color:#fff;
 overflow-x:hidden;
 }
 
-html{
-scroll-behavior:smooth;
-}
+/* ========== LAYOUT ========== */
 
-/* CONTAINER */
 .container{
 width:90%;
 max-width:1200px;
 margin:auto;
 }
 
-/* HEADER */
+/* ========== HEADER ========== */
+
 header{
 position:fixed;
 top:0;
 left:0;
 width:100%;
+z-index:999;
 background:rgba(0,0,0,.85);
 backdrop-filter:blur(15px);
-z-index:999;
 border-bottom:1px solid rgba(255,255,255,.05);
 }
 
@@ -69,6 +71,7 @@ gap:25px;
 color:#ccc;
 text-decoration:none;
 font-size:14px;
+transition:.3s;
 }
 
 .menu a:hover{
@@ -84,15 +87,18 @@ text-decoration:none;
 font-weight:700;
 transition:.3s;
 display:inline-block;
+border:none;
+cursor:pointer;
 }
 
 .btn:hover{
 transform:scale(1.05);
 }
 
-/* HERO */
+/* ========== HERO ========== */
+
 .hero{
-padding:140px 0 80px;
+padding:140px 0 70px;
 }
 
 .hero-grid{
@@ -136,21 +142,17 @@ gap:15px;
 flex-wrap:wrap;
 }
 
-/* HERO IMAGE */
-.hero-img{
-width:100%;
-border-radius:20px;
-overflow:hidden;
-}
+/* ========== IMAGE ========== */
 
 .hero-img img{
 width:100%;
-height:420px;
+height:430px;
 object-fit:cover;
-display:block;
+border-radius:20px;
 }
 
-/* STATS */
+/* ========== STATS ========== */
+
 .stats{
 padding:60px 0;
 border-top:1px solid rgba(255,255,255,.05);
@@ -166,11 +168,12 @@ text-align:center;
 
 .stats h2{
 color:#C8A85D;
-font-size:40px;
+font-size:38px;
 font-family:'Playfair Display',serif;
 }
 
-/* SECTIONS */
+/* ========== SECTIONS ========== */
+
 .section{
 padding:90px 0;
 }
@@ -181,7 +184,7 @@ margin-bottom:40px;
 }
 
 .title h2{
-font-size:38px;
+font-size:40px;
 font-family:'Playfair Display',serif;
 }
 
@@ -190,7 +193,8 @@ color:#aaa;
 margin-top:10px;
 }
 
-/* CARDS */
+/* ========== CARDS ========== */
+
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -206,7 +210,7 @@ transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-6px);
+transform:translateY(-8px);
 }
 
 .card h3{
@@ -214,7 +218,8 @@ color:#C8A85D;
 margin-bottom:10px;
 }
 
-/* STEPS */
+/* ========== PROCESS ========== */
+
 .step{
 display:flex;
 gap:15px;
@@ -229,16 +234,17 @@ border-radius:50%;
 margin-top:7px;
 }
 
-/* CTA */
+/* ========== CTA ========== */
+
 .cta{
 text-align:center;
-padding:80px 0;
+padding:70px 0;
 }
 
 .cta h2{
 font-family:'Playfair Display',serif;
 font-size:42px;
-margin-bottom:15px;
+margin-bottom:10px;
 }
 
 .cta p{
@@ -246,7 +252,62 @@ color:#aaa;
 margin-bottom:25px;
 }
 
-/* RESPONSIVO */
+/* ========== FORM ========== */
+
+.form-box{
+background:#0f0f0f;
+padding:30px;
+border-radius:18px;
+border:1px solid rgba(255,255,255,.05);
+}
+
+input, select, textarea{
+width:100%;
+padding:12px;
+margin-bottom:12px;
+border-radius:10px;
+border:none;
+outline:none;
+background:#1a1a1a;
+color:#fff;
+}
+
+textarea{
+resize:none;
+height:120px;
+}
+
+/* ========== FAQ ========== */
+
+.faq-item{
+background:#111;
+padding:18px;
+border-radius:12px;
+margin-bottom:10px;
+cursor:pointer;
+}
+
+.faq-answer{
+display:none;
+margin-top:10px;
+color:#aaa;
+}
+
+/* ========== ANIMATION ========== */
+
+.fade{
+opacity:0;
+transform:translateY(30px);
+transition:all .6s ease;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* ========== MOBILE ========== */
+
 @media(max-width:900px){
 
 .hero-grid{
@@ -282,16 +343,17 @@ font-size:36px;
 <a href="#areas">Benefícios</a>
 <a href="#processo">Processo</a>
 <a href="#faq">FAQ</a>
-<a href="#contato">Contato</a>
+<a href="#form">Contato</a>
 </div>
 
-<a href="#" onclick="abrirWhatsApp()" class="btn">Atendimento</a>
+<button class="btn" onclick="abrirWhatsApp()">Atendimento</button>
 
 </nav>
 </div>
 </header>
 
-<section class="hero">
+<!-- HERO -->
+<section class="hero fade">
 <div class="container">
 <div class="hero-grid">
 
@@ -308,8 +370,8 @@ Atendimento completo em aposentadoria, BPC/LOAS, pensão por morte e planejament
 </p>
 
 <div class="hero-buttons">
-<a href="#" onclick="abrirWhatsApp()" class="btn">Falar com a Lara</a>
-<a href="#areas" class="btn">Ver áreas</a>
+<button class="btn" onclick="abrirWhatsApp()">Falar com a Lara</button>
+<a href="#form" class="btn">Solicitar análise</a>
 </div>
 </div>
 
@@ -321,70 +383,43 @@ Atendimento completo em aposentadoria, BPC/LOAS, pensão por morte e planejament
 </div>
 </section>
 
-<section class="stats">
+<!-- STATS -->
+<section class="stats fade">
 <div class="container">
 <div class="stats-grid">
 
-<div>
-<h2>500+</h2>
-<p>Clientes</p>
-</div>
-
-<div>
-<h2>98%</h2>
-<p>Satisfação</p>
-</div>
-
-<div>
-<h2>10+</h2>
-<p>Anos</p>
-</div>
-
-<div>
-<h2>Brasil</h2>
-<p>Atendimento</p>
-</div>
+<div><h2>500+</h2><p>Clientes</p></div>
+<div><h2>98%</h2><p>Satisfação</p></div>
+<div><h2>10+</h2><p>Anos</p></div>
+<div><h2>Brasil</h2><p>Atendimento</p></div>
 
 </div>
 </div>
 </section>
 
-<section class="section" id="areas">
+<!-- ÁREAS -->
+<section class="section fade" id="areas">
 <div class="container">
 
 <div class="title">
 <h2>Áreas de Atuação</h2>
-<p>Atendimento completo em benefícios previdenciários</p>
+<p>Atendimento completo previdenciário</p>
 </div>
 
 <div class="cards">
 
-<div class="card">
-<h3>Aposentadoria</h3>
-<p>Planejamento e concessão.</p>
-</div>
-
-<div class="card">
-<h3>BPC / LOAS</h3>
-<p>Análise de requisitos.</p>
-</div>
-
-<div class="card">
-<h3>Pensão por Morte</h3>
-<p>Suporte completo.</p>
-</div>
-
-<div class="card">
-<h3>Auxílio Doença</h3>
-<p>Benefícios por incapacidade.</p>
-</div>
+<div class="card"><h3>Aposentadoria</h3><p>Análise completa do direito.</p></div>
+<div class="card"><h3>BPC / LOAS</h3><p>Benefício assistencial.</p></div>
+<div class="card"><h3>Pensão</h3><p>Suporte para dependentes.</p></div>
+<div class="card"><h3>Auxílio doença</h3><p>Benefícios por incapacidade.</p></div>
 
 </div>
 
 </div>
 </section>
 
-<section class="section" id="processo">
+<!-- PROCESSO -->
+<section class="section fade" id="processo">
 <div class="container">
 
 <div class="title">
@@ -392,29 +427,83 @@ Atendimento completo em aposentadoria, BPC/LOAS, pensão por morte e planejament
 </div>
 
 <div class="step"><div class="dot"></div><div><h3>Contato</h3><p>Você chama no WhatsApp.</p></div></div>
-<div class="step"><div class="dot"></div><div><h3>Análise</h3><p>Verificação do caso.</p></div></div>
-<div class="step"><div class="dot"></div><div><h3>Estratégia</h3><p>Definição do melhor caminho.</p></div></div>
-<div class="step"><div class="dot"></div><div><h3>Acompanhamento</h3><p>Até o final do processo.</p></div></div>
+<div class="step"><div class="dot"></div><div><h3>Análise</h3><p>Estudo do seu caso.</p></div></div>
+<div class="step"><div class="dot"></div><div><h3>Estratégia</h3><p>Plano personalizado.</p></div></div>
+<div class="step"><div class="dot"></div><div><h3>Resultado</h3><p>Acompanhamento completo.</p></div></div>
 
 </div>
 </section>
 
-<section class="cta">
+<!-- FORM -->
+<section class="section fade" id="form">
 <div class="container">
 
-<h2>Precisa de atendimento agora?</h2>
-<p>Fale diretamente com a Lara e tire suas dúvidas.</p>
+<div class="title">
+<h2>Solicitar Atendimento</h2>
+<p>Preencha e fale com a Lara no WhatsApp</p>
+</div>
 
-<a href="#" onclick="abrirWhatsApp()" class="btn">Falar com a Lara</a>
+<div class="form-box">
+
+<input id="nome" placeholder="Seu nome">
+<input id="telefone" placeholder="Seu telefone">
+
+<select id="tipo">
+<option>Aposentadoria</option>
+<option>BPC / LOAS</option>
+<option>Pensão por Morte</option>
+<option>Auxílio Doença</option>
+</select>
+
+<textarea id="msg" placeholder="Descreva seu caso"></textarea>
+
+<button class="btn" onclick="enviarFormulario()">Enviar para WhatsApp</button>
+
+</div>
 
 </div>
 </section>
 
-<footer style="text-align:center;padding:60px 0;color:#777;">
+<!-- CTA -->
+<section class="cta fade">
+<div class="container">
+
+<h2>Atendimento direto com a Lara</h2>
+<p>Resposta rápida via WhatsApp</p>
+
+<button class="btn" onclick="abrirWhatsApp()">Falar agora</button>
+
+</div>
+</section>
+
+<!-- FAQ -->
+<section class="section fade" id="faq">
+<div class="container">
+
+<div class="title">
+<h2>Dúvidas Frequentes</h2>
+</div>
+
+<div class="faq-item" onclick="toggle(this)">
+<h3>Meu benefício pode ser negado?</h3>
+<div class="faq-answer">Cada caso precisa ser analisado individualmente.</div>
+</div>
+
+<div class="faq-item" onclick="toggle(this)">
+<h3>Atende online?</h3>
+<div class="faq-answer">Sim, atendimento 100% digital.</div>
+</div>
+
+</div>
+</section>
+
+<footer style="text-align:center;padding:50px;color:#777;">
 AMUY MENEZES © 2026
 </footer>
 
 <script>
+
+/* WHATSAPP INTELIGENTE */
 function abrirWhatsApp(){
 
 const numero = "5562992754704";
@@ -427,6 +516,43 @@ const msg = `${saudacao}! Gostaria de atendimento com a Lara sobre meu benefíci
 window.open(`https://wa.me/${numero}?text=${encodeURIComponent(msg)}`,'_blank');
 
 }
+
+/* FORMULÁRIO */
+function enviarFormulario(){
+
+const nome = document.getElementById("nome").value;
+const telefone = document.getElementById("telefone").value;
+const tipo = document.getElementById("tipo").value;
+const msg = document.getElementById("msg").value;
+
+const texto =
+`Olá! Meu nome é ${nome}.
+Telefone: ${telefone}
+Tipo: ${tipo}
+Mensagem: ${msg}`;
+
+window.open(`https://wa.me/5562992754704?text=${encodeURIComponent(texto)}`,'_blank');
+
+}
+
+/* FAQ */
+function toggle(el){
+const answer = el.querySelector(".faq-answer");
+answer.style.display = answer.style.display === "block" ? "none" : "block";
+}
+
+/* ANIMAÇÃO SCROLL */
+const elements = document.querySelectorAll(".fade");
+
+window.addEventListener("scroll", ()=>{
+elements.forEach(el=>{
+const top = el.getBoundingClientRect().top;
+if(top < window.innerHeight - 100){
+el.classList.add("show");
+}
+});
+});
+
 </script>
 
 </body>
