@@ -6,6 +6,8 @@
 
 <title>Amuy Menezes Advocacia Previdenciária</title>
 
+<meta name="description" content="Advocacia previdenciária especializada em aposentadoria, BPC/LOAS, pensão por morte e revisão de benefícios. Atendimento em todo o Brasil.">
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
 <style>
@@ -27,16 +29,14 @@ color:#fff;
 overflow-x:hidden;
 }
 
-/* ========== LAYOUT ========== */
-
+/* CONTAINER */
 .container{
 width:90%;
 max-width:1200px;
 margin:auto;
 }
 
-/* ========== HEADER ========== */
-
+/* HEADER */
 header{
 position:fixed;
 top:0;
@@ -71,7 +71,6 @@ gap:25px;
 color:#ccc;
 text-decoration:none;
 font-size:14px;
-transition:.3s;
 }
 
 .menu a:hover{
@@ -83,20 +82,17 @@ background:linear-gradient(135deg,#C8A85D,#E3C57A);
 color:#000;
 padding:12px 22px;
 border-radius:30px;
-text-decoration:none;
 font-weight:700;
-transition:.3s;
-display:inline-block;
 border:none;
 cursor:pointer;
+display:inline-block;
 }
 
 .btn:hover{
 transform:scale(1.05);
 }
 
-/* ========== HERO ========== */
-
+/* HERO */
 .hero{
 padding:140px 0 70px;
 }
@@ -125,9 +121,7 @@ line-height:1.1;
 margin-bottom:20px;
 }
 
-h1 span{
-color:#C8A85D;
-}
+h1 span{color:#C8A85D;}
 
 .hero p{
 color:#bdbdbd;
@@ -136,14 +130,6 @@ line-height:1.6;
 margin-bottom:25px;
 }
 
-.hero-buttons{
-display:flex;
-gap:15px;
-flex-wrap:wrap;
-}
-
-/* ========== IMAGE ========== */
-
 .hero-img img{
 width:100%;
 height:430px;
@@ -151,8 +137,7 @@ object-fit:cover;
 border-radius:20px;
 }
 
-/* ========== STATS ========== */
-
+/* STATS */
 .stats{
 padding:60px 0;
 border-top:1px solid rgba(255,255,255,.05);
@@ -162,18 +147,10 @@ border-bottom:1px solid rgba(255,255,255,.05);
 .stats-grid{
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:20px;
 text-align:center;
 }
 
-.stats h2{
-color:#C8A85D;
-font-size:38px;
-font-family:'Playfair Display',serif;
-}
-
-/* ========== SECTIONS ========== */
-
+/* SECTIONS */
 .section{
 padding:90px 0;
 }
@@ -193,8 +170,7 @@ color:#aaa;
 margin-top:10px;
 }
 
-/* ========== CARDS ========== */
-
+/* CARDS */
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -213,13 +189,9 @@ transition:.3s;
 transform:translateY(-8px);
 }
 
-.card h3{
-color:#C8A85D;
-margin-bottom:10px;
-}
+.card h3{color:#C8A85D;}
 
-/* ========== PROCESS ========== */
-
+/* STEPS */
 .step{
 display:flex;
 gap:15px;
@@ -234,26 +206,7 @@ border-radius:50%;
 margin-top:7px;
 }
 
-/* ========== CTA ========== */
-
-.cta{
-text-align:center;
-padding:70px 0;
-}
-
-.cta h2{
-font-family:'Playfair Display',serif;
-font-size:42px;
-margin-bottom:10px;
-}
-
-.cta p{
-color:#aaa;
-margin-bottom:25px;
-}
-
-/* ========== FORM ========== */
-
+/* FORM */
 .form-box{
 background:#0f0f0f;
 padding:30px;
@@ -261,7 +214,7 @@ border-radius:18px;
 border:1px solid rgba(255,255,255,.05);
 }
 
-input, select, textarea{
+input,select,textarea{
 width:100%;
 padding:12px;
 margin-bottom:12px;
@@ -272,13 +225,7 @@ background:#1a1a1a;
 color:#fff;
 }
 
-textarea{
-resize:none;
-height:120px;
-}
-
-/* ========== FAQ ========== */
-
+/* FAQ */
 .faq-item{
 background:#111;
 padding:18px;
@@ -293,12 +240,17 @@ margin-top:10px;
 color:#aaa;
 }
 
-/* ========== ANIMATION ========== */
+/* CTA */
+.cta{
+text-align:center;
+padding:70px 0;
+}
 
+/* FADE FIX (CORREÇÃO DA TELA PRETA) */
 .fade{
 opacity:0;
 transform:translateY(30px);
-transition:all .6s ease;
+transition:all .7s ease;
 }
 
 .fade.show{
@@ -306,26 +258,12 @@ opacity:1;
 transform:translateY(0);
 }
 
-/* ========== MOBILE ========== */
-
+/* MOBILE */
 @media(max-width:900px){
-
-.hero-grid{
-grid-template-columns:1fr;
-}
-
-.stats-grid{
-grid-template-columns:1fr 1fr;
-}
-
-.menu{
-display:none;
-}
-
-h1{
-font-size:36px;
-}
-
+.hero-grid{grid-template-columns:1fr;}
+.stats-grid{grid-template-columns:1fr 1fr;}
+.menu{display:none;}
+h1{font-size:36px;}
 }
 
 </style>
@@ -353,30 +291,22 @@ font-size:36px;
 </header>
 
 <!-- HERO -->
-<section class="hero fade">
+<section class="hero fade show">
 <div class="container">
 <div class="hero-grid">
 
 <div>
-<div class="tag">Especialista em Direito Previdenciário</div>
+<div class="tag">Especialista em Previdenciário</div>
 
-<h1>
-Seu benefício merece<br>
-<span>acompanhamento especializado</span>
-</h1>
+<h1>Seu benefício merece<br><span>acompanhamento especializado</span></h1>
 
-<p>
-Atendimento completo em aposentadoria, BPC/LOAS, pensão por morte e planejamento previdenciário.
-</p>
+<p>Atendimento em aposentadoria, BPC/LOAS, pensão por morte e revisão de benefícios.</p>
 
-<div class="hero-buttons">
-<button class="btn" onclick="abrirWhatsApp()">Falar com a Lara</button>
-<a href="#form" class="btn">Solicitar análise</a>
-</div>
+<button class="btn" onclick="abrirWhatsApp()">Falar agora</button>
 </div>
 
 <div class="hero-img">
-<img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80">
+<img loading="lazy" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80">
 </div>
 
 </div>
@@ -387,12 +317,10 @@ Atendimento completo em aposentadoria, BPC/LOAS, pensão por morte e planejament
 <section class="stats fade">
 <div class="container">
 <div class="stats-grid">
-
 <div><h2>500+</h2><p>Clientes</p></div>
 <div><h2>98%</h2><p>Satisfação</p></div>
 <div><h2>10+</h2><p>Anos</p></div>
 <div><h2>Brasil</h2><p>Atendimento</p></div>
-
 </div>
 </div>
 </section>
@@ -400,35 +328,28 @@ Atendimento completo em aposentadoria, BPC/LOAS, pensão por morte e planejament
 <!-- ÁREAS -->
 <section class="section fade" id="areas">
 <div class="container">
-
 <div class="title">
 <h2>Áreas de Atuação</h2>
-<p>Atendimento completo previdenciário</p>
+<p>Atendimento previdenciário completo</p>
 </div>
 
 <div class="cards">
-
-<div class="card"><h3>Aposentadoria</h3><p>Análise completa do direito.</p></div>
-<div class="card"><h3>BPC / LOAS</h3><p>Benefício assistencial.</p></div>
-<div class="card"><h3>Pensão</h3><p>Suporte para dependentes.</p></div>
-<div class="card"><h3>Auxílio doença</h3><p>Benefícios por incapacidade.</p></div>
-
+<div class="card"><h3>Aposentadoria</h3><p>Análise jurídica completa do benefício.</p></div>
+<div class="card"><h3>BPC / LOAS</h3><p>Benefício assistencial ao idoso e PCD.</p></div>
+<div class="card"><h3>Pensão</h3><p>Concessão e revisão de pensão por morte.</p></div>
+<div class="card"><h3>Auxílio Doença</h3><p>Benefícios por incapacidade.</p></div>
 </div>
-
 </div>
 </section>
 
 <!-- PROCESSO -->
 <section class="section fade" id="processo">
 <div class="container">
-
-<div class="title">
-<h2>Como Funciona</h2>
-</div>
+<div class="title"><h2>Como Funciona</h2></div>
 
 <div class="step"><div class="dot"></div><div><h3>Contato</h3><p>Você chama no WhatsApp.</p></div></div>
-<div class="step"><div class="dot"></div><div><h3>Análise</h3><p>Estudo do seu caso.</p></div></div>
-<div class="step"><div class="dot"></div><div><h3>Estratégia</h3><p>Plano personalizado.</p></div></div>
+<div class="step"><div class="dot"></div><div><h3>Análise</h3><p>Avaliamos seu caso.</p></div></div>
+<div class="step"><div class="dot"></div><div><h3>Estratégia</h3><p>Montamos o plano jurídico.</p></div></div>
 <div class="step"><div class="dot"></div><div><h3>Resultado</h3><p>Acompanhamento completo.</p></div></div>
 
 </div>
@@ -437,56 +358,43 @@ Atendimento completo em aposentadoria, BPC/LOAS, pensão por morte e planejament
 <!-- FORM -->
 <section class="section fade" id="form">
 <div class="container">
-
 <div class="title">
 <h2>Solicitar Atendimento</h2>
-<p>Preencha e fale com a Lara no WhatsApp</p>
 </div>
 
 <div class="form-box">
-
-<input id="nome" placeholder="Seu nome">
-<input id="telefone" placeholder="Seu telefone">
-
+<input id="nome" placeholder="Nome">
+<input id="telefone" placeholder="Telefone">
 <select id="tipo">
 <option>Aposentadoria</option>
 <option>BPC / LOAS</option>
-<option>Pensão por Morte</option>
+<option>Pensão</option>
 <option>Auxílio Doença</option>
 </select>
-
 <textarea id="msg" placeholder="Descreva seu caso"></textarea>
 
-<button class="btn" onclick="enviarFormulario()">Enviar para WhatsApp</button>
-
+<button class="btn" onclick="enviarFormulario()">Enviar WhatsApp</button>
 </div>
-
 </div>
 </section>
 
 <!-- CTA -->
 <section class="cta fade">
 <div class="container">
-
-<h2>Atendimento direto com a Lara</h2>
+<h2>Atendimento direto</h2>
 <p>Resposta rápida via WhatsApp</p>
-
 <button class="btn" onclick="abrirWhatsApp()">Falar agora</button>
-
 </div>
 </section>
 
 <!-- FAQ -->
 <section class="section fade" id="faq">
 <div class="container">
-
-<div class="title">
-<h2>Dúvidas Frequentes</h2>
-</div>
+<div class="title"><h2>Dúvidas</h2></div>
 
 <div class="faq-item" onclick="toggle(this)">
 <h3>Meu benefício pode ser negado?</h3>
-<div class="faq-answer">Cada caso precisa ser analisado individualmente.</div>
+<div class="faq-answer">Depende da análise do caso.</div>
 </div>
 
 <div class="faq-item" onclick="toggle(this)">
@@ -497,60 +405,57 @@ Atendimento completo em aposentadoria, BPC/LOAS, pensão por morte e planejament
 </div>
 </section>
 
-<footer style="text-align:center;padding:50px;color:#777;">
+<footer style="text-align:center;padding:40px;color:#777;">
 AMUY MENEZES © 2026
 </footer>
 
 <script>
 
-/* WHATSAPP INTELIGENTE */
+/* WHATSAPP */
 function abrirWhatsApp(){
-
 const numero = "5562992754704";
 const hora = new Date().getHours();
+const saudacao = hora < 12 ? "Bom dia" : hora < 18 ? "Boa tarde" : "Boa noite";
 
-let saudacao = hora < 12 ? "Bom dia" : hora < 18 ? "Boa tarde" : "Boa noite";
-
-const msg = `${saudacao}! Gostaria de atendimento com a Lara sobre meu benefício previdenciário.`;
-
-window.open(`https://wa.me/${numero}?text=${encodeURIComponent(msg)}`,'_blank');
-
+window.open(`https://wa.me/${numero}?text=${encodeURIComponent(saudacao + " quero atendimento jurídico")}`,'_blank');
 }
 
-/* FORMULÁRIO */
+/* FORM */
 function enviarFormulario(){
 
 const nome = document.getElementById("nome").value;
 const telefone = document.getElementById("telefone").value;
+
+if(!nome || !telefone){
+alert("Preenche nome e telefone.");
+return;
+}
+
 const tipo = document.getElementById("tipo").value;
 const msg = document.getElementById("msg").value;
 
-const texto =
-`Olá! Meu nome é ${nome}.
-Telefone: ${telefone}
-Tipo: ${tipo}
-Mensagem: ${msg}`;
+const texto = `Nome: ${nome}\nTelefone: ${telefone}\nTipo: ${tipo}\nMensagem: ${msg}`;
 
 window.open(`https://wa.me/5562992754704?text=${encodeURIComponent(texto)}`,'_blank');
-
 }
 
 /* FAQ */
 function toggle(el){
-const answer = el.querySelector(".faq-answer");
-answer.style.display = answer.style.display === "block" ? "none" : "block";
+const a = el.querySelector(".faq-answer");
+a.style.display = a.style.display === "block" ? "none" : "block";
 }
 
-/* ANIMAÇÃO SCROLL */
-const elements = document.querySelectorAll(".fade");
-
-window.addEventListener("scroll", ()=>{
-elements.forEach(el=>{
-const top = el.getBoundingClientRect().top;
-if(top < window.innerHeight - 100){
-el.classList.add("show");
+/* ANIMAÇÃO PROFISSIONAL (FIX TELA PRETA) */
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
 }
 });
+},{threshold:0.15});
+
+document.querySelectorAll(".fade").forEach(el=>{
+observer.observe(el);
 });
 
 </script>
