@@ -268,7 +268,7 @@ h1{font-size:34px;}
 <h1>Seu benefício merece<br><span>atenção especializada</span></h1>
 
 <p>
-Atendimento previdenciário completo em aposentadoria, BPC/LOAS, pensão por morte e auxílio doença.
+Atendimento previdenciário completo em aposentadoria, BPC/LOAS, pensão por morte e auxílio-doença.
 </p>
 
 <button class="btn" onclick="abrirWhatsApp()">Falar com atendente</button>
@@ -311,9 +311,9 @@ Atendimento previdenciário completo em aposentadoria, BPC/LOAS, pensão por mor
 <div class="title"><h2>Áreas de Atuação</h2></div>
 
 <div class="cards">
-<div class="card"><h3>Aposentadoria</h3><p>Análise e concessão de benefícios.</p></div>
-<div class="card"><h3>BPC / LOAS</h3><p>Benefício assistencial completo.</p></div>
-<div class="card"><h3>Pensão por Morte</h3><p>Direito de dependentes.</p></div>
+<div class="card"><h3>Aposentadoria</h3><p>Análise completa do benefício.</p></div>
+<div class="card"><h3>BPC / LOAS</h3><p>Benefício assistencial ao idoso e PCD.</p></div>
+<div class="card"><h3>Pensão por Morte</h3><p>Concessão e revisão de dependentes.</p></div>
 <div class="card"><h3>Auxílio Doença</h3><p>Casos de incapacidade no INSS.</p></div>
 </div>
 
@@ -361,13 +361,13 @@ Atendimento previdenciário completo em aposentadoria, BPC/LOAS, pensão por mor
 
 <script>
 
-/* WHATSAPP NORMAL */
+/* WHATSAPP SIMPLES */
 function abrirWhatsApp(){
 const numero = "5562992754704";
 window.open(`https://wa.me/${numero}`,'_blank');
 }
 
-/* WHATSAPP FORM COM SAUDAÇÃO + LARA */
+/* WHATSAPP FORM ESTÁVEL (SEM EMOJIS PROBLEMÁTICOS) */
 function enviarFormulario(){
 
 const nome = document.getElementById("nome").value;
@@ -392,16 +392,16 @@ saudacao = "Boa noite";
 }
 
 const texto =
-`${saudacao}! 😊
+`${saudacao}
 
 Me chamo Lara, sou da equipe de atendimento.
 
-📌 Dados do atendimento:
+Dados do atendimento:
 Nome: ${nome}
 Telefone: ${telefone}
 Área: ${tipo}
 
-📝 Descrição:
+Descrição:
 ${msg}
 
 Vou analisar seu caso e te retorno com as orientações.`;
