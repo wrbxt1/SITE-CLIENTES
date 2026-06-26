@@ -6,13 +6,12 @@
 
 <title>Amuy Menezes Advocacia Previdenciária</title>
 
-<meta name="description" content="Advocacia previdenciária especializada em aposentadoria, BPC/LOAS, pensão por morte, auxílio-doença e auxílio-acidente. Atendimento em todo o Brasil.">
+<meta name="description" content="Advocacia previdenciária especializada em aposentadoria, BPC/LOAS, pensão por morte, auxílio-doença e auxílio-acidente. Atendimento inicial online com suporte presencial quando necessário.">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
-/* RESET */
 *{
 margin:0;
 padding:0;
@@ -142,11 +141,6 @@ background:#111;
 padding:22px;
 border-radius:15px;
 border:1px solid rgba(255,255,255,.05);
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
 }
 
 .card h3{
@@ -205,32 +199,6 @@ margin-top:10px;
 color:#aaa;
 }
 
-/* TESTIMONIALS */
-.testimonials{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:15px;
-}
-
-.testimonial{
-background:#111;
-padding:20px;
-border-radius:15px;
-border:1px solid rgba(255,255,255,.05);
-}
-
-.testimonial p{
-color:#bbb;
-font-size:14px;
-}
-
-.testimonial span{
-display:block;
-margin-top:10px;
-color:#C8A85D;
-font-size:13px;
-}
-
 /* CTA */
 .cta{
 text-align:center;
@@ -283,13 +251,15 @@ box-shadow:0 10px 25px rgba(0,0,0,.3);
 
 <h1>Seu benefício merece<br><span>atenção especializada</span></h1>
 
-<p>Atuação completa em aposentadoria, BPC/LOAS, pensão por morte, auxílio-doença e auxílio-acidente.</p>
+<p>
+Atendimento previdenciário com início online e suporte presencial quando necessário, inclusive em perícias e diligências.
+</p>
 
 <div class="badges">
-<div class="badge">Atendimento online</div>
-<div class="badge">Todo Brasil</div>
-<div class="badge">Especialista INSS</div>
-<div class="badge">Resposta rápida</div>
+<div class="badge">Atendimento inicial online</div>
+<div class="badge">Suporte presencial</div>
+<div class="badge">Perícias INSS</div>
+<div class="badge">Acompanhamento jurídico</div>
 </div>
 
 </div>
@@ -313,7 +283,7 @@ box-shadow:0 10px 25px rgba(0,0,0,.3);
 </div>
 
 <div class="cards">
-<div class="card"><h3>Aposentadoria</h3><p>Planejamento completo do benefício.</p></div>
+<div class="card"><h3>Aposentadoria</h3><p>Planejamento e concessão.</p></div>
 <div class="card"><h3>BPC / LOAS</h3><p>Benefício assistencial.</p></div>
 <div class="card"><h3>Pensão por Morte</h3><p>Direitos de dependentes.</p></div>
 <div class="card"><h3>Auxílio Doença</h3><p>Incapacidade temporária.</p></div>
@@ -327,45 +297,13 @@ box-shadow:0 10px 25px rgba(0,0,0,.3);
 <section class="section">
 <div class="container">
 
-<div class="title">
-<h2>Resultados</h2>
-</div>
+<div class="title"><h2>Resultados</h2></div>
 
 <div class="stats">
 <div><h2>500+</h2><p>Casos</p></div>
 <div><h2>98%</h2><p>Sucesso</p></div>
 <div><h2>10+</h2><p>Anos</p></div>
-<div><h2>100%</h2><p>Online</p></div>
-</div>
-
-</div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="section">
-<div class="container">
-
-<div class="title">
-<h2>Depoimentos</h2>
-</div>
-
-<div class="testimonials">
-
-<div class="testimonial">
-<p>"Excelente atendimento, resolveu meu benefício rapidamente."</p>
-<span>Maria S.</span>
-</div>
-
-<div class="testimonial">
-<p>"Muito atenciosos e explicam tudo com clareza."</p>
-<span>João P.</span>
-</div>
-
-<div class="testimonial">
-<p>"Consegui minha aposentadoria depois de muita negativa."</p>
-<span>Rosa L.</span>
-</div>
-
+<div><h2>100%</h2><p>Dedicação</p></div>
 </div>
 
 </div>
@@ -375,23 +313,27 @@ box-shadow:0 10px 25px rgba(0,0,0,.3);
 <section class="section">
 <div class="container">
 
-<div class="title">
-<h2>Dúvidas Frequentes</h2>
+<div class="title"><h2>Dúvidas Frequentes</h2></div>
+
+<div class="faq-item" onclick="toggle(this)">
+<h3>O atendimento é presencial?</h3>
+<div class="faq-answer">
+O atendimento inicia de forma online, podendo haver acompanhamento presencial em perícias, diligências e fases necessárias do processo.
+</div>
 </div>
 
 <div class="faq-item" onclick="toggle(this)">
-<h3>Preciso ir presencialmente?</h3>
-<div class="faq-answer">Não, atendimento 100% online.</div>
+<h3>Preciso ir ao escritório?</h3>
+<div class="faq-answer">
+Não necessariamente. A maior parte do atendimento é online, com suporte presencial quando necessário.
+</div>
 </div>
 
 <div class="faq-item" onclick="toggle(this)">
 <h3>Meu benefício pode ser negado?</h3>
-<div class="faq-answer">Cada caso precisa de análise individual.</div>
+<div class="faq-answer">
+Sim, cada caso depende de análise individual junto ao INSS.
 </div>
-
-<div class="faq-item" onclick="toggle(this)">
-<h3>Quanto tempo demora?</h3>
-<div class="faq-answer">Depende do tipo de benefício e análise do INSS.</div>
 </div>
 
 </div>
@@ -442,8 +384,8 @@ Enviar WhatsApp
 <!-- CTA -->
 <section class="cta">
 <div class="container">
-<h2>Atendimento rápido via WhatsApp</h2>
-<p>Preencha o formulário para falar com a atendente</p>
+<h2>Atendimento jurídico com suporte completo</h2>
+<p>Online inicialmente e presencial quando necessário</p>
 </div>
 </section>
 
@@ -452,13 +394,11 @@ Enviar WhatsApp
 
 <script>
 
-/* FAQ */
 function toggle(el){
 const ans = el.querySelector(".faq-answer");
 ans.style.display = ans.style.display === "block" ? "none" : "block";
 }
 
-/* VALIDADO WHATSAPP */
 function enviarFormulario(){
 
 const nome = document.getElementById("nome").value.trim();
@@ -495,13 +435,17 @@ Telefone: ${telefone}
 Área: ${tipo}
 
 Descrição:
-${msg}`;
+${msg}
 
-window.open(`https://wa.me/5562992754704?text=${encodeURIComponent(texto)}`,'_blank');
+Atendimento inicial online com suporte presencial quando necessário.`;
+
+window.open(
+`https://wa.me/5562992754704?text=${encodeURIComponent(texto)}`,
+"_blank"
+);
 
 }
 
-/* BOTÃO FLUTUANTE */
 function abrirWhatsApp(){
 window.open("https://wa.me/5562992754704","_blank");
 }
