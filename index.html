@@ -524,11 +524,10 @@ ${msg}
 
 Atendimento híbrido com suporte presencial quando necessário.`;
 
-window.open(`https://wa.me/5562992754704?text=${encodeURIComponent(texto)}`,'_blank');
+/* 🔥 WHATSAPP CORRIGIDO (SEM ERRO) */
+const url = "https://api.whatsapp.com/send?phone=5562992754704&text=" + encodeURIComponent(texto);
+
+/* abre de forma estável */
+location.href = url;
 
 }
-
-</script>
-
-</body>
-</html>
