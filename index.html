@@ -6,26 +6,27 @@
 
 <title>Amuy Menezes Advocacia Previdenciária</title>
 
-<meta name="description" content="Advocacia previdenciária especializada em aposentadoria, BPC/LOAS, pensão por morte, auxílio-doença e auxílio-acidente. Atendimento inicial online com suporte presencial quando necessário.">
+<meta name="description" content="Advocacia previdenciária especializada em aposentadoria, BPC/LOAS, pensão por morte, auxílio-doença e auxílio-acidente. Atendimento híbrido com suporte presencial quando necessário.">
 
+<!-- ICONES -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- FONTES -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;}
 
 body{
 font-family:'Inter',sans-serif;
 background:#070707;
 color:#fff;
 overflow-x:hidden;
-line-height:1.5;
 }
 
+/* CONTAINER */
 .container{
 width:90%;
 max-width:1200px;
@@ -59,7 +60,7 @@ font-weight:700;
 
 /* HERO */
 .hero{
-padding:130px 0 60px;
+padding:140px 0 70px;
 }
 
 .hero-grid{
@@ -71,7 +72,7 @@ align-items:center;
 
 h1{
 font-family:'Playfair Display';
-font-size:50px;
+font-size:52px;
 line-height:1.1;
 margin-bottom:15px;
 }
@@ -81,14 +82,8 @@ h1 span{color:#C8A85D;}
 .hero p{
 color:#bbb;
 font-size:16px;
-margin-bottom:20px;
-}
-
-.hero-img img{
-width:100%;
-height:420px;
-object-fit:cover;
-border-radius:15px;
+line-height:1.6;
+margin-bottom:25px;
 }
 
 /* BADGES */
@@ -96,22 +91,31 @@ border-radius:15px;
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:10px;
-margin-top:25px;
+margin-top:20px;
 }
 
 .badge{
-background:#0f0f0f;
-padding:12px;
+background:#111;
+padding:14px;
 border-radius:12px;
+border:1px solid rgba(255,255,255,.05);
 text-align:center;
 font-size:13px;
-color:#bbb;
-border:1px solid rgba(255,255,255,.05);
+color:#ccc;
+}
+
+/* HERO IMG */
+.hero-img img{
+width:100%;
+height:430px;
+object-fit:cover;
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,.5);
 }
 
 /* SECTIONS */
 .section{
-padding:80px 0;
+padding:90px 0;
 }
 
 .title{
@@ -120,7 +124,7 @@ margin-bottom:40px;
 }
 
 .title h2{
-font-size:38px;
+font-size:40px;
 font-family:'Playfair Display';
 }
 
@@ -133,14 +137,26 @@ margin-top:10px;
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:15px;
+gap:18px;
 }
 
 .card{
 background:#111;
-padding:22px;
-border-radius:15px;
+padding:25px;
+border-radius:18px;
 border:1px solid rgba(255,255,255,.05);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(0,0,0,.4);
+}
+
+.card i{
+font-size:20px;
+color:#C8A85D;
+margin-bottom:10px;
 }
 
 .card h3{
@@ -154,25 +170,32 @@ display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:15px;
 text-align:center;
-margin-top:40px;
 }
 
 .stats h2{
 color:#C8A85D;
-font-size:34px;
+font-size:36px;
+}
+
+/* SOBRE */
+.about{
+background:#0f0f0f;
+padding:60px;
+border-radius:18px;
+border:1px solid rgba(255,255,255,.05);
 }
 
 /* FORM */
 .form-box{
 background:#0f0f0f;
-padding:25px;
-border-radius:15px;
+padding:30px;
+border-radius:18px;
 border:1px solid rgba(255,255,255,.05);
 }
 
 input,select,textarea{
 width:100%;
-padding:12px;
+padding:13px;
 margin-bottom:12px;
 border-radius:10px;
 border:none;
@@ -181,7 +204,7 @@ background:#1a1a1a;
 color:#fff;
 }
 
-textarea{height:120px;resize:none;}
+textarea{height:130px;resize:none;}
 
 /* FAQ */
 .faq-item{
@@ -199,6 +222,26 @@ margin-top:10px;
 color:#aaa;
 }
 
+/* TESTIMONIALS */
+.testimonials{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:18px;
+}
+
+.testimonial{
+background:#111;
+padding:22px;
+border-radius:18px;
+border:1px solid rgba(255,255,255,.05);
+}
+
+.testimonial span{
+display:block;
+margin-top:10px;
+color:#C8A85D;
+}
+
 /* CTA */
 .cta{
 text-align:center;
@@ -206,14 +249,14 @@ padding:70px 0;
 background:#0f0f0f;
 }
 
-/* WHATSAPP FLOAT */
+/* WHATSAPP */
 .whatsapp{
 position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
 color:#fff;
-padding:14px 16px;
+padding:15px 18px;
 border-radius:50px;
 font-weight:700;
 text-decoration:none;
@@ -221,7 +264,7 @@ z-index:9999;
 box-shadow:0 10px 25px rgba(0,0,0,.3);
 }
 
-/* MOBILE */
+/* RESPONSIVO */
 @media(max-width:900px){
 .hero-grid{grid-template-columns:1fr;}
 .badges{grid-template-columns:1fr 1fr;}
@@ -244,22 +287,21 @@ box-shadow:0 10px 25px rgba(0,0,0,.3);
 <!-- HERO -->
 <section class="hero">
 <div class="container">
-
 <div class="hero-grid">
 
 <div>
 
-<h1>Seu benefício merece<br><span>atenção especializada</span></h1>
+<h1>Advocacia previdenciária<br><span>com atuação estratégica</span></h1>
 
 <p>
-Atendimento previdenciário com início online e suporte presencial quando necessário, inclusive em perícias e diligências.
+Atendimento híbrido: início online com suporte presencial quando necessário, incluindo perícias e acompanhamento processual.
 </p>
 
 <div class="badges">
-<div class="badge">Atendimento inicial online</div>
-<div class="badge">Suporte presencial</div>
-<div class="badge">Perícias INSS</div>
-<div class="badge">Acompanhamento jurídico</div>
+<div class="badge"><i class="fa-solid fa-laptop"></i> Atendimento online</div>
+<div class="badge"><i class="fa-solid fa-building"></i> Presencial quando necessário</div>
+<div class="badge"><i class="fa-solid fa-stethoscope"></i> Perícias INSS</div>
+<div class="badge"><i class="fa-solid fa-scale-balanced"></i> Suporte jurídico completo</div>
 </div>
 
 </div>
@@ -269,7 +311,6 @@ Atendimento previdenciário com início online e suporte presencial quando neces
 </div>
 
 </div>
-
 </div>
 </section>
 
@@ -279,15 +320,57 @@ Atendimento previdenciário com início online e suporte presencial quando neces
 
 <div class="title">
 <h2>Áreas de Atuação</h2>
-<p>Atendimento previdenciário completo</p>
+<p>Atuação completa em Direito Previdenciário</p>
 </div>
 
 <div class="cards">
-<div class="card"><h3>Aposentadoria</h3><p>Planejamento e concessão.</p></div>
-<div class="card"><h3>BPC / LOAS</h3><p>Benefício assistencial.</p></div>
-<div class="card"><h3>Pensão por Morte</h3><p>Direitos de dependentes.</p></div>
-<div class="card"><h3>Auxílio Doença</h3><p>Incapacidade temporária.</p></div>
-<div class="card"><h3>Auxílio-Acidente</h3><p>Indenização por sequela permanente.</p></div>
+
+<div class="card">
+<i class="fa-solid fa-person-cane"></i>
+<h3>Aposentadoria</h3>
+<p>Análise e planejamento previdenciário completo.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-hand-holding-medical"></i>
+<h3>BPC / LOAS</h3>
+<p>Benefício assistencial para idosos e PCD.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-heart-pulse"></i>
+<h3>Pensão por Morte</h3>
+<p>Direitos de dependentes e revisão de benefícios.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-user-injured"></i>
+<h3>Auxílio Doença</h3>
+<p>Casos de incapacidade temporária.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-wheelchair"></i>
+<h3>Auxílio-Acidente</h3>
+<p>Indenização por sequela permanente.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- SOBRE -->
+<section class="section">
+<div class="container">
+
+<div class="about">
+<h2>Sobre o Escritório</h2>
+<br>
+<p>
+Atuação especializada em Direito Previdenciário com foco em resultados reais.
+O atendimento inicia de forma online, garantindo praticidade e agilidade, e pode evoluir para acompanhamento presencial em perícias médicas, diligências administrativas e fases processuais que exigem presença física.
+</p>
 </div>
 
 </div>
@@ -297,43 +380,11 @@ Atendimento previdenciário com início online e suporte presencial quando neces
 <section class="section">
 <div class="container">
 
-<div class="title"><h2>Resultados</h2></div>
-
 <div class="stats">
 <div><h2>500+</h2><p>Casos</p></div>
 <div><h2>98%</h2><p>Sucesso</p></div>
 <div><h2>10+</h2><p>Anos</p></div>
-<div><h2>100%</h2><p>Dedicação</p></div>
-</div>
-
-</div>
-</section>
-
-<!-- FAQ -->
-<section class="section">
-<div class="container">
-
-<div class="title"><h2>Dúvidas Frequentes</h2></div>
-
-<div class="faq-item" onclick="toggle(this)">
-<h3>O atendimento é presencial?</h3>
-<div class="faq-answer">
-O atendimento inicia de forma online, podendo haver acompanhamento presencial em perícias, diligências e fases necessárias do processo.
-</div>
-</div>
-
-<div class="faq-item" onclick="toggle(this)">
-<h3>Preciso ir ao escritório?</h3>
-<div class="faq-answer">
-Não necessariamente. A maior parte do atendimento é online, com suporte presencial quando necessário.
-</div>
-</div>
-
-<div class="faq-item" onclick="toggle(this)">
-<h3>Meu benefício pode ser negado?</h3>
-<div class="faq-answer">
-Sim, cada caso depende de análise individual junto ao INSS.
-</div>
+<div><h2>100%</h2><p>Compromisso</p></div>
 </div>
 
 </div>
@@ -345,7 +396,6 @@ Sim, cada caso depende de análise individual junto ao INSS.
 
 <div class="title">
 <h2>Falar com a atendente</h2>
-<p>Envie suas informações pelo WhatsApp</p>
 </div>
 
 <div class="form-box">
@@ -366,10 +416,10 @@ Sim, cada caso depende de análise individual junto ao INSS.
 <button onclick="enviarFormulario()" style="
 background:linear-gradient(135deg,#C8A85D,#E3C57A);
 color:#000;
-padding:12px;
+padding:13px;
 width:100%;
 border:none;
-border-radius:10px;
+border-radius:12px;
 font-weight:700;
 cursor:pointer;
 ">
@@ -381,22 +431,69 @@ Enviar WhatsApp
 </div>
 </section>
 
-<!-- CTA -->
-<section class="cta">
+<!-- TESTIMONIALS -->
+<section class="section">
 <div class="container">
-<h2>Atendimento jurídico com suporte completo</h2>
-<p>Online inicialmente e presencial quando necessário</p>
+
+<div class="title">
+<h2>Depoimentos</h2>
+</div>
+
+<div class="testimonials">
+
+<div class="testimonial">
+<p>"Atendimento excelente e muito profissional."</p>
+<span>Maria S.</span>
+</div>
+
+<div class="testimonial">
+<p>"Consegui meu benefício após negativa do INSS."</p>
+<span>João P.</span>
+</div>
+
+<div class="testimonial">
+<p>"Equipe muito atenciosa e eficiente."</p>
+<span>Rosa L.</span>
+</div>
+
+</div>
+
 </div>
 </section>
 
-<!-- WHATSAPP FLOAT -->
-<a class="whatsapp" href="#" onclick="abrirWhatsApp()">WhatsApp</a>
+<!-- FAQ -->
+<section class="section">
+<div class="container">
+
+<div class="title">
+<h2>Dúvidas Frequentes</h2>
+</div>
+
+<div class="faq-item" onclick="toggle(this)">
+<h3>O atendimento é presencial?</h3>
+<div class="faq-answer">
+Inicia online e pode ter acompanhamento presencial quando necessário.
+</div>
+</div>
+
+<div class="faq-item" onclick="toggle(this)">
+<h3>Preciso ir ao escritório?</h3>
+<div class="faq-answer">
+Não obrigatoriamente, apenas quando houver necessidade técnica.
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- WHATSAPP -->
+<a class="whatsapp" href="#" onclick="enviarFormulario()">WhatsApp</a>
 
 <script>
 
 function toggle(el){
-const ans = el.querySelector(".faq-answer");
-ans.style.display = ans.style.display === "block" ? "none" : "block";
+const a = el.querySelector(".faq-answer");
+a.style.display = a.style.display === "block" ? "none" : "block";
 }
 
 function enviarFormulario(){
@@ -406,23 +503,11 @@ const telefone = document.getElementById("telefone").value.replace(/\D/g,"");
 const tipo = document.getElementById("tipo").value;
 const msg = document.getElementById("msg").value.trim();
 
-if(nome.length < 3){
-alert("Nome inválido");
-return;
-}
+if(nome.length < 3) return alert("Nome inválido");
+if(telefone.length < 10) return alert("Telefone inválido");
+if(msg.length < 5) return alert("Descreva melhor o caso");
 
-if(telefone.length < 10 || telefone.length > 11){
-alert("Telefone inválido");
-return;
-}
-
-if(msg.length < 5){
-alert("Descreva melhor seu caso");
-return;
-}
-
-const hora = new Date().getHours();
-
+let hora = new Date().getHours();
 let saudacao = hora < 12 ? "Bom dia" : hora < 18 ? "Boa tarde" : "Boa noite";
 
 const texto =
@@ -437,17 +522,10 @@ Telefone: ${telefone}
 Descrição:
 ${msg}
 
-Atendimento inicial online com suporte presencial quando necessário.`;
+Atendimento híbrido com suporte presencial quando necessário.`;
 
-window.open(
-`https://wa.me/5562992754704?text=${encodeURIComponent(texto)}`,
-"_blank"
-);
+window.open(`https://wa.me/5562992754704?text=${encodeURIComponent(texto)}`,'_blank');
 
-}
-
-function abrirWhatsApp(){
-window.open("https://wa.me/5562992754704","_blank");
 }
 
 </script>
