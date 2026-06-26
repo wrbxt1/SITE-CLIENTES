@@ -1,559 +1,2067 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
 <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Amuy Menezes Advocacia Previdenciária</title>
+<title>Amuy Menezes Advocacia Previdenciária | Atendimento Especializado</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<meta name="description" content="Especialistas em Direito Previdenciário. Atendimento personalizado em aposentadorias, BPC/LOAS, pensão por morte, auxílio por incapacidade e planejamento previdenciário.">
 
-<style>
+<meta name="keywords" content="advogado previdenciário, aposentadoria, loas, bpc, pensão por morte, auxílio doença, auxílio incapacidade">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+<meta name="author" content="Amuy Menezes Advocacia Previdenciária">
 
-html{
-scroll-behavior:smooth;
-}
+<meta property="og:title" content="Amuy Menezes Advocacia Previdenciária">
 
-body{
-font-family:'Inter',sans-serif;
-background:#070707;
-color:#fff;
-overflow-x:hidden;
-}
+<meta property="og:description" content="Especialistas em benefícios previdenciários.">
 
-/* ========== LAYOUT ========== */
+<meta property="og:type" content="website">
 
-.container{
-width:90%;
-max-width:1200px;
-margin:auto;
-}
+<meta property="og:image" content="hero.jpg">
 
-/* ========== HEADER ========== */
+<meta property="theme-color" content="#0B0B0B">
 
-header{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-z-index:999;
-background:rgba(0,0,0,.85);
-backdrop-filter:blur(15px);
-border-bottom:1px solid rgba(255,255,255,.05);
-}
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 0;
-}
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-.logo{
-font-family:'Playfair Display',serif;
-font-size:28px;
-color:#C8A85D;
-font-weight:700;
-}
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
 
-.menu{
-display:flex;
-gap:25px;
-}
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-.menu a{
-color:#ccc;
-text-decoration:none;
-font-size:14px;
-transition:.3s;
-}
+<link
+href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+rel="stylesheet">
 
-.menu a:hover{
-color:#C8A85D;
-}
-
-.btn{
-background:linear-gradient(135deg,#C8A85D,#E3C57A);
-color:#000;
-padding:12px 22px;
-border-radius:30px;
-text-decoration:none;
-font-weight:700;
-transition:.3s;
-display:inline-block;
-border:none;
-cursor:pointer;
-}
-
-.btn:hover{
-transform:scale(1.05);
-}
-
-/* ========== HERO ========== */
-
-.hero{
-padding:140px 0 70px;
-}
-
-.hero-grid{
-display:grid;
-grid-template-columns:1.2fr 1fr;
-gap:50px;
-align-items:center;
-}
-
-.tag{
-display:inline-block;
-background:rgba(200,168,93,.1);
-color:#C8A85D;
-padding:8px 14px;
-border-radius:20px;
-font-size:13px;
-margin-bottom:20px;
-}
-
-h1{
-font-family:'Playfair Display',serif;
-font-size:52px;
-line-height:1.1;
-margin-bottom:20px;
-}
-
-h1 span{
-color:#C8A85D;
-}
-
-.hero p{
-color:#bdbdbd;
-font-size:17px;
-line-height:1.6;
-margin-bottom:25px;
-}
-
-.hero-buttons{
-display:flex;
-gap:15px;
-flex-wrap:wrap;
-}
-
-/* ========== IMAGE ========== */
-
-.hero-img img{
-width:100%;
-height:430px;
-object-fit:cover;
-border-radius:20px;
-}
-
-/* ========== STATS ========== */
-
-.stats{
-padding:60px 0;
-border-top:1px solid rgba(255,255,255,.05);
-border-bottom:1px solid rgba(255,255,255,.05);
-}
-
-.stats-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:20px;
-text-align:center;
-}
-
-.stats h2{
-color:#C8A85D;
-font-size:38px;
-font-family:'Playfair Display',serif;
-}
-
-/* ========== SECTIONS ========== */
-
-.section{
-padding:90px 0;
-}
-
-.title{
-text-align:center;
-margin-bottom:40px;
-}
-
-.title h2{
-font-size:40px;
-font-family:'Playfair Display',serif;
-}
-
-.title p{
-color:#aaa;
-margin-top:10px;
-}
-
-/* ========== CARDS ========== */
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.card{
-background:#111;
-padding:25px;
-border-radius:18px;
-border:1px solid rgba(255,255,255,.05);
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-}
-
-.card h3{
-color:#C8A85D;
-margin-bottom:10px;
-}
-
-/* ========== PROCESS ========== */
-
-.step{
-display:flex;
-gap:15px;
-margin-bottom:25px;
-}
-
-.dot{
-width:10px;
-height:10px;
-background:#C8A85D;
-border-radius:50%;
-margin-top:7px;
-}
-
-/* ========== CTA ========== */
-
-.cta{
-text-align:center;
-padding:70px 0;
-}
-
-.cta h2{
-font-family:'Playfair Display',serif;
-font-size:42px;
-margin-bottom:10px;
-}
-
-.cta p{
-color:#aaa;
-margin-bottom:25px;
-}
-
-/* ========== FORM ========== */
-
-.form-box{
-background:#0f0f0f;
-padding:30px;
-border-radius:18px;
-border:1px solid rgba(255,255,255,.05);
-}
-
-input, select, textarea{
-width:100%;
-padding:12px;
-margin-bottom:12px;
-border-radius:10px;
-border:none;
-outline:none;
-background:#1a1a1a;
-color:#fff;
-}
-
-textarea{
-resize:none;
-height:120px;
-}
-
-/* ========== FAQ ========== */
-
-.faq-item{
-background:#111;
-padding:18px;
-border-radius:12px;
-margin-bottom:10px;
-cursor:pointer;
-}
-
-.faq-answer{
-display:none;
-margin-top:10px;
-color:#aaa;
-}
-
-/* ========== ANIMATION ========== */
-
-.fade{
-opacity:0;
-transform:translateY(30px);
-transition:all .6s ease;
-}
-
-.fade.show{
-opacity:1;
-transform:translateY(0);
-}
-
-/* ========== MOBILE ========== */
-
-@media(max-width:900px){
-
-.hero-grid{
-grid-template-columns:1fr;
-}
-
-.stats-grid{
-grid-template-columns:1fr 1fr;
-}
-
-.menu{
-display:none;
-}
-
-h1{
-font-size:36px;
-}
-
-}
-
-</style>
 </head>
 
 <body>
 
-<header>
+<div class="cursor"></div>
+
+<div class="loading">
+
+<div class="loading-logo">
+
+<span>A</span>
+
+</div>
+
+</div>
+
+<header id="header">
+
 <div class="container">
+
 <nav>
 
-<div class="logo">AMUY MENEZES</div>
+<a href="#" class="logo">
 
-<div class="menu">
-<a href="#areas">Benefícios</a>
-<a href="#processo">Processo</a>
-<a href="#faq">FAQ</a>
-<a href="#form">Contato</a>
+<div class="logo-icon">
+
+<i class="fa-solid fa-scale-balanced"></i>
+
 </div>
-
-<button class="btn" onclick="abrirWhatsApp()">Atendimento</button>
-
-</nav>
-</div>
-</header>
-
-<!-- HERO -->
-<section class="hero fade">
-<div class="container">
-<div class="hero-grid">
 
 <div>
-<div class="tag">Especialista em Direito Previdenciário</div>
+
+<h2>AMUY MENEZES</h2>
+
+<span>ADVOCACIA PREVIDENCIÁRIA</span>
+
+</div>
+
+</a>
+
+<ul class="menu">
+
+<li>
+
+<a href="#inicio">
+
+Início
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#areas">
+
+Benefícios
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#processo">
+
+Como Funciona
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#depoimentos">
+
+Depoimentos
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#faq">
+
+FAQ
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#contato">
+
+Contato
+
+</a>
+
+</li>
+
+</ul>
+
+<div class="nav-buttons">
+
+<a
+href="#formulario"
+class="btn-outline">
+
+Solicitar Análise
+
+</a>
+
+<button
+onclick="abrirWhatsApp()"
+class="btn-gold">
+
+Falar com a Lara
+
+</button>
+
+</div>
+
+<div class="menu-mobile">
+
+<i class="fa-solid fa-bars"></i>
+
+</div>
+
+</nav>
+
+</div>
+
+</header>
+
+<section
+class="hero"
+id="inicio">
+
+<div class="hero-bg"></div>
+
+<div class="container">
+
+<div class="hero-grid">
+
+<div
+class="hero-left"
+data-aos="fade-right">
+
+<div class="hero-badge">
+
+<i class="fa-solid fa-shield-heart"></i>
+
+<span>
+
+Atendimento Humanizado • Todo o Brasil
+
+</span>
+
+</div>
 
 <h1>
-Seu benefício merece<br>
-<span>acompanhamento especializado</span>
+
+Seu benefício merece uma
+
+<span>
+
+análise especializada.
+
+</span>
+
 </h1>
 
 <p>
-Atendimento completo em aposentadoria, BPC/LOAS, pensão por morte e planejamento previdenciário.
+
+Nossa equipe atua de forma estratégica para garantir que você conheça todos os seus direitos previdenciários, oferecendo atendimento personalizado desde a análise inicial até a conclusão do seu processo.
+
 </p>
 
 <div class="hero-buttons">
-<button class="btn" onclick="abrirWhatsApp()">Falar com a Lara</button>
-<a href="#form" class="btn">Solicitar análise</a>
-</div>
+
+<button
+onclick="abrirWhatsApp()"
+class="btn-gold hero-btn">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+Quero falar com a Lara
+
+</button>
+
+<a
+href="#formulario"
+class="btn-outline hero-btn">
+
+Solicitar Análise
+
+</a>
+
 </div>
 
-<div class="hero-img">
-<img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80">
+<div class="hero-info">
+
+<div>
+
+<strong>
+
+✔ Atendimento Nacional
+
+</strong>
+
+<span>
+
+100% Online
+
+</span>
+
+</div>
+
+<div>
+
+<strong>
+
+✔ Atendimento Personalizado
+
+</strong>
+
+<span>
+
+Equipe Especializada
+
+</span>
+
+</div>
+
+<div>
+
+<strong>
+
+✔ Resposta Rápida
+
+</strong>
+
+<span>
+
+Via WhatsApp
+
+</span>
+
 </div>
 
 </div>
+
 </div>
+<div
+class="hero-right"
+data-aos="fade-left">
+
+<div class="hero-image">
+
+<img
+src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=900&q=80"
+alt="Advocacia Previdenciária">
+
+<div class="experience-card">
+
+<div class="experience-icon">
+
+<i class="fa-solid fa-award"></i>
+
+</div>
+
+<div>
+
+<h3>
+
++10 anos
+
+</h3>
+
+<p>
+
+de atuação especializada
+
+</p>
+
+</div>
+
+</div>
+
+<div class="floating-card floating-card-1">
+
+<div class="floating-icon">
+
+<i class="fa-solid fa-users"></i>
+
+</div>
+
+<div>
+
+<h4>
+
+500+
+
+</h4>
+
+<span>
+
+Clientes atendidos
+
+</span>
+
+</div>
+
+</div>
+
+<div class="floating-card floating-card-2">
+
+<div class="floating-icon">
+
+<i class="fa-solid fa-star"></i>
+
+</div>
+
+<div>
+
+<h4>
+
+98%
+
+</h4>
+
+<span>
+
+Satisfação dos clientes
+
+</span>
+
+</div>
+
+</div>
+
+<div class="floating-card floating-card-3">
+
+<div class="floating-icon">
+
+<i class="fa-solid fa-comments"></i>
+
+</div>
+
+<div>
+
+<h4>
+
+Atendimento
+
+</h4>
+
+<span>
+
+100% Humanizado
+
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="hero-wave">
+
+<svg
+viewBox="0 0 1440 140"
+preserveAspectRatio="none">
+
+<path
+fill="#0d0d0d"
+d="M0,96L120,106.7C240,117,480,139,720,133.3C960,128,1200,96,1320,80L1440,64L1440,160L1320,160C1200,160,960,160,720,160C480,160,240,160,120,160L0,160Z">
+
+</path>
+
+</svg>
+
+</div>
+
 </section>
 
-<!-- STATS -->
-<section class="stats fade">
+<section
+class="numbers">
+
 <div class="container">
-<div class="stats-grid">
 
-<div><h2>500+</h2><p>Clientes</p></div>
-<div><h2>98%</h2><p>Satisfação</p></div>
-<div><h2>10+</h2><p>Anos</p></div>
-<div><h2>Brasil</h2><p>Atendimento</p></div>
+<div class="numbers-grid">
+
+<div
+class="number-box"
+data-aos="zoom-in">
+
+<h2
+class="counter"
+data-target="500">
+
+0
+
+</h2>
+
+<p>
+
+Clientes Atendidos
+
+</p>
 
 </div>
+
+<div
+class="number-box"
+data-aos="zoom-in"
+data-aos-delay="100">
+
+<h2
+class="counter"
+data-target="98">
+
+0
+
+</h2>
+
+<p>
+
+% de Satisfação
+
+</p>
+
 </div>
+
+<div
+class="number-box"
+data-aos="zoom-in"
+data-aos-delay="200">
+
+<h2
+class="counter"
+data-target="10">
+
+0
+
+</h2>
+
+<p>
+
+Anos de Experiência
+
+</p>
+
+</div>
+
+<div
+class="number-box"
+data-aos="zoom-in"
+data-aos-delay="300">
+
+<h2>
+
+Brasil
+
+</h2>
+
+<p>
+
+Atendimento Nacional
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- ÁREAS -->
-<section class="section fade" id="areas">
+<section
+class="areas"
+id="areas">
+
 <div class="container">
 
-<div class="title">
-<h2>Áreas de Atuação</h2>
-<p>Atendimento completo previdenciário</p>
+<div
+class="section-header"
+data-aos="fade-up">
+
+<span>
+
+NOSSOS SERVIÇOS
+
+</span>
+
+<h2>
+
+Áreas de Atuação
+
+</h2>
+
+<p>
+
+Atendimento especializado em Direito Previdenciário para garantir seus direitos com segurança, estratégia e acompanhamento completo.
+
+</p>
+
 </div>
 
-<div class="cards">
+<div class="areas-grid">
 
-<div class="card"><h3>Aposentadoria</h3><p>Análise completa do direito.</p></div>
-<div class="card"><h3>BPC / LOAS</h3><p>Benefício assistencial.</p></div>
-<div class="card"><h3>Pensão</h3><p>Suporte para dependentes.</p></div>
-<div class="card"><h3>Auxílio doença</h3><p>Benefícios por incapacidade.</p></div>
+<div
+class="area-card"
+data-aos="fade-up">
+
+<div class="area-icon">
+
+<i class="fa-solid fa-user-clock"></i>
+
+</div>
+
+<h3>
+
+Aposentadorias
+
+</h3>
+
+<p>
+
+Análise completa das regras de transição, aposentadoria por idade, tempo de contribuição e planejamento previdenciário.
+
+</p>
+
+<a
+href="#formulario">
+
+Saiba mais
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</a>
+
+</div>
+
+<div
+class="area-card"
+data-aos="fade-up"
+data-aos-delay="100">
+
+<div class="area-icon">
+
+<i class="fa-solid fa-wheelchair"></i>
+
+</div>
+
+<h3>
+
+BPC / LOAS
+
+</h3>
+
+<p>
+
+Orientação completa para solicitação do Benefício de Prestação Continuada com análise detalhada da documentação.
+
+</p>
+
+<a
+href="#formulario">
+
+Saiba mais
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</a>
+
+</div>
+
+<div
+class="area-card"
+data-aos="fade-up"
+data-aos-delay="200">
+
+<div class="area-icon">
+
+<i class="fa-solid fa-heart-circle-plus"></i>
+
+</div>
+
+<h3>
+
+Auxílio por Incapacidade
+
+</h3>
+
+<p>
+
+Auxílio-doença, aposentadoria por incapacidade permanente e demais benefícios relacionados à incapacidade laboral.
+
+</p>
+
+<a
+href="#formulario">
+
+Saiba mais
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</a>
+
+</div>
+<div
+class="area-card"
+data-aos="fade-up"
+data-aos-delay="300">
+
+<div class="area-icon">
+
+<i class="fa-solid fa-people-roof"></i>
+
+</div>
+
+<h3>
+
+Pensão por Morte
+
+</h3>
+
+<p>
+
+Assessoria completa para dependentes na solicitação da pensão por morte, com análise documental e acompanhamento durante todo o processo.
+
+</p>
+
+<a href="#formulario">
+
+Saiba mais
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</a>
+
+</div>
+
+<div
+class="area-card"
+data-aos="fade-up"
+data-aos-delay="400">
+
+<div class="area-icon">
+
+<i class="fa-solid fa-person-pregnant"></i>
+
+</div>
+
+<h3>
+
+Salário-Maternidade
+
+</h3>
+
+<p>
+
+Atendimento especializado para trabalhadoras urbanas, rurais, MEIs e seguradas facultativas.
+
+</p>
+
+<a href="#formulario">
+
+Saiba mais
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</a>
+
+</div>
+
+<div
+class="area-card"
+data-aos="fade-up"
+data-aos-delay="500">
+
+<div class="area-icon">
+
+<i class="fa-solid fa-chart-line"></i>
+
+</div>
+
+<h3>
+
+Planejamento Previdenciário
+
+</h3>
+
+<p>
+
+Descubra qual é o melhor momento para se aposentar e quanto você poderá receber, evitando perdas financeiras.
+
+</p>
+
+<a href="#formulario">
+
+Saiba mais
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</a>
 
 </div>
 
 </div>
+
+</div>
+
 </section>
 
-<!-- PROCESSO -->
-<section class="section fade" id="processo">
+<!-- ========================= -->
+
+<section
+class="process"
+id="processo">
+
 <div class="container">
 
-<div class="title">
-<h2>Como Funciona</h2>
+<div
+class="section-header"
+data-aos="fade-up">
+
+<span>
+
+COMO FUNCIONA
+
+</span>
+
+<h2>
+
+Atendimento simples, rápido e seguro
+
+</h2>
+
+<p>
+
+Você não precisa enfrentar a burocracia sozinho. Nossa equipe acompanha todas as etapas para garantir mais tranquilidade e segurança.
+
+</p>
+
 </div>
 
-<div class="step"><div class="dot"></div><div><h3>Contato</h3><p>Você chama no WhatsApp.</p></div></div>
-<div class="step"><div class="dot"></div><div><h3>Análise</h3><p>Estudo do seu caso.</p></div></div>
-<div class="step"><div class="dot"></div><div><h3>Estratégia</h3><p>Plano personalizado.</p></div></div>
-<div class="step"><div class="dot"></div><div><h3>Resultado</h3><p>Acompanhamento completo.</p></div></div>
+<div class="timeline">
+
+<div
+class="timeline-item"
+data-aos="fade-right">
+
+<div class="timeline-number">
+
+01
 
 </div>
+
+<div class="timeline-content">
+
+<h3>
+
+Primeiro Contato
+
+</h3>
+
+<p>
+
+Você entra em contato pelo WhatsApp e conversa diretamente com a equipe de atendimento. A Lara fará o primeiro atendimento para entender sua situação.
+
+</p>
+
+</div>
+
+</div>
+
+<div
+class="timeline-item"
+data-aos="fade-left">
+
+<div class="timeline-number">
+
+02
+
+</div>
+
+<div class="timeline-content">
+
+<h3>
+
+Análise do Caso
+
+</h3>
+
+<p>
+
+Nossa equipe jurídica verifica toda a documentação e identifica quais benefícios podem ser solicitados.
+
+</p>
+
+</div>
+
+</div>
+
+<div
+class="timeline-item"
+data-aos="fade-right">
+
+<div class="timeline-number">
+
+03
+
+</div>
+
+<div class="timeline-content">
+
+<h3>
+
+Estratégia Previdenciária
+
+</h3>
+
+<p>
+
+É elaborado um plano personalizado para buscar o melhor benefício possível de acordo com o seu histórico.
+
+</p>
+
+</div>
+
+</div>
+
+<div
+class="timeline-item"
+data-aos="fade-left">
+
+<div class="timeline-number">
+
+04
+
+</div>
+
+<div class="timeline-content">
+
+<h3>
+
+Acompanhamento Completo
+
+</h3>
+
+<p>
+
+Você acompanha todas as etapas do processo com total transparência até a conclusão do seu benefício.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- FORM -->
-<section class="section fade" id="form">
+<!-- ========================= -->
+
+<section
+class="why-us">
+
 <div class="container">
 
-<div class="title">
-<h2>Solicitar Atendimento</h2>
-<p>Preencha e fale com a Lara no WhatsApp</p>
+<div
+class="section-header"
+data-aos="fade-up">
+
+<span>
+
+DIFERENCIAIS
+
+</span>
+
+<h2>
+
+Por que escolher a Amuy Menezes?
+
+</h2>
+
+<p>
+
+Mais do que solicitar benefícios, buscamos garantir segurança, estratégia e tranquilidade para cada cliente.
+
+</p>
+
 </div>
 
-<div class="form-box">
+<div class="why-grid">
 
-<input id="nome" placeholder="Seu nome">
-<input id="telefone" placeholder="Seu telefone">
+<div
+class="why-card"
+data-aos="zoom-in">
 
-<select id="tipo">
-<option>Aposentadoria</option>
-<option>BPC / LOAS</option>
-<option>Pensão por Morte</option>
-<option>Auxílio Doença</option>
+<i class="fa-solid fa-user-shield"></i>
+
+<h3>
+
+Atendimento Humanizado
+
+</h3>
+
+<p>
+
+Cada cliente recebe atenção individualizada durante todo o processo.
+
+</p>
+
+</div>
+
+<div
+class="why-card"
+data-aos="zoom-in"
+data-aos-delay="100">
+
+<i class="fa-solid fa-gavel"></i>
+
+<h3>
+
+Equipe Especializada
+
+</h3>
+
+<p>
+
+Profissionais focados exclusivamente em Direito Previdenciário.
+
+</p>
+
+</div>
+
+<div
+class="why-card"
+data-aos="zoom-in"
+data-aos-delay="200">
+
+<i class="fa-solid fa-headset"></i>
+
+<h3>
+
+Suporte Contínuo
+
+</h3>
+
+<p>
+
+Você nunca fica sem resposta. Nossa equipe acompanha seu caso do início ao fim.
+
+</p>
+
+</div>
+
+<div
+class="why-card"
+data-aos="zoom-in"
+data-aos-delay="300">
+
+<i class="fa-solid fa-earth-americas"></i>
+
+<h3>
+
+Atendimento Nacional
+
+</h3>
+
+<p>
+
+Todo o processo pode ser realizado de forma totalmente online.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+
+<section
+class="cta-premium">
+
+<div class="container">
+
+<div
+class="cta-box"
+data-aos="zoom-in">
+
+<span>
+
+ANÁLISE GRATUITA
+
+</span>
+
+<h2>
+
+Descubra quais benefícios você pode ter direito.
+
+</h2>
+
+<p>
+
+Fale agora mesmo com nossa equipe e receba um atendimento personalizado. A Lara realizará o primeiro atendimento e encaminhará seu caso para análise jurídica.
+
+</p>
+
+<div class="cta-buttons">
+
+<button
+onclick="abrirWhatsApp()"
+class="btn-gold">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+Quero falar com a Lara
+
+</button>
+
+<a
+href="#formulario"
+class="btn-outline">
+
+Solicitar Atendimento
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+  <!-- ===================================================== -->
+<!-- LARA -->
+<!-- ===================================================== -->
+
+<section class="lara-section" id="lara">
+
+<div class="container">
+
+<div class="lara-grid">
+
+<div
+class="lara-image"
+data-aos="fade-right">
+
+<div class="image-border"></div>
+
+<img
+src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80"
+alt="Lara">
+
+<div class="lara-badge">
+
+<i class="fa-solid fa-circle-check"></i>
+
+Atendimento Personalizado
+
+</div>
+
+</div>
+
+<div
+class="lara-content"
+data-aos="fade-left">
+
+<span class="mini-title">
+
+PRIMEIRO ATENDIMENTO
+
+</span>
+
+<h2>
+
+Quem fará seu primeiro atendimento será a Lara.
+
+</h2>
+
+<p>
+
+Ao entrar em contato pelo WhatsApp você será recebido pela Lara, integrante da equipe da Amuy Menezes Advocacia Previdenciária.
+
+Ela realizará o primeiro atendimento, entenderá sua situação e encaminhará seu caso para análise jurídica da equipe responsável.
+
+</p>
+
+<div class="lara-list">
+
+<div>
+
+<i class="fa-solid fa-check"></i>
+
+Atendimento humanizado
+
+</div>
+
+<div>
+
+<i class="fa-solid fa-check"></i>
+
+Resposta rápida
+
+</div>
+
+<div>
+
+<i class="fa-solid fa-check"></i>
+
+Acompanhamento durante todo o processo
+
+</div>
+
+<div>
+
+<i class="fa-solid fa-check"></i>
+
+Encaminhamento direto para análise jurídica
+
+</div>
+
+</div>
+
+<div class="lara-buttons">
+
+<button
+class="btn-gold"
+onclick="abrirWhatsApp()">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+Falar com a Lara
+
+</button>
+
+<a
+href="#formulario"
+class="btn-outline">
+
+Solicitar Atendimento
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- DEPOIMENTOS -->
+<!-- ===================================================== -->
+
+<section
+class="testimonials"
+id="depoimentos">
+
+<div class="container">
+
+<div
+class="section-header"
+data-aos="fade-up">
+
+<span>
+
+DEPOIMENTOS
+
+</span>
+
+<h2>
+
+O que dizem nossos clientes
+
+</h2>
+
+<p>
+
+Veja a experiência de pessoas que confiaram na Amuy Menezes Advocacia Previdenciária.
+
+</p>
+
+</div>
+
+<div class="testimonial-grid">
+
+<div
+class="testimonial-card"
+data-aos="fade-up">
+
+<div class="stars">
+
+★★★★★
+
+</div>
+
+<p>
+
+"Excelente atendimento desde o primeiro contato. Fui muito bem orientada e consegui resolver meu benefício com tranquilidade."
+
+</p>
+
+<div class="client">
+
+<div class="avatar">
+
+M
+
+</div>
+
+<div>
+
+<strong>
+
+Maria Oliveira
+
+</strong>
+
+<span>
+
+Aposentadoria
+
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+<div
+class="testimonial-card"
+data-aos="fade-up"
+data-aos-delay="150">
+
+<div class="stars">
+
+★★★★★
+
+</div>
+
+<p>
+
+"A Lara foi extremamente atenciosa desde o início. Sempre respondeu minhas dúvidas rapidamente."
+
+</p>
+
+<div class="client">
+
+<div class="avatar">
+
+J
+
+</div>
+
+<div>
+
+<strong>
+
+João Batista
+
+</strong>
+
+<span>
+
+Auxílio Doença
+
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+<div
+class="testimonial-card"
+data-aos="fade-up"
+data-aos-delay="300">
+
+<div class="stars">
+
+★★★★★
+
+</div>
+
+<p>
+
+"Profissionalismo e segurança em todas as etapas. Recomendo para qualquer pessoa que precise de auxílio previdenciário."
+
+</p>
+
+<div class="client">
+
+<div class="avatar">
+
+A
+
+</div>
+
+<div>
+
+<strong>
+
+Ana Paula
+
+</strong>
+
+<span>
+
+BPC / LOAS
+
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- ESTATÍSTICAS PREMIUM -->
+<!-- ===================================================== -->
+
+<section class="trust">
+
+<div class="container">
+
+<div class="trust-grid">
+
+<div
+class="trust-card"
+data-aos="zoom-in">
+
+<i class="fa-solid fa-user-group"></i>
+
+<h3>
+
+500+
+
+</h3>
+
+<p>
+
+Clientes atendidos
+
+</p>
+
+</div>
+
+<div
+class="trust-card"
+data-aos="zoom-in"
+data-aos-delay="100">
+
+<i class="fa-solid fa-scale-balanced"></i>
+
+<h3>
+
+10+
+
+</h3>
+
+<p>
+
+Anos de atuação
+
+</p>
+
+</div>
+
+<div
+class="trust-card"
+data-aos="zoom-in"
+data-aos-delay="200">
+
+<i class="fa-solid fa-medal"></i>
+
+<h3>
+
+98%
+
+</h3>
+
+<p>
+
+Satisfação dos clientes
+
+</p>
+
+</div>
+
+<div
+class="trust-card"
+data-aos="zoom-in"
+data-aos-delay="300">
+
+<i class="fa-solid fa-earth-americas"></i>
+
+<h3>
+
+Brasil
+
+</h3>
+
+<p>
+
+Atendimento Nacional
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+  <!-- ===================================================== -->
+<!-- FAQ -->
+<!-- ===================================================== -->
+
+<section class="faq" id="faq">
+
+<div class="container">
+
+<div class="section-header" data-aos="fade-up">
+
+<span>PERGUNTAS FREQUENTES</span>
+
+<h2>
+
+Tire suas principais dúvidas
+
+</h2>
+
+<p>
+
+Selecionamos as perguntas mais comuns recebidas pela nossa equipe.
+
+</p>
+
+</div>
+
+<div class="faq-wrapper">
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+<span>
+
+Meu benefício foi negado. Ainda tenho direito?
+
+</span>
+
+<i class="fa-solid fa-plus"></i>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+
+Sim. Em muitos casos é possível recorrer administrativamente ou judicialmente. Cada situação precisa ser analisada individualmente.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+<span>
+
+O atendimento pode ser realizado online?
+
+</span>
+
+<i class="fa-solid fa-plus"></i>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+
+Sim. Todo o atendimento pode ser feito pela internet, desde a análise inicial até o acompanhamento do processo.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+<span>
+
+Quais documentos preciso enviar?
+
+</span>
+
+<i class="fa-solid fa-plus"></i>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+
+Depende do benefício desejado. Após o primeiro atendimento você receberá uma lista personalizada de documentos.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+<span>
+
+Quanto tempo demora?
+
+</span>
+
+<i class="fa-solid fa-plus"></i>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+
+O prazo varia conforme o benefício solicitado e a análise realizada pelos órgãos responsáveis.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- FORMULÁRIO -->
+<!-- ===================================================== -->
+
+<section class="contact-section" id="formulario">
+
+<div class="container">
+
+<div class="contact-grid">
+
+<div
+class="contact-info"
+data-aos="fade-right">
+
+<span class="mini-title">
+
+SOLICITE UMA ANÁLISE
+
+</span>
+
+<h2>
+
+Receba uma avaliação do seu caso.
+
+</h2>
+
+<p>
+
+Nossa equipe realizará uma análise inicial das informações enviadas.
+
+Após o envio, sua solicitação será direcionada para a Lara, responsável pelo primeiro atendimento.
+
+</p>
+
+<div class="info-list">
+
+<div>
+
+<i class="fa-solid fa-location-dot"></i>
+
+<div>
+
+<strong>
+
+Atendimento Nacional
+
+</strong>
+
+<span>
+
+100% Online
+
+</span>
+
+</div>
+
+</div>
+
+<div>
+
+<i class="fa-solid fa-phone"></i>
+
+<div>
+
+<strong>
+
+WhatsApp
+
+</strong>
+
+<span>
+
+(62) 99275-4704
+
+</span>
+
+</div>
+
+</div>
+
+<div>
+
+<i class="fa-solid fa-clock"></i>
+
+<div>
+
+<strong>
+
+Horário
+
+</strong>
+
+<span>
+
+Segunda à Sexta • 08h às 18h
+
+</span>
+
+</div>
+
+</div>
+
+<div>
+
+<i class="fa-solid fa-envelope"></i>
+
+<div>
+
+<strong>
+
+Primeiro Atendimento
+
+</strong>
+
+<span>
+
+Equipe Lara
+
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div
+class="contact-form"
+data-aos="fade-left">
+
+<form
+id="leadForm">
+
+<div class="input-group">
+
+<label>
+
+Nome Completo
+
+</label>
+
+<input
+type="text"
+id="nome"
+placeholder="Digite seu nome">
+
+</div>
+
+<div class="input-group">
+
+<label>
+
+Telefone
+
+</label>
+
+<input
+type="tel"
+id="telefone"
+placeholder="(00) 00000-0000">
+
+</div>
+
+<div class="input-group">
+
+<label>
+
+Cidade
+
+</label>
+
+<input
+type="text"
+id="cidade"
+placeholder="Sua cidade">
+
+</div>
+
+<div class="input-group">
+
+<label>
+
+Benefício desejado
+
+</label>
+
+<select id="beneficio">
+
+<option value="">
+
+Selecione
+
+</option>
+
+<option>
+
+Aposentadoria
+
+</option>
+
+<option>
+
+BPC / LOAS
+
+</option>
+
+<option>
+
+Pensão por Morte
+
+</option>
+
+<option>
+
+Auxílio por Incapacidade
+
+</option>
+
+<option>
+
+Planejamento Previdenciário
+
+</option>
+
+<option>
+
+Outro
+
+</option>
+
 </select>
 
-<textarea id="msg" placeholder="Descreva seu caso"></textarea>
+</div>
 
-<button class="btn" onclick="enviarFormulario()">Enviar para WhatsApp</button>
+<div class="input-group">
+
+<label>
+
+Conte um pouco sobre seu caso
+
+</label>
+
+<textarea
+
+id="mensagem"
+
+rows="6"
+
+placeholder="Descreva sua situação...">
+
+</textarea>
+
+</div>
+
+<button
+type="button"
+onclick="enviarFormulario()"
+class="btn-gold form-btn">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+Solicitar Atendimento
+
+</button>
+
+<p class="form-footer">
+
+Ao enviar seus dados você será direcionado ao WhatsApp da equipe.
+
+</p>
+
+</form>
 
 </div>
 
 </div>
+
+</div>
+
 </section>
 
-<!-- CTA -->
-<section class="cta fade">
+<!-- ===================================================== -->
+<!-- CTA FINAL -->
+<!-- ===================================================== -->
+
+<section class="final-cta">
+
 <div class="container">
 
-<h2>Atendimento direto com a Lara</h2>
-<p>Resposta rápida via WhatsApp</p>
+<div
+class="final-box"
+data-aos="zoom-in">
 
-<button class="btn" onclick="abrirWhatsApp()">Falar agora</button>
+<h2>
+
+Seu benefício pode valer muito mais do que você imagina.
+
+</h2>
+
+<p>
+
+Não deixe seus direitos para depois.
+
+Converse agora com a Lara e receba uma análise personalizada.
+
+</p>
+
+<button
+
+onclick="abrirWhatsApp()"
+
+class="btn-gold big-btn">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+Quero falar com a Lara
+
+</button>
 
 </div>
+
+</div>
+
 </section>
 
-<!-- FAQ -->
-<section class="section fade" id="faq">
+<footer id="contato">
+
 <div class="container">
 
-<div class="title">
-<h2>Dúvidas Frequentes</h2>
+<div class="footer-grid">
+
+<div>
+
+<h3>
+
+AMUY MENEZES
+
+</h3>
+
+<p>
+
+Advocacia Previdenciária especializada em aposentadorias, benefícios por incapacidade, BPC/LOAS e planejamento previdenciário.
+
+</p>
+
 </div>
 
-<div class="faq-item" onclick="toggle(this)">
-<h3>Meu benefício pode ser negado?</h3>
-<div class="faq-answer">Cada caso precisa ser analisado individualmente.</div>
+<div>
+
+<h4>
+
+Links
+
+</h4>
+
+<ul>
+
+<li><a href="#inicio">Início</a></li>
+
+<li><a href="#areas">Benefícios</a></li>
+
+<li><a href="#processo">Processo</a></li>
+
+<li><a href="#faq">FAQ</a></li>
+
+</ul>
+
 </div>
 
-<div class="faq-item" onclick="toggle(this)">
-<h3>Atende online?</h3>
-<div class="faq-answer">Sim, atendimento 100% digital.</div>
+<div>
+
+<h4>
+
+Contato
+
+</h4>
+
+<p>
+
+WhatsApp
+
+</p>
+
+<p>
+
+(62) 99275-4704
+
+</p>
+
+<p>
+
+Atendimento Nacional
+
+</p>
+
 </div>
 
 </div>
-</section>
 
-<footer style="text-align:center;padding:50px;color:#777;">
-AMUY MENEZES © 2026
+<div class="copyright">
+
+© 2026 Amuy Menezes Advocacia Previdenciária.
+
+Todos os direitos reservados.
+
+</div>
+
+</div>
+
 </footer>
 
-<script>
+<button
 
-/* WHATSAPP INTELIGENTE */
-function abrirWhatsApp(){
+id="backTop"
 
-const numero = "5562992754704";
-const hora = new Date().getHours();
+onclick="window.scrollTo({top:0,behavior:'smooth'})">
 
-let saudacao = hora < 12 ? "Bom dia" : hora < 18 ? "Boa tarde" : "Boa noite";
+<i class="fa-solid fa-arrow-up"></i>
 
-const msg = `${saudacao}! Gostaria de atendimento com a Lara sobre meu benefício previdenciário.`;
+</button>
 
-window.open(`https://wa.me/${numero}?text=${encodeURIComponent(msg)}`,'_blank');
+<a
 
-}
+id="whatsappFloat"
 
-/* FORMULÁRIO */
-function enviarFormulario(){
+onclick="abrirWhatsApp()">
 
-const nome = document.getElementById("nome").value;
-const telefone = document.getElementById("telefone").value;
-const tipo = document.getElementById("tipo").value;
-const msg = document.getElementById("msg").value;
+<i class="fa-brands fa-whatsapp"></i>
 
-const texto =
-`Olá! Meu nome é ${nome}.
-Telefone: ${telefone}
-Tipo: ${tipo}
-Mensagem: ${msg}`;
-
-window.open(`https://wa.me/5562992754704?text=${encodeURIComponent(texto)}`,'_blank');
-
-}
-
-/* FAQ */
-function toggle(el){
-const answer = el.querySelector(".faq-answer");
-answer.style.display = answer.style.display === "block" ? "none" : "block";
-}
-
-/* ANIMAÇÃO SCROLL */
-const elements = document.querySelectorAll(".fade");
-
-window.addEventListener("scroll", ()=>{
-elements.forEach(el=>{
-const top = el.getBoundingClientRect().top;
-if(top < window.innerHeight - 100){
-el.classList.add("show");
-}
-});
-});
-
-</script>
+</a>
 
 </body>
+
 </html>
