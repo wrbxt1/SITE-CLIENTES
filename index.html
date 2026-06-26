@@ -6,9 +6,6 @@
 
 <title>Amuy Menezes Advocacia Previdenciária</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
 <style>
@@ -19,27 +16,21 @@ padding:0;
 box-sizing:border-box;
 }
 
+body{
+font-family:'Inter',sans-serif;
+background:#070707;
+color:#fff;
+overflow-x:hidden;
+}
+
 html{
 scroll-behavior:smooth;
 }
 
-:root{
---gold:#C8A85D;
---gold2:#E3C57A;
---dark:#080808;
---card:#121212;
-}
-
-body{
-background:var(--dark);
-font-family:'Inter',sans-serif;
-color:white;
-overflow-x:hidden;
-}
-
+/* CONTAINER */
 .container{
 width:90%;
-max-width:1300px;
+max-width:1200px;
 margin:auto;
 }
 
@@ -49,9 +40,9 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-z-index:999;
 background:rgba(0,0,0,.85);
 backdrop-filter:blur(15px);
+z-index:999;
 border-bottom:1px solid rgba(255,255,255,.05);
 }
 
@@ -59,39 +50,38 @@ nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:22px 0;
+padding:18px 0;
 }
 
 .logo{
-font-size:32px;
 font-family:'Playfair Display',serif;
-color:var(--gold);
+font-size:28px;
+color:#C8A85D;
 font-weight:700;
-text-shadow:0 0 20px rgba(200,168,93,.3);
 }
 
 .menu{
 display:flex;
-gap:35px;
+gap:25px;
 }
 
 .menu a{
+color:#ccc;
 text-decoration:none;
-color:#ddd;
-transition:.3s;
+font-size:14px;
 }
 
 .menu a:hover{
-color:var(--gold);
+color:#C8A85D;
 }
 
 .btn{
-padding:15px 28px;
-border-radius:50px;
-background:linear-gradient(135deg,var(--gold),var(--gold2));
-color:black;
-font-weight:700;
+background:linear-gradient(135deg,#C8A85D,#E3C57A);
+color:#000;
+padding:12px 22px;
+border-radius:30px;
 text-decoration:none;
+font-weight:700;
 transition:.3s;
 display:inline-block;
 }
@@ -102,73 +92,67 @@ transform:scale(1.05);
 
 /* HERO */
 .hero{
-padding-top:150px;
-padding-bottom:100px;
+padding:140px 0 80px;
 }
 
 .hero-grid{
 display:grid;
-grid-template-columns:1.1fr .9fr;
-gap:60px;
+grid-template-columns:1.2fr 1fr;
+gap:50px;
 align-items:center;
 }
 
-.hero-tag{
+.tag{
 display:inline-block;
-padding:10px 18px;
-border-radius:50px;
 background:rgba(200,168,93,.1);
-color:var(--gold);
-margin-bottom:25px;
+color:#C8A85D;
+padding:8px 14px;
+border-radius:20px;
+font-size:13px;
+margin-bottom:20px;
 }
 
-.hero h1{
+h1{
 font-family:'Playfair Display',serif;
-font-size:clamp(3rem,6vw,5.8rem);
-line-height:1.05;
-margin-bottom:25px;
+font-size:52px;
+line-height:1.1;
+margin-bottom:20px;
 }
 
-.hero h1 span{
-color:var(--gold);
+h1 span{
+color:#C8A85D;
 }
 
 .hero p{
-font-size:20px;
-line-height:1.8;
-color:#c7c7c7;
-margin-bottom:35px;
+color:#bdbdbd;
+font-size:17px;
+line-height:1.6;
+margin-bottom:25px;
 }
 
 .hero-buttons{
 display:flex;
-gap:20px;
+gap:15px;
 flex-wrap:wrap;
 }
 
 /* HERO IMAGE */
-.hero-image img{
+.hero-img{
 width:100%;
-height:650px;
-object-fit:cover;
-border-radius:30px;
+border-radius:20px;
+overflow:hidden;
 }
 
-/* CARD */
-.hero-card{
-position:absolute;
-bottom:25px;
-left:-40px;
-width:320px;
-background:rgba(10,10,10,.95);
-padding:30px;
-border-radius:25px;
-border:1px solid rgba(255,255,255,.05);
+.hero-img img{
+width:100%;
+height:420px;
+object-fit:cover;
+display:block;
 }
 
 /* STATS */
 .stats{
-padding:100px 0;
+padding:60px 0;
 border-top:1px solid rgba(255,255,255,.05);
 border-bottom:1px solid rgba(255,255,255,.05);
 }
@@ -176,121 +160,109 @@ border-bottom:1px solid rgba(255,255,255,.05);
 .stats-grid{
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:30px;
-}
-
-.stat{
+gap:20px;
 text-align:center;
 }
 
-.stat h2{
-font-size:55px;
+.stats h2{
+color:#C8A85D;
+font-size:40px;
 font-family:'Playfair Display',serif;
-color:var(--gold);
-text-shadow:0 0 20px rgba(200,168,93,.2);
 }
 
 /* SECTIONS */
 .section{
-padding:120px 0;
+padding:90px 0;
 }
 
-.section-title{
+.title{
 text-align:center;
-margin-bottom:60px;
+margin-bottom:40px;
 }
 
-.section-title h2{
-font-size:55px;
+.title h2{
+font-size:38px;
 font-family:'Playfair Display',serif;
-margin-bottom:20px;
+}
+
+.title p{
+color:#aaa;
+margin-top:10px;
 }
 
 /* CARDS */
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
 .card{
-background:var(--card);
-padding:35px;
-border-radius:25px;
-transition:.3s;
+background:#111;
+padding:25px;
+border-radius:18px;
 border:1px solid rgba(255,255,255,.05);
+transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-10px) scale(1.02);
-box-shadow:0 20px 40px rgba(0,0,0,.4);
+transform:translateY(-6px);
 }
 
-.number{
-font-size:50px;
-color:var(--gold);
-font-family:'Playfair Display',serif;
-margin-bottom:15px;
+.card h3{
+color:#C8A85D;
+margin-bottom:10px;
 }
 
-/* PROCESS */
-.process{
-background:#0d0d0d;
-}
-
+/* STEPS */
 .step{
 display:flex;
-gap:25px;
-margin-bottom:40px;
+gap:15px;
+margin-bottom:25px;
 }
 
 .dot{
-width:18px;
-height:18px;
-background:var(--gold);
+width:10px;
+height:10px;
+background:#C8A85D;
 border-radius:50%;
-margin-top:8px;
-box-shadow:0 0 15px rgba(200,168,93,.3);
+margin-top:7px;
 }
 
-/* MOBILE */
-@media(max-width:1000px){
+/* CTA */
+.cta{
+text-align:center;
+padding:80px 0;
+}
+
+.cta h2{
+font-family:'Playfair Display',serif;
+font-size:42px;
+margin-bottom:15px;
+}
+
+.cta p{
+color:#aaa;
+margin-bottom:25px;
+}
+
+/* RESPONSIVO */
+@media(max-width:900px){
 
 .hero-grid{
 grid-template-columns:1fr;
-}
-
-.hero-image{
-display:block;
-margin-top:40px;
-}
-
-.hero-card{
-position:relative;
-left:0;
-bottom:0;
-margin-top:20px;
-width:100%;
 }
 
 .stats-grid{
 grid-template-columns:1fr 1fr;
 }
 
-}
-
-@media(max-width:768px){
-
 .menu{
 display:none;
 }
 
-.hero h1{
-font-size:42px;
-}
-
-.section-title h2{
-font-size:38px;
+h1{
+font-size:36px;
 }
 
 }
@@ -313,9 +285,7 @@ font-size:38px;
 <a href="#contato">Contato</a>
 </div>
 
-<a href="#" onclick="abrirWhatsApp()" class="btn">
-Atendimento
-</a>
+<a href="#" onclick="abrirWhatsApp()" class="btn">Atendimento</a>
 
 </nav>
 </div>
@@ -326,53 +296,25 @@ Atendimento
 <div class="hero-grid">
 
 <div>
-
-<div class="hero-tag">
-Especialistas em Direito Previdenciário
-</div>
+<div class="tag">Especialista em Direito Previdenciário</div>
 
 <h1>
-Seu benefício merece
-<span>acompanhamento especializado.</span>
+Seu benefício merece<br>
+<span>acompanhamento especializado</span>
 </h1>
 
 <p>
-Atendimento completo para aposentadorias, BPC/LOAS,
-pensão por morte, auxílio por incapacidade e planejamento previdenciário.
+Atendimento completo em aposentadoria, BPC/LOAS, pensão por morte e planejamento previdenciário.
 </p>
 
 <div class="hero-buttons">
-
-<a href="#" onclick="abrirWhatsApp()" class="btn">
-Falar com a Lara
-</a>
-
-<a href="#areas" class="btn">
-Ver áreas
-</a>
-
+<a href="#" onclick="abrirWhatsApp()" class="btn">Falar com a Lara</a>
+<a href="#areas" class="btn">Ver áreas</a>
+</div>
 </div>
 
-</div>
-
-<div class="hero-image">
-
+<div class="hero-img">
 <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80">
-
-<div class="hero-card">
-
-<h3>Atendimento Completo</h3>
-
-<ul>
-<li>✓ Análise Previdenciária</li>
-<li>✓ Revisão de Benefícios</li>
-<li>✓ BPC / LOAS</li>
-<li>✓ Pensão por Morte</li>
-<li>✓ Suporte Integral</li>
-</ul>
-
-</div>
-
 </div>
 
 </div>
@@ -383,24 +325,24 @@ Ver áreas
 <div class="container">
 <div class="stats-grid">
 
-<div class="stat">
+<div>
 <h2>500+</h2>
-<p>Clientes Atendidos</p>
+<p>Clientes</p>
 </div>
 
-<div class="stat">
+<div>
 <h2>98%</h2>
 <p>Satisfação</p>
 </div>
 
-<div class="stat">
+<div>
 <h2>10+</h2>
-<p>Anos de Atuação</p>
+<p>Anos</p>
 </div>
 
-<div class="stat">
+<div>
 <h2>Brasil</h2>
-<p>Atendimento Nacional</p>
+<p>Atendimento</p>
 </div>
 
 </div>
@@ -410,164 +352,80 @@ Ver áreas
 <section class="section" id="areas">
 <div class="container">
 
-<div class="section-title">
+<div class="title">
 <h2>Áreas de Atuação</h2>
-<p>Atuação estratégica em todas as áreas do Direito Previdenciário.</p>
+<p>Atendimento completo em benefícios previdenciários</p>
 </div>
 
 <div class="cards">
 
 <div class="card">
-<div class="number">01</div>
-<h3>Aposentadorias</h3>
-<p>Orientação completa para aposentadoria.</p>
+<h3>Aposentadoria</h3>
+<p>Planejamento e concessão.</p>
 </div>
 
 <div class="card">
-<div class="number">02</div>
-<h3>Auxílio por Incapacidade</h3>
-<p>Benefícios por incapacidade laboral.</p>
-</div>
-
-<div class="card">
-<div class="number">03</div>
 <h3>BPC / LOAS</h3>
-<p>Análise de requisitos e documentação.</p>
+<p>Análise de requisitos.</p>
 </div>
 
 <div class="card">
-<div class="number">04</div>
 <h3>Pensão por Morte</h3>
-<p>Suporte para dependentes.</p>
+<p>Suporte completo.</p>
 </div>
 
 <div class="card">
-<div class="number">05</div>
-<h3>Salário-Maternidade</h3>
-<p>Acompanhamento completo.</p>
-</div>
-
-<div class="card">
-<div class="number">06</div>
-<h3>Planejamento Previdenciário</h3>
-<p>Estratégias para o futuro.</p>
+<h3>Auxílio Doença</h3>
+<p>Benefícios por incapacidade.</p>
 </div>
 
 </div>
+
 </div>
 </section>
 
-<section class="section process">
+<section class="section" id="processo">
 <div class="container">
 
-<div class="section-title">
+<div class="title">
 <h2>Como Funciona</h2>
 </div>
 
-<div class="step">
-<div class="dot"></div>
-<div>
-<h3>Primeiro Contato</h3>
-<p>Você fala diretamente com a Lara pelo WhatsApp.</p>
-</div>
-</div>
-
-<div class="step">
-<div class="dot"></div>
-<div>
-<h3>Análise do Caso</h3>
-<p>Verificação dos documentos e direitos.</p>
-</div>
-</div>
-
-<div class="step">
-<div class="dot"></div>
-<div>
-<h3>Estratégia</h3>
-<p>Definição do melhor caminho.</p>
-</div>
-</div>
-
-<div class="step">
-<div class="dot"></div>
-<div>
-<h3>Acompanhamento</h3>
-<p>Até a conclusão do processo.</p>
-</div>
-</div>
+<div class="step"><div class="dot"></div><div><h3>Contato</h3><p>Você chama no WhatsApp.</p></div></div>
+<div class="step"><div class="dot"></div><div><h3>Análise</h3><p>Verificação do caso.</p></div></div>
+<div class="step"><div class="dot"></div><div><h3>Estratégia</h3><p>Definição do melhor caminho.</p></div></div>
+<div class="step"><div class="dot"></div><div><h3>Acompanhamento</h3><p>Até o final do processo.</p></div></div>
 
 </div>
 </section>
 
-<section class="section">
+<section class="cta">
 <div class="container">
 
-<div style="text-align:center;max-width:900px;margin:auto;">
+<h2>Precisa de atendimento agora?</h2>
+<p>Fale diretamente com a Lara e tire suas dúvidas.</p>
 
-<h2 style="font-family:'Playfair Display',serif;font-size:60px;margin-bottom:25px;">
-Descubra seus direitos previdenciários
-</h2>
-
-<p style="font-size:20px;color:#c7c7c7;margin-bottom:40px;">
-Entre em contato agora e receba atendimento com a Lara.
-</p>
-
-<a href="#" onclick="abrirWhatsApp()" class="btn">
-Falar com a Lara
-</a>
-
-</div>
+<a href="#" onclick="abrirWhatsApp()" class="btn">Falar com a Lara</a>
 
 </div>
 </section>
 
-<footer id="contato" style="padding:80px 0;text-align:center;border-top:1px solid rgba(255,255,255,.05);">
-
-<div class="container">
-
-<h2 style="color:#C8A85D;font-family:'Playfair Display',serif;">AMUY MENEZES</h2>
-
-<p style="color:#bcbcbc;">Direito Previdenciário</p>
-<p style="color:#bcbcbc;">WhatsApp: (62) 99275-4704</p>
-<p style="color:#bcbcbc;">Instagram: @amuymenezes</p>
-
-<br>
-
-<p style="color:#666;">© 2026 Todos os direitos reservados.</p>
-
-</div>
-
+<footer style="text-align:center;padding:60px 0;color:#777;">
+AMUY MENEZES © 2026
 </footer>
 
-<a href="#" onclick="abrirWhatsApp()"
-style="position:fixed;right:25px;bottom:25px;width:70px;height:70px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#C8A85D;color:black;font-size:30px;text-decoration:none;font-weight:bold;box-shadow:0 0 30px rgba(200,168,93,.4);z-index:9999;">
-💬
-</a>
-
 <script>
-function abrirWhatsApp() {
+function abrirWhatsApp(){
 
-    const numero = "5562992754704";
+const numero = "5562992754704";
+const hora = new Date().getHours();
 
-    const hora = new Date().getHours();
+let saudacao = hora < 12 ? "Bom dia" : hora < 18 ? "Boa tarde" : "Boa noite";
 
-    let saudacao = "";
+const msg = `${saudacao}! Gostaria de atendimento com a Lara sobre meu benefício previdenciário.`;
 
-    if (hora >= 5 && hora < 12) {
-        saudacao = "Bom dia";
-    } 
-    else if (hora >= 12 && hora < 18) {
-        saudacao = "Boa tarde";
-    } 
-    else {
-        saudacao = "Boa noite";
-    }
+window.open(`https://wa.me/${numero}?text=${encodeURIComponent(msg)}`,'_blank');
 
-    const mensagem = `${saudacao}! Gostaria de atendimento com a Lara sobre meu benefício previdenciário.`;
-
-    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
-
-    window.open(url, "_blank");
 }
 </script>
 
