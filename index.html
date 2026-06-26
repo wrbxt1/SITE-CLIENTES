@@ -369,7 +369,6 @@ Atendimento híbrido: início online com suporte presencial quando necessário, 
 <br>
 <p>
 Atuação especializada em Direito Previdenciário com foco em resultados reais.
-O atendimento inicia de forma online, garantindo praticidade e agilidade, e pode evoluir para acompanhamento presencial em perícias médicas, diligências administrativas e fases processuais que exigem presença física.
 </p>
 </div>
 
@@ -476,17 +475,10 @@ Inicia online e pode ter acompanhamento presencial quando necessário.
 </div>
 </div>
 
-<div class="faq-item" onclick="toggle(this)">
-<h3>Preciso ir ao escritório?</h3>
-<div class="faq-answer">
-Não obrigatoriamente, apenas quando houver necessidade técnica.
-</div>
-</div>
-
 </div>
 </section>
 
-<!-- WHATSAPP -->
+<!-- WHATSAPP BUTTON -->
 <a class="whatsapp" href="#" onclick="enviarFormulario()">WhatsApp</a>
 
 <script>
@@ -496,24 +488,13 @@ const a = el.querySelector(".faq-answer");
 a.style.display = a.style.display === "block" ? "none" : "block";
 }
 
+/* 🔥 SÓ WHATSAPP CORRIGIDO */
 function enviarFormulario(){
 
-try {
-
-const nomeEl = document.getElementById("nome");
-const telefoneEl = document.getElementById("telefone");
-const tipoEl = document.getElementById("tipo");
-const msgEl = document.getElementById("msg");
-
-if(!nomeEl || !telefoneEl || !tipoEl || !msgEl){
-alert("Erro: campos do formulário não encontrados no HTML.");
-return;
-}
-
-const nome = nomeEl.value.trim();
-const telefone = telefoneEl.value.replace(/\D/g,"");
-const tipo = tipoEl.value;
-const msg = msgEl.value.trim();
+const nome = document.getElementById("nome").value.trim();
+const telefone = document.getElementById("telefone").value.replace(/\D/g,"");
+const tipo = document.getElementById("tipo").value;
+const msg = document.getElementById("msg").value.trim();
 
 if(nome.length < 3) return alert("Nome inválido");
 if(telefone.length < 10) return alert("Telefone inválido");
@@ -536,14 +517,16 @@ ${msg}
 
 Atendimento híbrido com suporte presencial quando necessário.`;
 
-/* WHATSAPP 100% ESTÁVEL */
-const url = "https://api.whatsapp.com/send?phone=5562992754704&text=" + encodeURIComponent(texto);
+/* ✔ CORREÇÃO FINAL WHATSAPP */
+const numero = "5562992754704";
+
+const url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(texto);
 
 window.location.href = url;
 
-} catch (err) {
-console.log(err);
-alert("Erro ao enviar. Veja o console (F12).");
 }
 
-}
+</script>
+
+</body>
+</html>
