@@ -12,7 +12,11 @@
 
 <style>
 
-*{margin:0;padding:0;box-sizing:border-box;}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
 body{
 font-family:'Inter',sans-serif;
@@ -47,14 +51,25 @@ padding:18px 0;
 
 .logo{
 font-family:'Playfair Display';
-color:#C8A85D;
 font-size:26px;
+color:#C8A85D;
 font-weight:700;
 }
 
-.menu{display:flex;gap:20px;}
-.menu a{color:#ccc;text-decoration:none;font-size:14px;}
-.menu a:hover{color:#C8A85D;}
+.menu{
+display:flex;
+gap:20px;
+}
+
+.menu a{
+color:#ccc;
+text-decoration:none;
+font-size:14px;
+}
+
+.menu a:hover{
+color:#C8A85D;
+}
 
 .btn{
 background:linear-gradient(135deg,#C8A85D,#E3C57A);
@@ -66,7 +81,7 @@ border:none;
 cursor:pointer;
 }
 
-/* HERO (MENOS VAZIO) */
+/* HERO */
 .hero{
 padding:120px 0 50px;
 }
@@ -94,16 +109,6 @@ line-height:1.6;
 margin-bottom:20px;
 }
 
-.hero-box{
-background:#0f0f0f;
-padding:18px;
-border-left:3px solid #C8A85D;
-margin-top:15px;
-border-radius:10px;
-color:#aaa;
-font-size:14px;
-}
-
 .hero-img img{
 width:100%;
 height:420px;
@@ -111,14 +116,14 @@ object-fit:cover;
 border-radius:15px;
 }
 
-/* BARRA DE DIFERENCIAIS (NOVO) */
+/* BAR */
 .bar{
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:10px;
-margin-top:40px;
+margin-top:35px;
 background:#0f0f0f;
-padding:20px;
+padding:18px;
 border-radius:15px;
 border:1px solid rgba(255,255,255,.05);
 text-align:center;
@@ -146,7 +151,7 @@ color:#C8A85D;
 font-size:34px;
 }
 
-/* SEÇÕES MAIS DENSAS */
+/* SEÇÕES */
 .section{
 padding:70px 0;
 }
@@ -161,7 +166,7 @@ font-size:36px;
 font-family:'Playfair Display';
 }
 
-/* CARDS MAIS CHEIOS */
+/* CARDS */
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
@@ -175,49 +180,15 @@ border-radius:15px;
 border:1px solid rgba(255,255,255,.05);
 }
 
-.card h3{color:#C8A85D;margin-bottom:8px;font-size:18px;}
-.card p{color:#aaa;font-size:14px;line-height:1.4;}
-
-/* NOVO: DEPOIMENTOS */
-.testimonials{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:15px;
-}
-
-.testimonial{
-background:#0f0f0f;
-padding:20px;
-border-radius:15px;
-border:1px solid rgba(255,255,255,.05);
-}
-
-.testimonial p{
-color:#bbb;
-font-size:14px;
-line-height:1.5;
-}
-
-.testimonial span{
-display:block;
-margin-top:10px;
+.card h3{
 color:#C8A85D;
-font-size:13px;
+margin-bottom:8px;
+font-size:18px;
 }
 
-/* PROCESSO MAIS ENXUTO */
-.step{
-display:flex;
-gap:12px;
-margin-bottom:18px;
-}
-
-.dot{
-width:10px;
-height:10px;
-background:#C8A85D;
-border-radius:50%;
-margin-top:6px;
+.card p{
+color:#aaa;
+font-size:14px;
 }
 
 /* FORM */
@@ -228,16 +199,22 @@ border-radius:15px;
 border:1px solid rgba(255,255,255,.05);
 }
 
-/* FAQ */
-.faq-item{
-background:#111;
-padding:15px;
-border-radius:12px;
-margin-bottom:8px;
-cursor:pointer;
+input,select,textarea{
+width:100%;
+padding:12px;
+margin-bottom:12px;
+border-radius:10px;
+border:none;
+outline:none;
+background:#1a1a1a;
+color:#fff;
+font-family:inherit;
 }
 
-.faq-answer{display:none;color:#aaa;margin-top:10px;}
+textarea{
+height:120px;
+resize:none;
+}
 
 /* CTA */
 .cta{
@@ -252,7 +229,6 @@ margin-top:20px;
 .hero-grid{grid-template-columns:1fr;}
 .bar{grid-template-columns:1fr 1fr;}
 .stats-grid{grid-template-columns:1fr 1fr;}
-.testimonials{grid-template-columns:1fr;}
 .menu{display:none;}
 h1{font-size:34px;}
 }
@@ -265,47 +241,38 @@ h1{font-size:34px;}
 <header>
 <div class="container">
 <nav>
+
 <div class="logo">AMUY MENEZES</div>
 
 <div class="menu">
 <a href="#areas">Áreas</a>
 <a href="#processo">Processo</a>
-<a href="#depoimentos">Resultados</a>
 <a href="#form">Contato</a>
 </div>
 
 <button class="btn" onclick="abrirWhatsApp()">WhatsApp</button>
+
 </nav>
 </div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
+
 <div class="container">
 
 <div class="hero-grid">
 
 <div>
-<h1>Seu benefício merece<br><span>máxima atenção jurídica</span></h1>
+
+<h1>Seu benefício merece<br><span>atenção especializada</span></h1>
 
 <p>
-Atuação especializada em aposentadoria, BPC/LOAS, pensão por morte e revisões previdenciárias.
+Atuação em aposentadoria, BPC/LOAS, pensão por morte e revisões previdenciárias em todo o Brasil.
 </p>
 
-<button class="btn" onclick="abrirWhatsApp()">Falar agora</button>
+<button class="btn" onclick="abrirWhatsApp()">Falar com atendente</button>
 
-<div class="hero-box">
-Atendimento humanizado + análise jurídica completa do seu caso antes de qualquer processo.
-</div>
-</div>
-
-<div class="hero-img">
-<img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80">
-</div>
-
-</div>
-
-<!-- BARRA NOVA (REMOVE VAZIO) -->
 <div class="bar">
 <div>Atendimento online</div>
 <div>Todo Brasil</div>
@@ -314,6 +281,15 @@ Atendimento humanizado + análise jurídica completa do seu caso antes de qualqu
 </div>
 
 </div>
+
+<div class="hero-img">
+<img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80">
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 <!-- STATS -->
@@ -335,36 +311,25 @@ Atendimento humanizado + análise jurídica completa do seu caso antes de qualqu
 <div class="title"><h2>Áreas de Atuação</h2></div>
 
 <div class="cards">
-<div class="card"><h3>Aposentadoria</h3><p>Planejamento e concessão estratégica.</p></div>
-<div class="card"><h3>BPC / LOAS</h3><p>Benefício assistencial ao idoso e PCD.</p></div>
-<div class="card"><h3>Pensão</h3><p>Concessão e revisão previdenciária.</p></div>
-<div class="card"><h3>Auxílio Doença</h3><p>Incapacidade temporária e perícia.</p></div>
+
+<div class="card">
+<h3>Aposentadoria</h3>
+<p>Planejamento e concessão de benefícios.</p>
 </div>
 
-</div>
-</section>
-
-<!-- DEPOIMENTOS (NOVO = TIRA VAZIO) -->
-<section class="section" id="depoimentos">
-<div class="container">
-
-<div class="title"><h2>Resultados Reais</h2></div>
-
-<div class="testimonials">
-
-<div class="testimonial">
-<p>“Consegui minha aposentadoria depois de duas negativas do INSS.”</p>
-<span>Cliente 01</span>
+<div class="card">
+<h3>BPC / LOAS</h3>
+<p>Benefício assistencial ao idoso e PCD.</p>
 </div>
 
-<div class="testimonial">
-<p>“Atendimento rápido e resolveram meu BPC que estava parado.”</p>
-<span>Cliente 02</span>
+<div class="card">
+<h3>Pensão por Morte</h3>
+<p>Concessão e revisão de dependentes.</p>
 </div>
 
-<div class="testimonial">
-<p>“Muito atenciosos, explicam tudo sem complicação.”</p>
-<span>Cliente 03</span>
+<div class="card">
+<h3>Auxílio Doença</h3>
+<p>Casos de incapacidade e perícia do INSS.</p>
 </div>
 
 </div>
@@ -378,10 +343,10 @@ Atendimento humanizado + análise jurídica completa do seu caso antes de qualqu
 
 <div class="title"><h2>Como Funciona</h2></div>
 
-<div class="step"><div class="dot"></div><div><h3>Contato</h3><p>Você chama no WhatsApp.</p></div></div>
-<div class="step"><div class="dot"></div><div><h3>Análise</h3><p>Estudo completo do caso.</p></div></div>
-<div class="step"><div class="dot"></div><div><h3>Estratégia</h3><p>Plano jurídico personalizado.</p></div></div>
-<div class="step"><div class="dot"></div><div><h3>Resultado</h3><p>Acompanhamento até o fim.</p></div></div>
+<div class="card"><h3>1. Contato</h3><p>Você fala com a atendente pelo WhatsApp.</p></div>
+<div class="card"><h3>2. Análise</h3><p>Avaliamos seu caso com cuidado jurídico.</p></div>
+<div class="card"><h3>3. Estratégia</h3><p>Definimos o melhor caminho para seu benefício.</p></div>
+<div class="card"><h3>4. Acompanhamento</h3><p>Seguimos até a conclusão do processo.</p></div>
 
 </div>
 </section>
@@ -390,14 +355,27 @@ Atendimento humanizado + análise jurídica completa do seu caso antes de qualqu
 <section class="section" id="form">
 <div class="container">
 
-<div class="title"><h2>Falar com advogado</h2></div>
+<div class="title">
+<h2>Falar com a atendente</h2>
+<p>Preencha e envie direto para o WhatsApp</p>
+</div>
 
 <div class="form-box">
-<input placeholder="Nome">
-<input placeholder="Telefone">
-<textarea placeholder="Descreva seu caso"></textarea>
 
-<button class="btn" onclick="abrirWhatsApp()">Enviar WhatsApp</button>
+<input id="nome" placeholder="Seu nome">
+<input id="telefone" placeholder="Seu telefone">
+
+<select id="tipo">
+<option>Aposentadoria</option>
+<option>BPC / LOAS</option>
+<option>Pensão por Morte</option>
+<option>Auxílio Doença</option>
+</select>
+
+<textarea id="msg" placeholder="Descreva sua situação"></textarea>
+
+<button class="btn" onclick="enviarFormulario()">Enviar WhatsApp</button>
+
 </div>
 
 </div>
@@ -406,9 +384,9 @@ Atendimento humanizado + análise jurídica completa do seu caso antes de qualqu
 <!-- CTA -->
 <section class="cta">
 <div class="container">
-<h2>Atendimento rápido no WhatsApp</h2>
-<p>Resposta em poucos minutos</p>
-<button class="btn" onclick="abrirWhatsApp()">Iniciar atendimento</button>
+<h2>Atendimento rápido via WhatsApp</h2>
+<p>Fale com nossa atendente agora mesmo</p>
+<button class="btn" onclick="abrirWhatsApp()">Iniciar conversa</button>
 </div>
 </section>
 
@@ -417,6 +395,27 @@ Atendimento humanizado + análise jurídica completa do seu caso antes de qualqu
 function abrirWhatsApp(){
 const numero = "5562992754704";
 window.open(`https://wa.me/${numero}`,'_blank');
+}
+
+function enviarFormulario(){
+
+const nome = document.getElementById("nome").value;
+const telefone = document.getElementById("telefone").value;
+const tipo = document.getElementById("tipo").value;
+const msg = document.getElementById("msg").value;
+
+if(!nome || !telefone){
+alert("Preencha nome e telefone.");
+return;
+}
+
+const texto =
+`Nome: ${nome}
+Telefone: ${telefone}
+Tipo: ${tipo}
+Mensagem: ${msg}`;
+
+window.open(`https://wa.me/5562992754704?text=${encodeURIComponent(texto)}`,'_blank');
 }
 
 </script>
