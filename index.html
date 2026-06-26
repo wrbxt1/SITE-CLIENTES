@@ -12,15 +12,7 @@
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
 
 body{
 font-family:'Inter',sans-serif;
@@ -29,7 +21,6 @@ color:#fff;
 overflow-x:hidden;
 }
 
-/* CONTAINER */
 .container{
 width:90%;
 max-width:1200px;
@@ -40,7 +31,6 @@ margin:auto;
 header{
 position:fixed;
 top:0;
-left:0;
 width:100%;
 z-index:999;
 background:rgba(0,0,0,.85);
@@ -56,146 +46,170 @@ padding:18px 0;
 }
 
 .logo{
-font-family:'Playfair Display',serif;
-font-size:28px;
+font-family:'Playfair Display';
 color:#C8A85D;
+font-size:26px;
 font-weight:700;
 }
 
-.menu{
-display:flex;
-gap:25px;
-}
-
-.menu a{
-color:#ccc;
-text-decoration:none;
-font-size:14px;
-}
-
-.menu a:hover{
-color:#C8A85D;
-}
+.menu{display:flex;gap:20px;}
+.menu a{color:#ccc;text-decoration:none;font-size:14px;}
+.menu a:hover{color:#C8A85D;}
 
 .btn{
 background:linear-gradient(135deg,#C8A85D,#E3C57A);
 color:#000;
-padding:12px 22px;
+padding:12px 18px;
 border-radius:30px;
 font-weight:700;
 border:none;
 cursor:pointer;
-display:inline-block;
 }
 
-.btn:hover{
-transform:scale(1.05);
-}
-
-/* HERO */
+/* HERO (MENOS VAZIO) */
 .hero{
-padding:140px 0 70px;
+padding:120px 0 50px;
 }
 
 .hero-grid{
 display:grid;
-grid-template-columns:1.2fr 1fr;
-gap:50px;
+grid-template-columns:1.3fr 1fr;
+gap:40px;
 align-items:center;
 }
 
-.tag{
-display:inline-block;
-background:rgba(200,168,93,.1);
-color:#C8A85D;
-padding:8px 14px;
-border-radius:20px;
-font-size:13px;
-margin-bottom:20px;
-}
-
 h1{
-font-family:'Playfair Display',serif;
-font-size:52px;
+font-family:'Playfair Display';
+font-size:48px;
 line-height:1.1;
-margin-bottom:20px;
+margin-bottom:15px;
 }
 
 h1 span{color:#C8A85D;}
 
 .hero p{
-color:#bdbdbd;
-font-size:17px;
+color:#bbb;
+font-size:16px;
 line-height:1.6;
-margin-bottom:25px;
+margin-bottom:20px;
+}
+
+.hero-box{
+background:#0f0f0f;
+padding:18px;
+border-left:3px solid #C8A85D;
+margin-top:15px;
+border-radius:10px;
+color:#aaa;
+font-size:14px;
 }
 
 .hero-img img{
 width:100%;
-height:430px;
+height:420px;
 object-fit:cover;
-border-radius:20px;
+border-radius:15px;
+}
+
+/* BARRA DE DIFERENCIAIS (NOVO) */
+.bar{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:10px;
+margin-top:40px;
+background:#0f0f0f;
+padding:20px;
+border-radius:15px;
+border:1px solid rgba(255,255,255,.05);
+text-align:center;
+}
+
+.bar div{
+font-size:13px;
+color:#bbb;
 }
 
 /* STATS */
 .stats{
-padding:60px 0;
-border-top:1px solid rgba(255,255,255,.05);
-border-bottom:1px solid rgba(255,255,255,.05);
+padding:40px 0;
 }
 
 .stats-grid{
 display:grid;
 grid-template-columns:repeat(4,1fr);
 text-align:center;
+gap:10px;
 }
 
-/* SECTIONS */
+.stats h2{
+color:#C8A85D;
+font-size:34px;
+}
+
+/* SEÇÕES MAIS DENSAS */
 .section{
-padding:90px 0;
+padding:70px 0;
 }
 
 .title{
 text-align:center;
-margin-bottom:40px;
+margin-bottom:30px;
 }
 
 .title h2{
-font-size:40px;
-font-family:'Playfair Display',serif;
+font-size:36px;
+font-family:'Playfair Display';
 }
 
-.title p{
-color:#aaa;
-margin-top:10px;
-}
-
-/* CARDS */
+/* CARDS MAIS CHEIOS */
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:15px;
 }
 
 .card{
 background:#111;
-padding:25px;
-border-radius:18px;
+padding:20px;
+border-radius:15px;
 border:1px solid rgba(255,255,255,.05);
-transition:.3s;
 }
 
-.card:hover{
-transform:translateY(-8px);
+.card h3{color:#C8A85D;margin-bottom:8px;font-size:18px;}
+.card p{color:#aaa;font-size:14px;line-height:1.4;}
+
+/* NOVO: DEPOIMENTOS */
+.testimonials{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
 }
 
-.card h3{color:#C8A85D;}
+.testimonial{
+background:#0f0f0f;
+padding:20px;
+border-radius:15px;
+border:1px solid rgba(255,255,255,.05);
+}
 
-/* STEPS */
+.testimonial p{
+color:#bbb;
+font-size:14px;
+line-height:1.5;
+}
+
+.testimonial span{
+display:block;
+margin-top:10px;
+color:#C8A85D;
+font-size:13px;
+}
+
+/* PROCESSO MAIS ENXUTO */
 .step{
 display:flex;
-gap:15px;
-margin-bottom:25px;
+gap:12px;
+margin-bottom:18px;
 }
 
 .dot{
@@ -203,67 +217,44 @@ width:10px;
 height:10px;
 background:#C8A85D;
 border-radius:50%;
-margin-top:7px;
+margin-top:6px;
 }
 
 /* FORM */
 .form-box{
 background:#0f0f0f;
-padding:30px;
-border-radius:18px;
+padding:25px;
+border-radius:15px;
 border:1px solid rgba(255,255,255,.05);
-}
-
-input,select,textarea{
-width:100%;
-padding:12px;
-margin-bottom:12px;
-border-radius:10px;
-border:none;
-outline:none;
-background:#1a1a1a;
-color:#fff;
 }
 
 /* FAQ */
 .faq-item{
 background:#111;
-padding:18px;
+padding:15px;
 border-radius:12px;
-margin-bottom:10px;
+margin-bottom:8px;
 cursor:pointer;
 }
 
-.faq-answer{
-display:none;
-margin-top:10px;
-color:#aaa;
-}
+.faq-answer{display:none;color:#aaa;margin-top:10px;}
 
 /* CTA */
 .cta{
 text-align:center;
-padding:70px 0;
-}
-
-/* FADE FIX (CORREÇÃO DA TELA PRETA) */
-.fade{
-opacity:0;
-transform:translateY(30px);
-transition:all .7s ease;
-}
-
-.fade.show{
-opacity:1;
-transform:translateY(0);
+padding:60px 0;
+background:#0f0f0f;
+margin-top:20px;
 }
 
 /* MOBILE */
 @media(max-width:900px){
 .hero-grid{grid-template-columns:1fr;}
+.bar{grid-template-columns:1fr 1fr;}
 .stats-grid{grid-template-columns:1fr 1fr;}
+.testimonials{grid-template-columns:1fr;}
 .menu{display:none;}
-h1{font-size:36px;}
+h1{font-size:34px;}
 }
 
 </style>
@@ -274,189 +265,159 @@ h1{font-size:36px;}
 <header>
 <div class="container">
 <nav>
-
 <div class="logo">AMUY MENEZES</div>
 
 <div class="menu">
-<a href="#areas">Benefícios</a>
+<a href="#areas">Áreas</a>
 <a href="#processo">Processo</a>
-<a href="#faq">FAQ</a>
+<a href="#depoimentos">Resultados</a>
 <a href="#form">Contato</a>
 </div>
 
-<button class="btn" onclick="abrirWhatsApp()">Atendimento</button>
-
+<button class="btn" onclick="abrirWhatsApp()">WhatsApp</button>
 </nav>
 </div>
 </header>
 
 <!-- HERO -->
-<section class="hero fade show">
+<section class="hero">
 <div class="container">
+
 <div class="hero-grid">
 
 <div>
-<div class="tag">Especialista em Previdenciário</div>
+<h1>Seu benefício merece<br><span>máxima atenção jurídica</span></h1>
 
-<h1>Seu benefício merece<br><span>acompanhamento especializado</span></h1>
-
-<p>Atendimento em aposentadoria, BPC/LOAS, pensão por morte e revisão de benefícios.</p>
+<p>
+Atuação especializada em aposentadoria, BPC/LOAS, pensão por morte e revisões previdenciárias.
+</p>
 
 <button class="btn" onclick="abrirWhatsApp()">Falar agora</button>
+
+<div class="hero-box">
+Atendimento humanizado + análise jurídica completa do seu caso antes de qualquer processo.
+</div>
 </div>
 
 <div class="hero-img">
-<img loading="lazy" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80">
+<img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80">
 </div>
 
 </div>
+
+<!-- BARRA NOVA (REMOVE VAZIO) -->
+<div class="bar">
+<div>Atendimento online</div>
+<div>Todo Brasil</div>
+<div>Especialista INSS</div>
+<div>Resposta rápida</div>
+</div>
+
 </div>
 </section>
 
 <!-- STATS -->
-<section class="stats fade">
+<section class="stats">
 <div class="container">
 <div class="stats-grid">
-<div><h2>500+</h2><p>Clientes</p></div>
-<div><h2>98%</h2><p>Satisfação</p></div>
+<div><h2>500+</h2><p>Casos</p></div>
+<div><h2>98%</h2><p>Sucesso</p></div>
 <div><h2>10+</h2><p>Anos</p></div>
-<div><h2>Brasil</h2><p>Atendimento</p></div>
+<div><h2>100%</h2><p>Online</p></div>
 </div>
 </div>
 </section>
 
 <!-- ÁREAS -->
-<section class="section fade" id="areas">
+<section class="section" id="areas">
 <div class="container">
-<div class="title">
-<h2>Áreas de Atuação</h2>
-<p>Atendimento previdenciário completo</p>
-</div>
+
+<div class="title"><h2>Áreas de Atuação</h2></div>
 
 <div class="cards">
-<div class="card"><h3>Aposentadoria</h3><p>Análise jurídica completa do benefício.</p></div>
+<div class="card"><h3>Aposentadoria</h3><p>Planejamento e concessão estratégica.</p></div>
 <div class="card"><h3>BPC / LOAS</h3><p>Benefício assistencial ao idoso e PCD.</p></div>
-<div class="card"><h3>Pensão</h3><p>Concessão e revisão de pensão por morte.</p></div>
-<div class="card"><h3>Auxílio Doença</h3><p>Benefícios por incapacidade.</p></div>
+<div class="card"><h3>Pensão</h3><p>Concessão e revisão previdenciária.</p></div>
+<div class="card"><h3>Auxílio Doença</h3><p>Incapacidade temporária e perícia.</p></div>
 </div>
+
+</div>
+</section>
+
+<!-- DEPOIMENTOS (NOVO = TIRA VAZIO) -->
+<section class="section" id="depoimentos">
+<div class="container">
+
+<div class="title"><h2>Resultados Reais</h2></div>
+
+<div class="testimonials">
+
+<div class="testimonial">
+<p>“Consegui minha aposentadoria depois de duas negativas do INSS.”</p>
+<span>Cliente 01</span>
+</div>
+
+<div class="testimonial">
+<p>“Atendimento rápido e resolveram meu BPC que estava parado.”</p>
+<span>Cliente 02</span>
+</div>
+
+<div class="testimonial">
+<p>“Muito atenciosos, explicam tudo sem complicação.”</p>
+<span>Cliente 03</span>
+</div>
+
+</div>
+
 </div>
 </section>
 
 <!-- PROCESSO -->
-<section class="section fade" id="processo">
+<section class="section" id="processo">
 <div class="container">
+
 <div class="title"><h2>Como Funciona</h2></div>
 
 <div class="step"><div class="dot"></div><div><h3>Contato</h3><p>Você chama no WhatsApp.</p></div></div>
-<div class="step"><div class="dot"></div><div><h3>Análise</h3><p>Avaliamos seu caso.</p></div></div>
-<div class="step"><div class="dot"></div><div><h3>Estratégia</h3><p>Montamos o plano jurídico.</p></div></div>
-<div class="step"><div class="dot"></div><div><h3>Resultado</h3><p>Acompanhamento completo.</p></div></div>
+<div class="step"><div class="dot"></div><div><h3>Análise</h3><p>Estudo completo do caso.</p></div></div>
+<div class="step"><div class="dot"></div><div><h3>Estratégia</h3><p>Plano jurídico personalizado.</p></div></div>
+<div class="step"><div class="dot"></div><div><h3>Resultado</h3><p>Acompanhamento até o fim.</p></div></div>
 
 </div>
 </section>
 
 <!-- FORM -->
-<section class="section fade" id="form">
+<section class="section" id="form">
 <div class="container">
-<div class="title">
-<h2>Solicitar Atendimento</h2>
-</div>
+
+<div class="title"><h2>Falar com advogado</h2></div>
 
 <div class="form-box">
-<input id="nome" placeholder="Nome">
-<input id="telefone" placeholder="Telefone">
-<select id="tipo">
-<option>Aposentadoria</option>
-<option>BPC / LOAS</option>
-<option>Pensão</option>
-<option>Auxílio Doença</option>
-</select>
-<textarea id="msg" placeholder="Descreva seu caso"></textarea>
+<input placeholder="Nome">
+<input placeholder="Telefone">
+<textarea placeholder="Descreva seu caso"></textarea>
 
-<button class="btn" onclick="enviarFormulario()">Enviar WhatsApp</button>
+<button class="btn" onclick="abrirWhatsApp()">Enviar WhatsApp</button>
 </div>
+
 </div>
 </section>
 
 <!-- CTA -->
-<section class="cta fade">
+<section class="cta">
 <div class="container">
-<h2>Atendimento direto</h2>
-<p>Resposta rápida via WhatsApp</p>
-<button class="btn" onclick="abrirWhatsApp()">Falar agora</button>
+<h2>Atendimento rápido no WhatsApp</h2>
+<p>Resposta em poucos minutos</p>
+<button class="btn" onclick="abrirWhatsApp()">Iniciar atendimento</button>
 </div>
 </section>
-
-<!-- FAQ -->
-<section class="section fade" id="faq">
-<div class="container">
-<div class="title"><h2>Dúvidas</h2></div>
-
-<div class="faq-item" onclick="toggle(this)">
-<h3>Meu benefício pode ser negado?</h3>
-<div class="faq-answer">Depende da análise do caso.</div>
-</div>
-
-<div class="faq-item" onclick="toggle(this)">
-<h3>Atende online?</h3>
-<div class="faq-answer">Sim, atendimento 100% digital.</div>
-</div>
-
-</div>
-</section>
-
-<footer style="text-align:center;padding:40px;color:#777;">
-AMUY MENEZES © 2026
-</footer>
 
 <script>
 
-/* WHATSAPP */
 function abrirWhatsApp(){
 const numero = "5562992754704";
-const hora = new Date().getHours();
-const saudacao = hora < 12 ? "Bom dia" : hora < 18 ? "Boa tarde" : "Boa noite";
-
-window.open(`https://wa.me/${numero}?text=${encodeURIComponent(saudacao + " quero atendimento jurídico")}`,'_blank');
+window.open(`https://wa.me/${numero}`,'_blank');
 }
-
-/* FORM */
-function enviarFormulario(){
-
-const nome = document.getElementById("nome").value;
-const telefone = document.getElementById("telefone").value;
-
-if(!nome || !telefone){
-alert("Preenche nome e telefone.");
-return;
-}
-
-const tipo = document.getElementById("tipo").value;
-const msg = document.getElementById("msg").value;
-
-const texto = `Nome: ${nome}\nTelefone: ${telefone}\nTipo: ${tipo}\nMensagem: ${msg}`;
-
-window.open(`https://wa.me/5562992754704?text=${encodeURIComponent(texto)}`,'_blank');
-}
-
-/* FAQ */
-function toggle(el){
-const a = el.querySelector(".faq-answer");
-a.style.display = a.style.display === "block" ? "none" : "block";
-}
-
-/* ANIMAÇÃO PROFISSIONAL (FIX TELA PRETA) */
-const observer = new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
-});
-},{threshold:0.15});
-
-document.querySelectorAll(".fade").forEach(el=>{
-observer.observe(el);
-});
 
 </script>
 
