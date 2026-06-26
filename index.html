@@ -43,6 +43,7 @@ max-width:1300px;
 margin:auto;
 }
 
+/* HEADER */
 header{
 position:fixed;
 top:0;
@@ -66,6 +67,7 @@ font-size:32px;
 font-family:'Playfair Display',serif;
 color:var(--gold);
 font-weight:700;
+text-shadow:0 0 20px rgba(200,168,93,.3);
 }
 
 .menu{
@@ -76,6 +78,11 @@ gap:35px;
 .menu a{
 text-decoration:none;
 color:#ddd;
+transition:.3s;
+}
+
+.menu a:hover{
+color:var(--gold);
 }
 
 .btn{
@@ -85,8 +92,15 @@ background:linear-gradient(135deg,var(--gold),var(--gold2));
 color:black;
 font-weight:700;
 text-decoration:none;
+transition:.3s;
+display:inline-block;
 }
 
+.btn:hover{
+transform:scale(1.05);
+}
+
+/* HERO */
 .hero{
 padding-top:150px;
 padding-bottom:100px;
@@ -132,10 +146,7 @@ gap:20px;
 flex-wrap:wrap;
 }
 
-.hero-image{
-position:relative;
-}
-
+/* HERO IMAGE */
 .hero-image img{
 width:100%;
 height:650px;
@@ -143,6 +154,7 @@ object-fit:cover;
 border-radius:30px;
 }
 
+/* CARD */
 .hero-card{
 position:absolute;
 bottom:25px;
@@ -154,18 +166,7 @@ border-radius:25px;
 border:1px solid rgba(255,255,255,.05);
 }
 
-.hero-card h3{
-margin-bottom:15px;
-}
-
-.hero-card ul{
-list-style:none;
-}
-
-.hero-card li{
-margin-bottom:12px;
-}
-
+/* STATS */
 .stats{
 padding:100px 0;
 border-top:1px solid rgba(255,255,255,.05);
@@ -186,8 +187,10 @@ text-align:center;
 font-size:55px;
 font-family:'Playfair Display',serif;
 color:var(--gold);
+text-shadow:0 0 20px rgba(200,168,93,.2);
 }
 
+/* SECTIONS */
 .section{
 padding:120px 0;
 }
@@ -203,6 +206,7 @@ font-family:'Playfair Display',serif;
 margin-bottom:20px;
 }
 
+/* CARDS */
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -214,10 +218,12 @@ background:var(--card);
 padding:35px;
 border-radius:25px;
 transition:.3s;
+border:1px solid rgba(255,255,255,.05);
 }
 
 .card:hover{
-transform:translateY(-8px);
+transform:translateY(-10px) scale(1.02);
+box-shadow:0 20px 40px rgba(0,0,0,.4);
 }
 
 .number{
@@ -227,6 +233,7 @@ font-family:'Playfair Display',serif;
 margin-bottom:15px;
 }
 
+/* PROCESS */
 .process{
 background:#0d0d0d;
 }
@@ -243,8 +250,10 @@ height:18px;
 background:var(--gold);
 border-radius:50%;
 margin-top:8px;
+box-shadow:0 0 15px rgba(200,168,93,.3);
 }
 
+/* MOBILE */
 @media(max-width:1000px){
 
 .hero-grid{
@@ -252,7 +261,16 @@ grid-template-columns:1fr;
 }
 
 .hero-image{
-display:none;
+display:block;
+margin-top:40px;
+}
+
+.hero-card{
+position:relative;
+left:0;
+bottom:0;
+margin-top:20px;
+width:100%;
 }
 
 .stats-grid{
@@ -283,38 +301,28 @@ font-size:38px;
 <body>
 
 <header>
-
 <div class="container">
-
 <nav>
 
-<div class="logo">
-AMUY MENEZES
-</div>
+<div class="logo">AMUY MENEZES</div>
 
 <div class="menu">
-
 <a href="#areas">Benefícios</a>
 <a href="#processo">Processo</a>
 <a href="#faq">FAQ</a>
 <a href="#contato">Contato</a>
-
 </div>
 
-<a href="https://wa.me/5500000000000" class="btn">
+<a href="https://wa.me/5562992754704" class="btn">
 Atendimento
 </a>
 
 </nav>
-
 </div>
-
 </header>
 
 <section class="hero">
-
 <div class="container">
-
 <div class="hero-grid">
 
 <div>
@@ -329,21 +337,18 @@ Seu benefício merece
 </h1>
 
 <p>
-Atendimento completo para aposentadorias,
-BPC/LOAS,
-pensão por morte,
-auxílio por incapacidade
-e planejamento previdenciário.
+Atendimento completo para aposentadorias, BPC/LOAS,
+pensão por morte, auxílio por incapacidade e planejamento previdenciário.
 </p>
 
 <div class="hero-buttons">
 
-<a href="https://wa.me/5500000000000" class="btn">
-Solicitar Atendimento
+<a href="https://wa.me/5562992754704" class="btn">
+Falar no WhatsApp
 </a>
 
-<a href="https://wa.me/5500000000000" class="btn">
-Falar com Especialista
+<a href="#areas" class="btn">
+Ver áreas
 </a>
 
 </div>
@@ -359,13 +364,11 @@ Falar com Especialista
 <h3>Atendimento Completo</h3>
 
 <ul>
-
 <li>✓ Análise Previdenciária</li>
 <li>✓ Revisão de Benefícios</li>
 <li>✓ BPC / LOAS</li>
 <li>✓ Pensão por Morte</li>
 <li>✓ Suporte Integral</li>
-
 </ul>
 
 </div>
@@ -373,15 +376,11 @@ Falar com Especialista
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 <section class="stats">
-
 <div class="container">
-
 <div class="stats-grid">
 
 <div class="stat">
@@ -405,24 +404,15 @@ Falar com Especialista
 </div>
 
 </div>
-
 </div>
-
 </section>
-<section class="section" id="areas">
 
+<section class="section" id="areas">
 <div class="container">
 
 <div class="section-title">
-
-<h2>
-Áreas de Atuação
-</h2>
-
-<p>
-Atuação estratégica em todas as áreas do Direito Previdenciário.
-</p>
-
+<h2>Áreas de Atuação</h2>
+<p>Atuação estratégica em todas as áreas do Direito Previdenciário.</p>
 </div>
 
 <div class="cards">
@@ -430,384 +420,127 @@ Atuação estratégica em todas as áreas do Direito Previdenciário.
 <div class="card">
 <div class="number">01</div>
 <h3>Aposentadorias</h3>
-<p>
-Orientação completa para aposentadoria por idade,
-tempo de contribuição e regras de transição.
-</p>
+<p>Orientação completa para aposentadoria.</p>
 </div>
 
 <div class="card">
 <div class="number">02</div>
 <h3>Auxílio por Incapacidade</h3>
-<p>
-Atendimento especializado para benefícios decorrentes
-de incapacidade laboral.
-</p>
+<p>Benefícios por incapacidade laboral.</p>
 </div>
 
 <div class="card">
 <div class="number">03</div>
 <h3>BPC / LOAS</h3>
-<p>
-Análise detalhada dos requisitos
-e documentação necessária.
-</p>
+<p>Análise de requisitos e documentação.</p>
 </div>
 
 <div class="card">
 <div class="number">04</div>
 <h3>Pensão por Morte</h3>
-<p>
-Suporte completo para dependentes
-e familiares.
-</p>
+<p>Suporte para dependentes.</p>
 </div>
 
 <div class="card">
 <div class="number">05</div>
 <h3>Salário-Maternidade</h3>
-<p>
-Acompanhamento durante todas as etapas
-do pedido.
-</p>
+<p>Acompanhamento completo.</p>
 </div>
 
 <div class="card">
 <div class="number">06</div>
 <h3>Planejamento Previdenciário</h3>
-<p>
-Estratégias para garantir mais segurança
-e melhores benefícios no futuro.
-</p>
+<p>Estratégias para o futuro.</p>
 </div>
 
 </div>
-
 </div>
-
 </section>
 
-<section class="section process" id="processo">
-
+<section class="section process">
 <div class="container">
 
 <div class="section-title">
-
-<h2>
-Como Funciona
-</h2>
-
+<h2>Como Funciona</h2>
 </div>
 
 <div class="step">
-
 <div class="dot"></div>
-
 <div>
-
 <h3>Primeiro Contato</h3>
-
-<p>
-Você entra em contato pelo WhatsApp
-e explica sua situação.
-</p>
-
+<p>Você fala pelo WhatsApp.</p>
 </div>
-
 </div>
 
 <div class="step">
-
 <div class="dot"></div>
-
 <div>
-
 <h3>Análise do Caso</h3>
-
-<p>
-Nossa equipe analisa a documentação
-e verifica seus direitos.
-</p>
-
+<p>Verificação dos documentos.</p>
 </div>
-
 </div>
 
 <div class="step">
-
 <div class="dot"></div>
-
 <div>
-
-<h3>Estratégia Previdenciária</h3>
-
-<p>
-Definimos o melhor caminho para buscar
-o benefício ou revisão.
-</p>
-
+<h3>Estratégia</h3>
+<p>Definição do melhor caminho.</p>
 </div>
-
 </div>
 
 <div class="step">
-
 <div class="dot"></div>
-
 <div>
-
 <h3>Acompanhamento</h3>
-
-<p>
-Monitoramento contínuo até a conclusão
-do processo.
-</p>
-
+<p>Até a conclusão do processo.</p>
+</div>
 </div>
 
 </div>
-
-</div>
-
 </section>
 
 <section class="section">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>
-O que nossos clientes dizem
-</h2>
-
-</div>
-
-<div class="cards">
-
-<div class="card">
-
-<h3>★★★★★</h3>
-
-<p>
-Excelente atendimento.
-Recebi orientação completa durante todo o processo.
-</p>
-
-<br>
-
-<strong>Maria S.</strong>
-
-</div>
-
-<div class="card">
-
-<h3>★★★★★</h3>
-
-<p>
-Equipe extremamente profissional
-e muito atenciosa.
-</p>
-
-<br>
-
-<strong>João P.</strong>
-
-</div>
-
-<div class="card">
-
-<h3>★★★★★</h3>
-
-<p>
-Consegui meu benefício com total suporte.
-Recomendo fortemente.
-</p>
-
-<br>
-
-<strong>Ana C.</strong>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="section" id="faq">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>
-Perguntas Frequentes
-</h2>
-
-</div>
-
-<div class="cards">
-
-<div class="card">
-
-<h3>
-Meu benefício foi negado. O que fazer?
-</h3>
-
-<p>
-Cada caso deve ser analisado individualmente.
-Uma negativa não significa perda definitiva do direito.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>
-Posso ser atendido online?
-</h3>
-
-<p>
-Sim. Todo o atendimento pode ser realizado
-de forma digital.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>
-Quais documentos preciso apresentar?
-</h3>
-
-<p>
-A documentação varia conforme o benefício solicitado.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>
-O acompanhamento continua após o protocolo?
-</h3>
-
-<p>
-Sim. O acompanhamento ocorre durante
-todo o processo.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
 <div class="container">
 
 <div style="text-align:center;max-width:900px;margin:auto;">
 
-<h2 style="
-font-family:'Playfair Display',serif;
-font-size:60px;
-margin-bottom:25px;
-">
-
-Descubra quais são os seus direitos previdenciários.
-
+<h2 style="font-family:'Playfair Display',serif;font-size:60px;margin-bottom:25px;">
+Descubra seus direitos previdenciários
 </h2>
 
-<p style="
-font-size:20px;
-color:#c7c7c7;
-margin-bottom:40px;
-">
-
-Entre em contato agora mesmo e receba orientação especializada.
-
+<p style="font-size:20px;color:#c7c7c7;margin-bottom:40px;">
+Entre em contato agora e receba orientação.
 </p>
 
-<a href="https://wa.me/5562992754704"
-class="btn">
-
-Solicitar Atendimento
-
+<a href="https://wa.me/5562992754704" class="btn">
+Falar no WhatsApp
 </a>
 
 </div>
 
 </div>
-
 </section>
 
-<footer id="contato"
-style="
-padding:80px 0;
-border-top:1px solid rgba(255,255,255,.05);
-text-align:center;
-">
+<footer id="contato" style="padding:80px 0;text-align:center;border-top:1px solid rgba(255,255,255,.05);">
 
 <div class="container">
 
-<h2 style="
-color:#C8A85D;
-font-family:'Playfair Display',serif;
-margin-bottom:20px;
-">
+<h2 style="color:#C8A85D;font-family:'Playfair Display',serif;">AMUY MENEZES</h2>
 
-AMUY MENEZES
-
-</h2>
-
-<p style="color:#bcbcbc;margin-bottom:15px;">
-Atendimento especializado em Direito Previdenciário.
-</p>
-
-<p style="color:#bcbcbc;">
-WhatsApp: (62) 99275-4704
-</p>
-
-<p style="color:#bcbcbc;">
-Instagram: @amuymenezes
-</p>
+<p style="color:#bcbcbc;">Direito Previdenciário</p>
+<p style="color:#bcbcbc;">WhatsApp: (62) 99275-4704</p>
+<p style="color:#bcbcbc;">Instagram: @amuymenezes</p>
 
 <br>
 
-<p style="color:#666;">
-© 2026 Amuy Menezes Advocacia.
-Todos os direitos reservados.
-</p>
+<p style="color:#666;">© 2026 Todos os direitos reservados.</p>
 
 </div>
 
 </footer>
 
 <a href="https://wa.me/5562992754704"
-style="
-position:fixed;
-right:25px;
-bottom:25px;
-width:70px;
-height:70px;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:50%;
-background:#C8A85D;
-color:black;
-font-size:30px;
-text-decoration:none;
-font-weight:bold;
-box-shadow:0 0 30px rgba(200,168,93,.4);
-z-index:9999;
-">
-
+style="position:fixed;right:25px;bottom:25px;width:70px;height:70px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#C8A85D;color:black;font-size:30px;text-decoration:none;font-weight:bold;box-shadow:0 0 30px rgba(200,168,93,.4);z-index:9999;">
 💬
 </a>
 
