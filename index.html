@@ -498,17 +498,29 @@ a.style.display = a.style.display === "block" ? "none" : "block";
 
 function enviarFormulario(){
 
-const nome = document.getElementById("nome").value.trim();
-const telefone = document.getElementById("telefone").value.replace(/\D/g,"");
-const tipo = document.getElementById("tipo").value;
-const msg = document.getElementById("msg").value.trim();
+try {
+
+const nomeEl = document.getElementById("nome");
+const telefoneEl = document.getElementById("telefone");
+const tipoEl = document.getElementById("tipo");
+const msgEl = document.getElementById("msg");
+
+if(!nomeEl || !telefoneEl || !tipoEl || !msgEl){
+alert("Erro: campos do formulário não encontrados no HTML.");
+return;
+}
+
+const nome = nomeEl.value.trim();
+const telefone = telefoneEl.value.replace(/\D/g,"");
+const tipo = tipoEl.value;
+const msg = msgEl.value.trim();
 
 if(nome.length < 3) return alert("Nome inválido");
 if(telefone.length < 10) return alert("Telefone inválido");
 if(msg.length < 5) return alert("Descreva melhor o caso");
 
-let hora = new Date().getHours();
-let saudacao = hora < 12 ? "Bom dia" : hora < 18 ? "Boa tarde" : "Boa noite";
+const hora = new Date().getHours();
+const saudacao = hora < 12 ? "Bom dia" : hora < 18 ? "Boa tarde" : "Boa noite";
 
 const texto =
 `${saudacao}
@@ -524,10 +536,14 @@ ${msg}
 
 Atendimento híbrido com suporte presencial quando necessário.`;
 
-/* 🔥 WHATSAPP CORRIGIDO (SEM ERRO) */
+/* WHATSAPP 100% ESTÁVEL */
 const url = "https://api.whatsapp.com/send?phone=5562992754704&text=" + encodeURIComponent(texto);
 
-/* abre de forma estável */
-location.href = url;
+window.location.href = url;
+
+} catch (err) {
+console.log(err);
+alert("Erro ao enviar. Veja o console (F12).");
+}
 
 }
